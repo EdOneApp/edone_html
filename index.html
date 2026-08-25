@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EdOne  Le système d'exploitation scolaire | Afrique &amp; Europe</title>
+<meta name="description" content="EdOne réunit académique, scolarité, paiements Mobile Money, bibliothèque de 79 000+ ouvrages, quiz sécurisés, bulletins et diplômes vérifiables dans une seule plateforme, active dans 25 pays.">
+<link rel="icon" type="image/jpeg" href="images/1.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,440;9..144,560;9..144,650&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   EDONE  TOKENS · Identité "Sceau institutionnel"
+   Navy (logo) + Or (certification) + Bleu signal (paiement)
+   ============================================================ */
+:root{
+  --navy-950:#050A1F; --navy-900:#0A1338; --navy-800:#10194A; --navy-700:#182A66;
+  --blue-600:#2547D6; --blue-500:#3A61FF; --blue-soft:#E8EDFF;
+  --gold-600:#A9832F; --gold-500:#C9A24A; --gold-soft:#F7EFD9;
+  --paper:#F5F6FB; --surface:#FFFFFF; --surface-2:#EFF1F9; --line:#E2E4F1;
+  --text:#0B1330; --text-mut:#565D7C; --text-soft:#8B92AE;
+  --ok:#1B8F6B; --ok-soft:#DEF4EB;
+  --r-s:10px; --r-m:16px; --r-l:24px; --r-xl:32px; --r-full:999px;
+  --sh-1:0 2px 12px rgba(10,19,56,.06);
+  --sh-2:0 16px 44px rgba(10,19,56,.10);
+  --sh-3:0 30px 76px rgba(10,19,56,.18);
+  --sh-gold:0 0 0 1px rgba(201,162,74,.35), 0 18px 44px rgba(201,162,74,.18);
+  --f-d:'Fraunces',Georgia,serif;
+  --f-b:'Inter',system-ui,sans-serif;
+  --f-m:'JetBrains Mono',monospace;
+  --wrap:1300px;
+  --headc:var(--navy-900);
+  --header-bg:rgba(245,246,251,.86);
+}
+[data-theme="dark"]{
+  --paper:#050814; --surface:#0B1230; --surface-2:#0F1738;
+  --line:rgba(255,255,255,.09);
+  --text:#EDEFF9; --text-mut:#AAB0CE; --text-soft:#6E759A;
+  --headc:#F3F4FC;
+  --header-bg:rgba(5,8,20,.82);
+  --blue-soft:rgba(58,97,255,.16); --gold-soft:rgba(201,162,74,.15); --ok-soft:rgba(27,143,107,.16);
+  --sh-1:0 2px 12px rgba(0,0,0,.4); --sh-2:0 16px 44px rgba(0,0,0,.5); --sh-3:0 30px 76px rgba(0,0,0,.6);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--f-b);color:var(--text);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .25s ease,color .25s ease;}
+img,svg{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+button{font-family:inherit;cursor:pointer;}
+input,select,textarea{font-family:inherit;}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px;}
+@media (max-width:900px){.wrap{padding:0 22px;}}
+@media (max-width:560px){.wrap{padding:0 18px;}}
+h1,h2,h3,h4{font-family:var(--f-d);font-weight:600;letter-spacing:-.01em;color:var(--headc);}
+.on-dark h1,.on-dark h2,.on-dark h3,.on-dark h4,.on-dark p,.on-dark span{color:#fff;}
+section{padding:124px 0;position:relative;}
+@media (max-width:900px){section{padding:84px 0;}}
+@media (max-width:560px){section{padding:64px 0;}}
+.dark-sec{background:var(--navy-950);color:rgba(255,255,255,.78);}
+.alt-sec{background:var(--surface-2);}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,.8,.3,1),transform .7s cubic-bezier(.16,.8,.3,1);}
+.rv.in{opacity:1;transform:none;}
+.rv-l{opacity:0;transform:translateX(-28px);transition:opacity .7s ease,transform .7s cubic-bezier(.16,.8,.3,1);}
+.rv-l.in{opacity:1;transform:none;}
+.rv-r{opacity:0;transform:translateX(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.16,.8,.3,1);}
+.rv-r.in{opacity:1;transform:none;}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-m);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-600);font-weight:600;}
+.eyebrow::before{content:"";width:16px;height:1px;background:var(--gold-600);}
+.on-dark .eyebrow{color:var(--gold-500);}
+.on-dark .eyebrow::before{background:var(--gold-500);}
+.head{max-width:760px;margin-bottom:56px;}
+.head h2{font-size:clamp(2rem,3.6vw,2.9rem);line-height:1.1;margin-top:16px;font-weight:560;}
+.head p{color:var(--text-mut);margin-top:18px;font-size:1.06rem;}
+.on-dark .head p{color:rgba(255,255,255,.6);}
+.head.center{margin-left:auto;margin-right:auto;text-align:center;}
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--f-b);font-weight:700;font-size:.92rem;padding:16px 32px;border-radius:var(--r-full);border:1.5px solid transparent;transition:transform .18s ease,box-shadow .18s ease,background .18s ease,border-color .18s ease;white-space:nowrap;}
+.btn-navy{background:var(--navy-900);color:#fff;box-shadow:0 12px 28px rgba(10,19,56,.28);}
+.btn-navy:hover{transform:translateY(-2px);box-shadow:0 18px 38px rgba(10,19,56,.38);}
+.btn-gold{background:linear-gradient(135deg,var(--gold-500),var(--gold-600));color:#241A02;box-shadow:0 12px 28px rgba(201,162,74,.30);}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 18px 38px rgba(201,162,74,.4);}
+.btn-gold:disabled{opacity:.6;cursor:not-allowed;transform:none;}
+.btn-ghost{background:transparent;border-color:rgba(255,255,255,.28);color:#fff;}
+.btn-ghost:hover{background:rgba(255,255,255,.09);}
+.btn-line{background:transparent;border-color:var(--line);color:var(--headc);}
+.btn-line:hover{border-color:var(--navy-900);}
+.btn-sm{padding:11px 22px;font-size:.82rem;}
+.btn:focus-visible{outline:3px solid rgba(58,97,255,.4);outline-offset:2px;}
+/* ===== header ===== */
+header{position:sticky;top:0;z-index:130;background:var(--header-bg);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line);}
+.nav{display:flex;align-items:center;justify-content:space-between;height:82px;}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--f-d);font-weight:650;font-size:1.28rem;color:var(--headc);}
+.brand .mk{width:42px;height:42px;border-radius:12px;overflow:hidden;box-shadow:var(--sh-1);flex-shrink:0;}
+.brand .mk img{width:100%;height:100%;object-fit:cover;}
+.nlinks{display:flex;align-items:center;gap:0;}
+.nlinks a{font-size:.82rem;font-weight:600;color:var(--text-mut);padding:9px 12px;border-radius:var(--r-full);transition:background .15s,color .15s;white-space:nowrap;}
+.nlinks a:hover{background:var(--blue-soft);color:var(--blue-600);}
+.mnav-actions,.mnav-meta{display:none;}
+.nl-compact{display:none;}
+.nactions{display:flex;align-items:center;gap:12px;}
+.ntoggle{display:none;background:none;border:none;width:40px;height:40px;position:relative;z-index:10;}
+.ntoggle span{display:block;width:21px;height:2px;background:var(--headc);margin:5px auto;border-radius:2px;transition:transform .25s ease,opacity .25s ease;}
+.ntoggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.ntoggle.open span:nth-child(2){opacity:0;}
+.ntoggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.theme-toggle{width:42px;height:42px;border-radius:50%;border:1.5px solid var(--line);background:var(--surface);display:flex;align-items:center;justify-content:center;transition:transform .2s ease,border-color .2s ease;flex-shrink:0;}
+.theme-toggle:hover{transform:scale(1.08);border-color:var(--gold-600);}
+.theme-toggle svg{width:18px;height:18px;stroke:var(--headc);fill:none;stroke-width:1.7;}
+.theme-toggle .i-sun{display:none;}
+[data-theme="dark"] .theme-toggle .i-moon{display:none;}
+[data-theme="dark"] .theme-toggle .i-sun{display:block;}
+@media (max-width:1160px){
+  .nlinks{position:fixed;inset:0;background:var(--navy-950);flex-direction:column;align-items:stretch;justify-content:flex-start;padding:104px 26px 26px;gap:2px;transform:translateX(102%);transition:transform .32s cubic-bezier(.16,.8,.3,1);overflow-y:auto;z-index:100;}
+  .nlinks.open{transform:translateX(0);}
+  .nlinks a{font-size:1.15rem;width:100%;color:rgba(255,255,255,.86);padding:16px 6px;border-bottom:1px solid rgba(255,255,255,.08);border-radius:0;font-family:var(--f-d);font-weight:500;}
+  .nlinks a:hover{background:none;color:var(--gold-500);}
+  .nl-compact{display:block;}
+  .nlinks .mnav-actions{display:flex;flex-direction:column;gap:12px;margin-top:26px;}
+  .nlinks .mnav-actions .btn{width:100%;padding:16px;}
+  .nlinks .mnav-meta{margin-top:auto;padding-top:30px;display:flex;flex-direction:column;gap:8px;color:rgba(255,255,255,.4);font-family:var(--f-m);font-size:.72rem;}
+  .nactions .btn-line{display:none;}
+  .ntoggle{display:block;}
+}
+/* ===== hero ===== */
+.hero{padding:104px 0 90px;position:relative;overflow:hidden;}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(900px 520px at 86% -8%, rgba(201,162,74,.10), transparent 60%),
+  radial-gradient(700px 460px at -6% 30%, rgba(58,97,255,.07), transparent 60%);
+  pointer-events:none;}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:64px;align-items:center;position:relative;z-index:2;}
+@media (max-width:1000px){.hero-grid{grid-template-columns:1fr;gap:46px;}}
+.hero h1{font-size:clamp(2.3rem,4.6vw,3.7rem);line-height:1.06;margin:20px 0 24px;font-weight:600;}
+.hero h1 em{font-style:normal;color:var(--blue-600);}
+.hero h1 .gld{font-style:normal;color:var(--gold-600);}
+.hero p.lead{font-size:1.1rem;color:var(--text-mut);max-width:540px;margin-bottom:32px;}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:42px;}
+.hero-facts{display:grid;grid-template-columns:repeat(4,auto);gap:30px;border-top:1px solid var(--line);padding-top:26px;}
+@media (max-width:640px){.hero-facts{grid-template-columns:1fr 1fr;row-gap:22px;}}
+.hfact b{display:block;font-family:var(--f-d);font-size:1.7rem;color:var(--headc);font-weight:600;}
+.hfact span{font-size:.74rem;color:var(--text-soft);font-weight:600;letter-spacing:.02em;}
+.hero-visual{position:relative;}
+.seal{position:absolute;top:-30px;right:-14px;width:118px;height:118px;z-index:4;animation:spin 34s linear infinite;}
+@media (max-width:1000px){.seal{width:92px;height:92px;top:-16px;right:6px;}}
+@keyframes spin{from{transform:rotate(0);}to{transform:rotate(360deg);}}
+.seal-core{position:absolute;inset:24%;border-radius:50%;background:var(--navy-900);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(10,19,56,.35);animation:unspin 34s linear infinite;}
+@keyframes unspin{from{transform:rotate(0);}to{transform:rotate(-360deg);}}
+.seal-core img{width:58%;height:58%;object-fit:contain;border-radius:6px;}
+.hv-card{background:var(--navy-950);border-radius:28px;padding:24px;box-shadow:var(--sh-3);position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.06);}
+.hv-card::before{content:"";position:absolute;inset:0;background:radial-gradient(560px 300px at 100% 0%,rgba(201,162,74,.18),transparent 60%);}
+.hv-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;position:relative;z-index:1;}
+.hv-top .tag{font-family:var(--f-m);font-size:.66rem;color:var(--gold-500);letter-spacing:.08em;text-transform:uppercase;border:1px solid rgba(201,162,74,.35);padding:5px 10px;border-radius:var(--r-full);}
+.hv-top span.url{font-family:var(--f-m);font-size:.68rem;color:rgba(255,255,255,.4);}
+.hv-doc{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:18px;margin-bottom:12px;position:relative;z-index:1;}
+.hv-doc .row1{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;}
+.hv-doc .row1 b{color:#fff;font-family:var(--f-d);font-size:1.02rem;font-weight:600;}
+.hv-doc .row1 span{display:block;font-size:.68rem;color:rgba(255,255,255,.42);margin-top:2px;}
+.hv-doc .verif{display:flex;align-items:center;gap:7px;background:rgba(27,143,107,.16);color:#5FE0B4;border-radius:var(--r-full);padding:6px 12px;font-size:.68rem;font-family:var(--f-m);font-weight:600;}
+.hv-doc .verif svg{width:12px;height:12px;stroke:#5FE0B4;}
+.hv-doc .code{font-family:var(--f-m);font-size:.78rem;color:rgba(255,255,255,.7);letter-spacing:.06em;border-top:1px dashed rgba(255,255,255,.14);padding-top:12px;}
+.hv-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px;position:relative;z-index:1;}
+.hv-stat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:13px;}
+.hv-stat b{display:block;font-family:var(--f-d);font-size:1.24rem;color:#fff;font-weight:600;}
+.hv-stat span{font-size:.65rem;color:rgba(255,255,255,.42);}
+.hv-row{display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:12px;padding:11px 13px;position:relative;z-index:1;}
+.hv-row .l{display:flex;align-items:center;gap:10px;}
+.hv-row .ic{width:28px;height:28px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:rgba(201,162,74,.16);}
+.hv-row .txt b{display:block;font-size:.75rem;color:#fff;}
+.hv-row .txt span{font-size:.64rem;color:rgba(255,255,255,.42);}
+.hv-row .amt{font-family:var(--f-m);font-size:.78rem;font-weight:600;color:#5FE0B4;}
+.hv-float{position:absolute;background:var(--surface);border-radius:16px;box-shadow:var(--sh-2);padding:13px 16px;display:flex;align-items:center;gap:10px;z-index:5;animation:floaty 5.4s ease-in-out infinite;border:1px solid var(--line);}
+.hv-float.b{bottom:-6%;left:-8%;animation-delay:1.2s;}
+@media (max-width:1000px){.hv-float{display:none;}}
+@keyframes floaty{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+.hv-float .ic{width:36px;height:36px;border-radius:10px;background:var(--ok-soft);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.hv-float .ic svg{width:17px;height:17px;stroke:var(--ok);fill:none;stroke-width:2;}
+.hv-float b{display:block;font-size:.8rem;color:var(--headc);}
+.hv-float span{font-size:.67rem;color:var(--text-soft);}
+/* ===== ribbon marquee ===== */
+.ribbon{background:var(--navy-950);padding:22px 0;overflow:hidden;border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);}
+.marq{display:flex;width:max-content;gap:11px;animation:mrq 34s linear infinite;}
+.ribbon:hover .marq{animation-play-state:paused;}
+@keyframes mrq{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.chip{display:flex;align-items:center;gap:9px;font-family:var(--f-m);font-size:.72rem;color:rgba(255,255,255,.82);background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.11);padding:10px 17px;border-radius:var(--r-full);white-space:nowrap;font-weight:500;}
+.chip i{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+/* ===== stat cards ===== */
+.stats4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+@media (max-width:900px){.stats4{grid-template-columns:1fr 1fr;}}
+.scard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-l);padding:28px;box-shadow:var(--sh-1);}
+.scard .ic{width:42px;height:42px;border-radius:12px;background:var(--navy-900);display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
+.scard .ic svg{width:19px;height:19px;stroke:var(--gold-500);fill:none;stroke-width:1.7;}
+.scard .num{font-family:var(--f-d);font-size:2.3rem;color:var(--headc);font-weight:600;}
+.scard .num em{color:var(--blue-600);font-style:normal;}
+.scard .lbl{font-size:.84rem;color:var(--text-mut);margin-top:5px;}
+/* ===== coverage / map ===== */
+.cov-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;}
+@media (max-width:980px){.cov-grid{grid-template-columns:1fr;}}
+.map-wrap{position:relative;aspect-ratio:1/1.02;background:var(--navy-950);border-radius:30px;overflow:hidden;box-shadow:var(--sh-3);}
+.map-wrap::before{content:"";position:absolute;inset:0;background:radial-gradient(520px 420px at 30% 20%,rgba(201,162,74,.16),transparent 65%);z-index:0;}
+#africaMap{position:absolute;inset:0;width:100%;height:100%;}
+.map-flags{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;}
+.flagpin{position:absolute;transform:translate(-50%,-50%);display:flex;align-items:center;gap:5px;pointer-events:auto;}
+.flagpin img{width:20px;height:14px;object-fit:cover;border-radius:3px;box-shadow:0 0 0 1.5px rgba(255,255,255,.85),0 2px 6px rgba(0,0,0,.5);display:block;}
+.flagpin.hub img{width:27px;height:19px;box-shadow:0 0 0 2px var(--gold-500),0 3px 10px rgba(0,0,0,.6);}
+.flagpin .fl-label{font-family:var(--f-m);font-size:.6rem;color:#fff;background:rgba(0,0,0,.55);padding:2px 6px;border-radius:var(--r-full);white-space:nowrap;opacity:0;transform:translateY(2px);transition:opacity .15s ease,transform .15s ease;}
+.flagpin:hover .fl-label{opacity:1;transform:translateY(0);}
+.flagpin:hover img{outline:2px solid var(--gold-500);}
+.map-legend span img{width:14px;height:10px;object-fit:cover;border-radius:2px;margin-right:6px;vertical-align:middle;}
+.map-legend{margin-top:24px;display:flex;flex-wrap:wrap;gap:8px;}
+.map-legend span{font-family:var(--f-m);font-size:.7rem;color:var(--text-mut);background:var(--surface);border:1px solid var(--line);padding:6px 12px;border-radius:var(--r-full);}
+.cur-strip{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;}
+.cur-strip b{font-family:var(--f-m);font-size:.72rem;background:var(--navy-900);color:var(--gold-500);padding:6px 11px;border-radius:8px;}
+/* ===== compare ===== */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+@media (max-width:820px){.compare{grid-template-columns:1fr;}}
+.ccard{border-radius:var(--r-l);padding:30px;border:1.5px solid;}
+.ccard.bad{background:var(--surface);border-color:var(--line);}
+.ccard.good{background:var(--navy-900);border-color:var(--navy-900);}
+.ccard h4{font-family:var(--f-b);font-size:.98rem;font-weight:800;margin-bottom:18px;letter-spacing:.02em;text-transform:uppercase;font-size:.78rem;}
+.ccard.bad h4{color:var(--text-soft);}
+.ccard.good h4{color:var(--gold-500);}
+.ccard li{display:flex;gap:11px;align-items:flex-start;font-size:.88rem;margin-bottom:13px;}
+.ccard.bad li{color:var(--text-mut);}
+.ccard.good li{color:rgba(255,255,255,.82);}
+.ccard li svg{width:15px;height:15px;flex-shrink:0;margin-top:2px;}
+.ccard.bad li svg{stroke:var(--text-soft);}
+.ccard.good li svg{stroke:var(--gold-500);}
+/* ===== module grid ===== */
+.mod-cat{margin-bottom:54px;}
+.mod-cat-head{display:flex;align-items:center;gap:14px;margin-bottom:24px;}
+.mod-cat-head .tag{font-family:var(--f-m);font-size:.68rem;color:var(--blue-600);background:var(--blue-soft);padding:7px 14px;border-radius:var(--r-full);font-weight:700;letter-spacing:.04em;}
+.mod-cat-head h3{font-size:1.2rem;font-family:var(--f-d);font-weight:600;}
+.mgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+@media (max-width:1080px){.mgrid{grid-template-columns:1fr 1fr;}}
+@media (max-width:560px){.mgrid{grid-template-columns:1fr;}}
+.mcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-m);padding:22px;box-shadow:var(--sh-1);transition:transform .25s cubic-bezier(.16,.8,.3,1),box-shadow .25s ease,border-color .25s ease;}
+.mcard:hover{transform:translateY(-5px);box-shadow:var(--sh-2);border-color:var(--gold-600);}
+.mcard .ic{width:38px;height:38px;border-radius:10px;background:var(--navy-900);display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
+.mcard .ic svg{width:17px;height:17px;stroke:var(--gold-500);fill:none;stroke-width:1.7;}
+.mcard h4{font-size:.9rem;margin-bottom:7px;font-family:var(--f-b);font-weight:800;}
+.mcard p{font-size:.79rem;color:var(--text-mut);line-height:1.55;}
+.mcard.gold .ic{background:linear-gradient(135deg,var(--gold-500),var(--gold-600));}
+.mcard.gold .ic svg{stroke:#241A02;}
+/* ===== documents wall ===== */
+.doc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+@media (max-width:1024px){.doc-grid{grid-template-columns:1fr 1fr;}}
+@media (max-width:560px){.doc-grid{grid-template-columns:1fr;}}
+.dcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-m);padding:24px;text-align:center;box-shadow:var(--sh-1);transition:transform .2s ease;}
+.dcard:hover{transform:translateY(-5px);}
+.dcard svg{width:44px;height:54px;margin:0 auto 14px;}
+.dcard h5{font-size:.85rem;font-weight:800;margin-bottom:4px;}
+.dcard p{font-size:.72rem;color:var(--text-soft);}
+/* ===== brand carousel ===== */
+.carousel{position:relative;border-radius:var(--r-xl);overflow:hidden;background:var(--navy-950);box-shadow:var(--sh-3);border:1px solid var(--line);}
+.car-track{display:flex;transition:transform .55s cubic-bezier(.16,.8,.3,1);}
+.car-slide{flex:0 0 100%;position:relative;display:flex;align-items:center;justify-content:center;height:min(72vh,640px);background:radial-gradient(900px 500px at 50% 0%,rgba(201,162,74,.10),transparent 60%);}
+.car-slide img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;margin:0 auto;box-shadow:0 20px 60px rgba(0,0,0,.35);}
+@media (max-width:640px){.car-slide{height:min(58vh,440px);padding:10px;}}
+.car-cap{position:absolute;left:0;right:0;bottom:0;padding:22px 28px;background:linear-gradient(0deg,rgba(3,6,15,.92),transparent);display:flex;align-items:flex-end;justify-content:space-between;gap:14px;}
+.car-cap span.t{color:#fff;font-size:.98rem;font-weight:700;font-family:var(--f-b);}
+.car-cap span.n{display:block;color:var(--gold-500);font-family:var(--f-m);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px;}
+.car-nav{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;background:rgba(5,8,20,.55);border:1px solid rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;backdrop-filter:blur(6px);transition:background .2s ease,transform .2s ease;z-index:3;}
+.car-nav:hover{background:rgba(201,162,74,.85);}
+.car-nav svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2;}
+.car-nav.prev{left:16px;}
+.car-nav.next{right:16px;}
+@media (max-width:640px){.car-nav{width:38px;height:38px;}.car-nav.prev{left:8px;}.car-nav.next{right:8px;}}
+.car-dots{display:flex;justify-content:center;gap:9px;margin-top:20px;}
+.car-dot{width:9px;height:9px;border-radius:50%;background:var(--line);border:none;transition:background .2s ease,transform .2s ease;cursor:pointer;}
+.car-dot.active{background:var(--gold-500);transform:scale(1.25);}
+/* ===== library spotlight ===== */
+.lib-sec{background:linear-gradient(160deg,var(--navy-950) 0%,var(--navy-800) 100%);position:relative;overflow:hidden;}
+.lib-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;position:relative;z-index:1;}
+@media (max-width:980px){.lib-grid{grid-template-columns:1fr;}}
+.lib-num{font-family:var(--f-d);font-size:clamp(3.4rem,8vw,5.6rem);line-height:1;color:#fff;font-weight:600;}
+.lib-num em{color:var(--gold-500);font-style:normal;}
+.lib-sub{font-size:1rem;color:rgba(255,255,255,.62);margin:12px 0 28px;max-width:440px;}
+.lib-tags{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:28px;}
+.lib-tags span{font-size:.76rem;font-family:var(--f-m);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);padding:7px 13px;border-radius:var(--r-full);color:rgba(255,255,255,.72);}
+.shelf{position:relative;height:340px;display:flex;align-items:flex-end;justify-content:center;gap:5px;perspective:800px;}
+.book{border-radius:4px 6px 6px 4px;box-shadow:2px 4px 10px rgba(0,0,0,.4);transform:rotate(0);animation:bookIn .7s cubic-bezier(.16,.8,.3,1) both;}
+@keyframes bookIn{from{transform:translateY(30px) scaleY(.6);opacity:0;}to{transform:translateY(0) scaleY(1);opacity:1;}}
+/* ===== dashboards showcase ===== */
+.dash-tabs{display:flex;gap:10px;margin-bottom:36px;flex-wrap:wrap;}
+.dtab{font-family:var(--f-b);font-weight:700;font-size:.82rem;padding:12px 22px;border-radius:var(--r-full);border:1.5px solid var(--line);background:var(--surface);color:var(--text-mut);transition:all .18s ease;}
+.dtab.active{background:var(--navy-900);color:#fff;border-color:var(--navy-900);}
+.dash-panel{display:none;}
+.dash-panel.active{display:block;}
+.dweb{background:var(--navy-950);border-radius:28px;padding:22px;box-shadow:var(--sh-3);display:grid;grid-template-columns:210px 1fr;gap:16px;border:1px solid rgba(255,255,255,.06);}
+@media (max-width:820px){.dweb{grid-template-columns:1fr;}}
+.dweb-side{background:rgba(255,255,255,.035);border-radius:16px;padding:16px 12px;display:flex;flex-direction:column;gap:6px;}
+.dweb-side .di{display:flex;align-items:center;gap:9px;padding:10px 11px;border-radius:10px;font-size:.72rem;color:rgba(255,255,255,.5);}
+.dweb-side .di.active{background:var(--gold-500);color:#241A02;font-weight:700;}
+.dweb-side .di svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.7;flex-shrink:0;}
+.dweb-main{display:flex;flex-direction:column;gap:14px;}
+.dweb-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+@media (max-width:700px){.dweb-cards{grid-template-columns:1fr 1fr;}}
+.dweb-card{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:15px;}
+.dweb-card b{display:block;font-family:var(--f-d);font-size:1.34rem;color:#fff;font-weight:600;}
+.dweb-card span{font-size:.68rem;color:rgba(255,255,255,.42);}
+.dweb-charts{display:grid;grid-template-columns:1.4fr 1fr;gap:14px;}
+@media (max-width:700px){.dweb-charts{grid-template-columns:1fr;}}
+.chart-box{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:19px;}
+.chart-box .t{font-size:.76rem;color:rgba(255,255,255,.56);margin-bottom:15px;font-weight:600;}
+.line-chart{width:100%;height:130px;}
+.donut-wrap{display:flex;align-items:center;gap:16px;}
+.donut{width:110px;height:110px;border-radius:50%;flex-shrink:0;}
+.donut-legend{display:flex;flex-direction:column;gap:8px;}
+.donut-legend div{display:flex;align-items:center;gap:7px;font-size:.7rem;color:rgba(255,255,255,.56);}
+.donut-legend i{width:9px;height:9px;border-radius:3px;flex-shrink:0;}
+.dmobile{display:flex;justify-content:center;gap:26px;flex-wrap:wrap;}
+.mphone{width:232px;height:470px;border-radius:38px;border:8px solid var(--navy-950);background:linear-gradient(165deg,var(--navy-800),var(--navy-950));box-shadow:var(--sh-3);position:relative;overflow:hidden;}
+.mphone::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:80px;height:20px;background:var(--navy-950);border-radius:0 0 16px 16px;z-index:2;}
+.mscreen{padding:30px 14px 14px;height:100%;display:flex;flex-direction:column;gap:9px;}
+.mscreen .mh{display:flex;align-items:center;gap:8px;margin-bottom:8px;}
+.mscreen .mh .sq{width:22px;height:22px;border-radius:7px;background:var(--gold-500);}
+.mscreen .mh span{font-size:.66rem;color:#fff;font-weight:700;}
+.mcardx{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);border-radius:12px;padding:11px 12px;border-left:3px solid var(--gold-500);}
+.mcardx.i{border-left-color:#5B8DEF;}
+.mcardx.w{border-left-color:#E0A93A;}
+.mcardx strong{display:block;font-size:.68rem;color:#fff;margin-bottom:2px;}
+.mcardx span{font-size:.62rem;color:rgba(255,255,255,.48);line-height:1.4;}
+/* ===== payments ===== */
+.pay-grid{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:start;}
+@media (max-width:940px){.pay-grid{grid-template-columns:1fr;}}
+.paymethods{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.pm{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-m);padding:17px;display:flex;align-items:center;gap:12px;box-shadow:var(--sh-1);}
+.pm .b{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.7rem;color:#fff;flex-shrink:0;}
+.pm .n{font-weight:700;font-size:.82rem;}
+.pm .s{font-size:.68rem;color:var(--text-soft);}
+.calc{background:var(--navy-950);border-radius:var(--r-xl);padding:34px;box-shadow:var(--sh-3);color:#fff;border:1px solid rgba(255,255,255,.06);}
+.calc h4{color:#fff;font-size:1.12rem;margin-bottom:4px;font-weight:600;}
+.calc .s{color:rgba(255,255,255,.5);font-size:.83rem;margin-bottom:26px;}
+.calc-row{display:flex;align-items:center;gap:14px;margin-bottom:26px;}
+.calc-row input[type=range]{flex:1;accent-color:var(--gold-500);}
+.calc-row .amt{font-family:var(--f-m);font-weight:700;font-size:1.05rem;color:var(--gold-500);min-width:110px;text-align:right;}
+.calc-lines{border-top:1px dashed rgba(255,255,255,.18);padding-top:20px;display:flex;flex-direction:column;gap:12px;}
+.calc-lines .ln{display:flex;justify-content:space-between;font-size:.85rem;color:rgba(255,255,255,.56);}
+.calc-lines .ln.total{border-top:1px solid rgba(255,255,255,.14);padding-top:16px;margin-top:2px;font-weight:700;color:#fff;font-size:1rem;}
+.calc-lines .v{font-family:var(--f-m);}
+.calc .fine{font-size:.72rem;color:rgba(255,255,255,.36);margin-top:18px;}
+/* ===== roles ===== */
+.role-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+@media (max-width:1024px){.role-grid{grid-template-columns:1fr 1fr;}}
+@media (max-width:560px){.role-grid{grid-template-columns:1fr;}}
+.rcard{background:var(--navy-950);border-radius:var(--r-l);padding:26px;color:#fff;transition:transform .25s ease;border:1px solid rgba(255,255,255,.05);}
+.rcard:hover{transform:translateY(-6px);}
+.rcard .ic{width:40px;height:40px;border-radius:12px;background:rgba(201,162,74,.14);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+.rcard .ic svg{width:18px;height:18px;stroke:var(--gold-500);fill:none;stroke-width:1.7;}
+.rcard h5{font-size:.94rem;margin-bottom:13px;font-weight:800;color:#fff;}
+.rcard li{font-size:.75rem;color:rgba(255,255,255,.58);padding-left:14px;position:relative;margin-bottom:8px;}
+.rcard li::before{content:"";position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:var(--gold-500);}
+/* ===== security ===== */
+.sec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+@media (max-width:900px){.sec-grid{grid-template-columns:1fr 1fr;}}
+@media (max-width:560px){.sec-grid{grid-template-columns:1fr;}}
+.sc2{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-l);padding:26px;transition:background .2s ease,transform .25s ease;}
+.sc2:hover{background:rgba(255,255,255,.075);transform:translateY(-4px);}
+.sc2 .ic{width:42px;height:42px;border-radius:12px;background:rgba(201,162,74,.13);display:flex;align-items:center;justify-content:center;margin-bottom:15px;}
+.sc2 .ic svg{width:19px;height:19px;stroke:var(--gold-500);fill:none;stroke-width:1.6;}
+.sc2 h4{color:#fff;font-size:.94rem;margin-bottom:9px;font-weight:600;}
+.sc2 p{font-size:.81rem;color:rgba(255,255,255,.52);line-height:1.6;}
+/* ===== affiliate ===== */
+.aff-sec{background:linear-gradient(155deg,var(--navy-900) 0%,var(--navy-950) 100%);position:relative;overflow:hidden;color:#fff;}
+.aff-sec::before{content:"";position:absolute;inset:0;background:radial-gradient(740px 420px at 90% 8%,rgba(201,162,74,.14),transparent 60%);}
+.aff-grid{display:grid;grid-template-columns:1fr 1fr;gap:58px;align-items:center;position:relative;z-index:1;}
+@media (max-width:980px){.aff-grid{grid-template-columns:1fr;}}
+.astep{display:grid;grid-template-columns:44px 1fr;gap:16px;padding-bottom:28px;position:relative;}
+.astep:not(:last-child)::before{content:"";position:absolute;left:21px;top:44px;bottom:0;width:2px;background:rgba(255,255,255,.16);}
+.astep .n{width:44px;height:44px;border-radius:50%;background:var(--gold-500);color:#241A02;display:flex;align-items:center;justify-content:center;font-family:var(--f-d);font-weight:700;font-size:1rem;flex-shrink:0;}
+.astep h5{font-size:.98rem;margin-bottom:6px;color:#fff;font-weight:600;}
+.astep p{font-size:.84rem;color:rgba(255,255,255,.6);}
+.aff-visual{border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh-3);border:1px solid rgba(255,255,255,.1);margin-bottom:24px;}
+.aff-visual img{width:100%;display:block;}
+.aff-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:var(--r-xl);padding:32px;backdrop-filter:blur(6px);}
+.aff-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;}
+.aff-stat b{display:block;font-family:var(--f-d);font-size:1.7rem;color:#fff;font-weight:600;}
+.aff-stat span{font-size:.72rem;color:rgba(255,255,255,.58);}
+.aff-card ul{display:flex;flex-direction:column;gap:11px;margin-bottom:24px;}
+.aff-card li{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:rgba(255,255,255,.82);}
+.aff-card li svg{width:16px;height:16px;stroke:var(--gold-500);flex-shrink:0;margin-top:2px;}
+/* ===== pricing ===== */
+.price-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+@media (max-width:1024px){.price-grid{grid-template-columns:1fr 1fr;}}
+@media (max-width:640px){.price-grid{grid-template-columns:1fr;}}
+.pcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-l);overflow:hidden;box-shadow:var(--sh-1);display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease;}
+.pcard:hover{transform:translateY(-6px);box-shadow:var(--sh-2);}
+.pcard.feat{border:2px solid var(--gold-500);box-shadow:var(--sh-gold);}
+.phead{padding:28px 24px;background:var(--navy-950);color:#fff;position:relative;}
+.pcard.feat .phead{background:linear-gradient(135deg,var(--navy-900),var(--navy-950));}
+.pcard.ent .phead{background:#03060F;}
+.phead .star{position:absolute;top:22px;right:22px;color:var(--gold-500);}
+.phead .nm{font-family:var(--f-m);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:11px;}
+.phead .amt{font-family:var(--f-d);font-size:1.8rem;font-weight:600;}
+.phead .per{font-size:.74rem;color:rgba(255,255,255,.46);}
+.pbody{padding:24px;flex:1;display:flex;flex-direction:column;gap:12px;}
+.pbody li{display:flex;gap:8px;align-items:flex-start;font-size:.82rem;color:var(--text-mut);}
+.pbody li svg{width:14px;height:14px;stroke:var(--ok);flex-shrink:0;margin-top:3px;}
+.pbody .ideal{font-size:.73rem;color:var(--text-soft);font-style:italic;margin-top:auto;padding-top:12px;border-top:1px solid var(--line);}
+/* ===== quote ===== */
+.quote{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-xl);padding:42px;box-shadow:var(--sh-2);display:flex;gap:24px;align-items:flex-start;max-width:760px;margin:0 auto;}
+.quote .mk2{font-family:var(--f-d);font-size:3.4rem;color:var(--gold-600);line-height:.8;flex-shrink:0;font-weight:600;}
+.quote p{font-size:1.08rem;font-style:italic;line-height:1.65;font-family:var(--f-d);font-weight:440;color:var(--headc);}
+.quote .who{margin-top:16px;font-size:.83rem;color:var(--text-mut);font-style:normal;font-weight:700;font-family:var(--f-b);}
+/* ===== faq ===== */
+.faq-grid{display:grid;grid-template-columns:1.3fr .8fr;gap:32px;align-items:start;}
+@media (max-width:960px){.faq-grid{grid-template-columns:1fr;}}
+.faq-list{display:flex;flex-direction:column;gap:12px;}
+.faqi{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-m);overflow:hidden;}
+.faqi summary{list-style:none;cursor:pointer;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;font-weight:700;font-size:.93rem;gap:14px;}
+.faqi summary::-webkit-details-marker{display:none;}
+.faqi summary::after{content:"+";font-family:var(--f-m);font-size:1.3rem;color:var(--gold-600);transition:transform .25s ease;flex-shrink:0;}
+.faqi[open] summary::after{transform:rotate(45deg);}
+.faqi .body{padding:0 24px 22px;color:var(--text-mut);font-size:.87rem;}
+.faq-side{background:var(--navy-950);border-radius:var(--r-xl);padding:34px 30px;min-height:320px;display:flex;flex-direction:column;justify-content:flex-end;}
+.faq-side h4{color:#fff;font-size:1.12rem;margin-bottom:11px;font-weight:600;}
+.faq-side p{color:rgba(255,255,255,.54);font-size:.83rem;margin-bottom:20px;}
+.faq-side .acts{display:flex;flex-direction:column;gap:9px;}
+.faq-side .acts a{display:flex;align-items:center;gap:11px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.11);padding:12px 15px;border-radius:var(--r-m);font-size:.79rem;color:#fff;transition:background .2s ease,transform .2s ease;}
+.faq-side .acts a:hover{background:rgba(255,255,255,.12);transform:translateX(3px);}
+.faq-side .acts svg{width:15px;height:15px;stroke:var(--gold-500);fill:none;stroke-width:1.7;flex-shrink:0;}
+/* ===== demo ===== */
+.demo-sec{background:var(--navy-950);position:relative;overflow:hidden;}
+.demo-sec::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 420px at 8% 100%,rgba(201,162,74,.09),transparent 60%);}
+.demo-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:58px;position:relative;z-index:1;}
+@media (max-width:1024px){.demo-grid{grid-template-columns:1fr;}}
+.demo-copy h2{font-size:clamp(2rem,3.2vw,2.6rem);margin-top:16px;margin-bottom:20px;}
+.demo-copy p{color:rgba(255,255,255,.62);font-size:1rem;margin-bottom:28px;}
+.dperks li{display:flex;gap:12px;align-items:flex-start;color:rgba(255,255,255,.86);font-size:.88rem;margin-bottom:14px;}
+.dperks svg{width:17px;height:17px;stroke:var(--gold-500);flex-shrink:0;margin-top:2px;}
+.demo-card{background:#fff;border-radius:var(--r-xl);padding:36px;box-shadow:var(--sh-3);color:#0B1330;}
+.demo-card h3,.demo-card .sub,.demo-card label,.demo-card .fine{color:#0B1330;}
+.demo-card .sub,.demo-card .fine{opacity:.72;}
+.demo-card h3{font-size:1.14rem;margin-bottom:5px;font-weight:600;}
+.demo-card .sub{color:var(--text-mut);font-size:.83rem;margin-bottom:26px;}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media (max-width:560px){.fgrid{grid-template-columns:1fr;}}
+.field{display:flex;flex-direction:column;gap:6px;}
+.field.full{grid-column:1/-1;}
+.field label{font-size:.76rem;font-weight:700;}
+.field label .req{color:#B4402C;}
+.field input,.field select,.field textarea{border:1.5px solid #E4E5F2;border-radius:var(--r-s);padding:12px 14px;font-size:.86rem;color:#0B1330;background:#fff;width:100%;font-family:inherit;}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold-600);box-shadow:0 0 0 3px rgba(201,162,74,.14);}
+.field textarea{resize:vertical;min-height:88px;}
+.field-err{font-size:.74rem;color:#B4402C;min-height:1em;}
+.hp-field{position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;}
+.demo-card .btn{width:100%;margin-top:22px;padding:16px;}
+.demo-card .fine{font-size:.71rem;color:var(--text-soft);margin-top:15px;text-align:center;}
+.falert{background:var(--ok-soft);color:var(--ok);border-radius:var(--r-s);padding:14px 16px;font-size:.84rem;margin-bottom:22px;border:1px solid rgba(27,143,107,.3);display:none;}
+.falert.show{display:block;}
+.falert.err{background:#FBE5E1;color:#B4402C;border-color:rgba(180,64,44,.3);}
+/* ===== footer ===== */
+footer{background:#03060F;color:rgba(255,255,255,.62);padding:66px 0 28px;}
+.fgrid2{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:42px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.08);}
+@media (max-width:900px){.fgrid2{grid-template-columns:1fr 1fr;}}
+@media (max-width:560px){.fgrid2{grid-template-columns:1fr;}}
+.fgrid2 h5{color:#fff;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;font-family:var(--f-m);margin-bottom:17px;font-weight:500;}
+.fgrid2 ul{display:flex;flex-direction:column;gap:11px;}
+.fgrid2 a{font-size:.84rem;color:rgba(255,255,255,.5);}
+.fgrid2 a:hover{color:var(--gold-500);}
+.fbrand .brand{color:#fff;}
+.fbrand p{font-size:.84rem;color:rgba(255,255,255,.46);margin:16px 0 22px;max-width:280px;}
+.fcontact li{display:flex;gap:10px;align-items:flex-start;font-size:.83rem;}
+.fcontact svg{width:16px;height:16px;stroke:var(--gold-500);flex-shrink:0;margin-top:2px;}
+.fbottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px;flex-wrap:wrap;gap:10px;}
+.fbottom span{font-size:.76rem;color:rgba(255,255,255,.35);}
+.wa-float{position:fixed;right:24px;bottom:24px;z-index:80;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(37,211,102,.45);transition:transform .2s ease;}
+.wa-float:hover{transform:scale(1.08);}
+</style>
+</head>
+<body>
+<a class="wa-float" href="https://wa.me/2250105232335" target="_blank" rel="noopener" aria-label="Discuter sur WhatsApp">
+  <svg width="25" height="25" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.4a.6.6 0 0 0 0-.5c-.1-.1-.7-1.6-1-2.2s-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5c0 1.5 1 2.9 1.2 3.1s2 3.2 4.9 4.4a16.3 16.3 0 0 0 1.6.6 3.9 3.9 0 0 0 1.8.1 2.9 2.9 0 0 0 1.9-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.4z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2z" fill="none" stroke="#fff" stroke-width="1.4"/></svg>
+</a>
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand">
+      <span class="mk"><img src="images/1.jpeg" alt="Logo EdOne"></span>
+      EdOne
+    </a>
+    <nav class="nlinks" id="navLinks">
+      <a href="#modules">Fonctionnalités</a>
+      <a href="#bibliotheque" class="nl-compact">Bibliothèque</a>
+      <a href="#dashboards" class="nl-compact">Tableaux de bord</a>
+      <a href="#paiements">Paiements</a>
+      <a href="#couverture">Couverture</a>
+      <a href="#parrainage">Devenir partenaire</a>
+      <a href="#tarifs">Tarifs</a>
+      <div class="mnav-actions">
+        <a href="login.html" class="btn btn-ghost">Connexion</a>
+        <a href="#demo" class="btn btn-gold">Demander une démo</a>
+      </div>
+      <div class="mnav-meta">
+        <span>EdOne · Octogone Technologies</span>
+        <span>+225 01 05 23 23 35</span>
+      </div>
+    </nav>
+    <div class="nactions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
+        <svg class="i-moon" viewBox="0 0 24 24"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 3v1M12 20v1M4.2 4.2l.7.7M19.1 19.1l.7.7M3 12h1M20 12h1M4.2 19.8l.7-.7M19.1 4.9l.7-.7"/></svg>
+      </button>
+      <a href="login.html" class="btn btn-line btn-sm">Connexion</a>
+      <a href="#demo" class="btn btn-gold btn-sm">Demander une démo</a>
+      <button class="ntoggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="rv-l in">
+      <span class="eyebrow">Système d'exploitation scolaire · Afrique &amp; Europe</span>
+      <h1>La direction, la scolarité et les <em>paiements</em> de votre établissement, sous un seul <span class="gld">sceau</span>.</h1>
+      <p class="lead">EdOne réunit gestion académique, inscriptions, paiements Mobile Money, bulletins, diplômes vérifiables et bibliothèque de 79 000+ ouvrages dans une plateforme unique, pensée pour les directions exigeantes.</p>
+      <div class="hero-cta">
+        <a href="#demo" class="btn btn-gold">Demander une démo gratuite</a>
+        <a href="#modules" class="btn btn-line">Explorer la plateforme</a>
+      </div>
+      <div class="hero-facts">
+        <div class="hfact"><b>25</b><span>Pays couverts</span></div>
+        <div class="hfact"><b>15+</b><span>Devises supportées</span></div>
+        <div class="hfact"><b>79 000+</b><span>Ouvrages accessibles</span></div>
+        <div class="hfact"><b>2%+100F</b><span>Frais par paiement</span></div>
+      </div>
+    </div>
+    <div class="rv-r in hero-visual">
+      <div class="seal">
+        <svg viewBox="0 0 120 120" width="120" height="120"><path id="sealCirc" d="M60,10 a50,50 0 1,1 -0.1,0" fill="none"/><text font-family="JetBrains Mono, monospace" font-size="8.6" letter-spacing="2.4" fill="var(--gold-500)"><textPath href="#sealCirc" startOffset="0%">ÉTABLI EN AFRIQUE · DOCUMENTS VÉRIFIÉS · EDONE ·</textPath></text></svg>
+        <div class="seal-core"><img src="images/1.jpeg" alt="Sceau EdOne"></div>
+      </div>
+      <div class="hv-float b"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span><div><b>Scolarité réglée</b><span>Orange Money · 75 000 F</span></div></div>
+      <div class="hv-card">
+        <div class="hv-top"><span class="tag">Vérification publique</span><span class="url">edone.my</span></div>
+        <div class="hv-doc">
+          <div class="row1">
+            <div><b>Diplôme de Licence</b><span>KOUAME Jean-Marie · Session 2026</span></div>
+            <div class="verif"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Authentique</div>
+          </div>
+          <div class="code">CODE&nbsp;EDN-48213-CI · délivré par l'établissement</div>
+        </div>
+        <div class="hv-stats">
+          <div class="hv-stat"><b>1 284</b><span>Étudiants actifs</span></div>
+          <div class="hv-stat"><b>96%</b><span>Recouvrement</span></div>
+          <div class="hv-stat"><b>42</b><span>Enseignants</span></div>
+        </div>
+        <div class="hv-row"><div class="l"><span class="ic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="2"><path d="M9 12h6m-6 4h6"/></svg></span><div class="txt"><b>Quiz Mathématiques</b><span>3ème B · 38 soumissions corrigées</span></div></div><span class="amt">Clôturé</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="ribbon">
+  <div class="marq" id="marquee">
+    <span class="chip"><i style="background:#FF6600"></i> Orange Money</span>
+    <span class="chip"><i style="background:#FFCC00"></i> MTN Mobile Money</span>
+    <span class="chip"><i style="background:#3B9EF5"></i> Moov Money</span>
+    <span class="chip"><i style="background:#1DC8CD"></i> Wave</span>
+    <span class="chip"><i style="background:#EEEEEE"></i> Visa</span>
+    <span class="chip"><i style="background:#EB001B"></i> Mastercard</span>
+    <span class="chip"><i style="background:#C9A24A"></i> 25 pays actifs</span>
+    <span class="chip"><i style="background:#3A61FF"></i> 79 000+ livres</span>
+    <span class="chip"><i style="background:#1B8F6B"></i> Conforme RGPD</span>
+    <span class="chip"><i style="background:#C9A24A"></i> Programme partenaires</span>
+  </div>
+</div>
+<!-- ============ POURQUOI ============ -->
+<section id="pourquoi">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Pourquoi EdOne</span>
+      <h2>La fin du carnet papier, des tableurs et des outils qui ne se parlent pas</h2>
+      <p>EdOne centralise chaque donnée de votre établissement, du dossier d'inscription au diplôme final, avec des paiements directement intégrés à vos flux quotidiens.</p>
+    </div>
+    <div class="compare rv" style="margin-bottom:60px;">
+      <div class="ccard bad">
+        <h4>Avant EdOne</h4>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18L18 6M6 6l12 12"/></svg>Gestion papier ou Excel non sécurisée</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18L18 6M6 6l12 12"/></svg>Bulletins et PV produits en plusieurs jours</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18L18 6M6 6l12 12"/></svg>Suivi financier opaque, impayés non maîtrisés</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18L18 6M6 6l12 12"/></svg>Diplômes impossibles à vérifier en ligne</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18L18 6M6 6l12 12"/></svg>Aucun accès mobile pour parents ou enseignants</li>
+        </ul>
+      </div>
+      <div class="ccard good">
+        <h4>Avec EdOne</h4>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg>Toutes les données centralisées, en temps réel</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg>Bulletins, PV et diplômes générés en un clic</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg>Paiement Mobile Money, carte, wallet établissement</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg>Documents officiels vérifiables publiquement</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg>Applications web et mobiles pour chaque profil</li>
+        </ul>
+      </div>
+    </div>
+    <div class="stats4 rv">
+      <div class="scard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg></div><div class="num">40<em>+</em></div><div class="lbl">Modules &amp; fonctionnalités métiers</div></div>
+      <div class="scard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><circle cx="9" cy="7" r="3.2"/><path d="M2 21v-1a6 6 0 0112 0v1"/></svg></div><div class="num">30<em>+</em></div><div class="lbl">Profils &amp; rôles utilisateurs</div></div>
+      <div class="scard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18"/></svg></div><div class="num">79 000<em>+</em></div><div class="lbl">Ouvrages en bibliothèque</div></div>
+      <div class="scard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18"/></svg></div><div class="num">25</div><div class="lbl">Pays actifs en Afrique &amp; Europe</div></div>
+    </div>
+  </div>
+</section>
+<!-- ============ COUVERTURE / CARTE AFRIQUE ============ -->
+<section class="alt-sec" id="couverture">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Couverture géographique</span>
+      <h2>Un seul rail de paiement, 25 pays connectés</h2>
+      <p>Où que se trouve votre établissement  ou votre client si vous êtes partenaire EdOne  la même infrastructure de paiement et la même plateforme s'y adaptent nativement.</p>
+    </div>
+    <div class="cov-grid">
+      <div class="rv-l map-wrap">
+        <div id="africaMap"></div>
+        <div id="mapFlags" class="map-flags"></div>
+      </div>
+      <div class="rv-r">
+        <div class="stats4" style="grid-template-columns:1fr 1fr;margin-bottom:28px;">
+          <div class="scard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/></svg></div><div class="num">25</div><div class="lbl">Pays couverts</div></div>
+          <div class="scard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div class="num">15<em>+</em></div><div class="lbl">Devises supportées</div></div>
+        </div>
+        <p style="color:var(--text-mut);font-size:.94rem;margin-bottom:20px;">Nos rails de paiement Mobile Money et carte bancaire sont déployés dans l'ensemble de la zone francophone, anglophone et lusophone d'Afrique subsaharienne, avec un hub opérationnel basé à Abidjan.</p>
+        <div class="map-legend" id="countryLegend"></div>
+        <div class="cur-strip">
+          <b>XOF</b><b>XAF</b><b>GHS</b><b>NGN</b><b>KES</b><b>TZS</b><b>UGX</b><b>RWF</b><b>ZMW</b><b>MWK</b><b>MZN</b><b>SLL</b><b>ETB</b><b>LSL</b><b>EUR</b>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ MODULES EXHAUSTIF ============ -->
+<section id="modules">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow">Fonctionnalités</span>
+      <h2>Chaque brique métier de votre établissement, réunie</h2>
+      <p>De l'inscription d'un étudiant à la remise de son diplôme, chaque étape de la vie scolaire est couverte  rien n'est laissé de côté.</p>
+    </div>
+    <div class="mod-cat rv">
+      <div class="mod-cat-head"><span class="tag">Pédagogie</span><h3>Académique &amp; vie de classe</h3></div>
+      <div class="mgrid">
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><path d="M3 10l9-5 9 5-9 5-9-5z"/><path d="M7 12.5V17c0 1.1 2.2 2 5 2s5-.9 5-2v-4.5"/></svg></div><h4>Gestion académique</h4><p>Années académiques, campus, salles, filières, niveaux, classes et maquettes pédagogiques.</p></div>
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9h4M7 13h7"/></svg></div><h4>Inscription &amp; réinscription</h4><p>Dossier électronique complet, cartes étudiants, kits &amp; accessoires, statistiques en direct.</p></div>
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 3v3M16 3v3"/></svg></div><h4>Emploi du temps</h4><p>Planification par classe, émargements numériques, export PDF/Excel.</p></div>
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="8" r="3"/><path d="M5 21v-1a7 7 0 0114 0v1"/></svg></div><h4>Espace enseignant</h4><p>Contrats, volume horaire, travaux dirigés, dépôt de supports, RIB, acomptes.</p></div>
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div><h4>Quiz sécurisés anti-triche</h4><p>QCM, choix multiples, réponses libres, tentatives limitées, détection de changement d'onglet.</p></div>
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div><h4>Devoirs individuels</h4><p>Dépôt de fichier, consigne jointe, correction et appréciation par l'enseignant.</p></div>
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><circle cx="9" cy="7" r="3.2"/><path d="M2 21v-1a6 6 0 0112 0v1"/><circle cx="18" cy="8.5" r="2.5"/><path d="M15 21v-1a5 5 0 016 0"/></svg></div><h4>Devoirs de groupe</h4><p>Constitution des groupes, chef de groupe désigné, soumission et notation collective.</p></div>
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><path d="M9 3h6l1 4H8l1-4z"/><path d="M4 21l3-10h10l3 10"/></svg></div><h4>Évaluations &amp; notation</h4><p>Import de notes par Excel, coefficients configurables, gestion des réclamations.</p></div>
+      </div>
+    </div>
+    <div class="mod-cat rv">
+      <div class="mod-cat-head"><span class="tag">Documents</span><h3>Documents &amp; certification officielle</h3></div>
+      <div class="mgrid">
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div><h4>Bulletins</h4><p>Génération automatique par semestre, moyennes pondérées, rangs et appréciations.</p></div>
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 9h8M8 13h5"/></svg></div><h4>Procès-verbaux</h4><p>PV de semestre et annuel, calcul des crédits, décisions de passage automatisées.</p></div>
+        <div class="mcard gold"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="8" r="6"/><path d="M9 14l-2 7 5-3 5 3-2-7"/></svg></div><h4>Diplômes &amp; certificats</h4><p>Sessions de délivrance, génération en masse, code de vérification publique.</p></div>
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V4H6.5A2.5 2.5 0 004 6.5v13z"/></svg></div><h4>Attestations de scolarité</h4><p>Certificats de scolarité, de réussite et d'admission, vérifiables via lien public.</p></div>
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20M6 15h4"/></svg></div><h4>Reçus de paiement</h4><p>Reçu automatique à chaque paiement, envoyé par SMS et email, historique complet.</p></div>
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><path d="M12 3l7 4v5c0 5-3 8-7 9-4-1-7-4-7-9V7l7-4z"/></svg></div><h4>Carte étudiant</h4><p>Carte numérique et imprimable avec photo, statut de remise suivi par la direction.</p></div>
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div><h4>CV automatique</h4><p>Généré à partir du parcours de l'étudiant, personnalisable et partageable via un lien.</p></div>
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h4>Vérification en ligne</h4><p>Chaque document officiel est vérifiable publiquement via son code unique.</p></div>
+      </div>
+    </div>
+    <div class="mod-cat rv">
+      <div class="mod-cat-head"><span class="tag">Finance</span><h3>Finance, wallet &amp; ressources</h3></div>
+      <div class="mgrid">
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20M6 15h4"/></svg></div><h4>Comptabilité &amp; scolarité</h4><p>Frais de scolarité, plans de paiement, historique complet, statuts de solde.</p></div>
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><path d="M20 8.5c0-2.5-2-4.5-4.5-4.5-1.5 0-2.8.7-3.5 1.9C11.3 4.7 10 4 8.5 4 6 4 4 6 4 8.5 4 14 12 19 12 19s8-5 8-10.5z"/></svg></div><h4>Wallet établissement</h4><p>Solde en temps réel, demandes de reversement, historique de toutes les transactions.</p></div>
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20"/></svg></div><h4>Abonnement &amp; facturation</h4><p>Facturation SaaS mensuelle automatisée, prélèvement wallet ou paiement en ligne.</p></div>
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h4>Réconciliation automatique</h4><p>Rapprochement automatique des transactions et détection d'écarts.</p></div>
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg></div><h4>Stock &amp; moyens généraux</h4><p>Produits, catégories, fournisseurs, commandes, remise de kits &amp; accessoires.</p></div>
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><path d="M17 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/></svg></div><h4>Ressources humaines</h4><p>Fiches personnel administratif, services, contrats et suivi RH.</p></div>
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><path d="M20 8.5c0-2.5-2-4.5-4.5-4.5-1.5 0-2.8.7-3.5 1.9"/><circle cx="12" cy="12" r="9"/></svg></div><h4>Demandes d'acompte</h4><p>Enseignants et personnel demandent un acompte en ligne, validé par la comptabilité.</p></div>
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V4H6.5A2.5 2.5 0 004 6.5v13z"/></svg></div><h4>Infirmerie</h4><p>Dossiers médicaux, antécédents, consultations, arrêts de travail.</p></div>
+      </div>
+    </div>
+    <div class="mod-cat rv">
+      <div class="mod-cat-head"><span class="tag">Communication</span><h3>Communication, sécurité &amp; pilotage</h3></div>
+      <div class="mgrid">
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><path d="M17 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2"/><circle cx="10" cy="7" r="4"/></svg></div><h4>Espace parent sécurisé</h4><p>Accès par matricule et contact, suivi complet du cursus, absences et paiements.</p></div>
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517"/></svg></div><h4>Campagnes SMS &amp; email</h4><p>Ciblées par classe, filière ou niveau  relances de paiement, notes, messages libres.</p></div>
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="8" r="3"/><path d="M5 21v-1a7 7 0 0114 0v1"/></svg></div><h4>Comptes &amp; permissions</h4><p>Rôles et droits d'accès finement configurables pour chaque profil.</p></div>
+        <div class="mcard gold"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><path d="M17 16a4 4 0 000-8 5 5 0 00-9.6-1.5A4.5 4.5 0 007 15h10z"/></svg></div><h4>Google Workspace intégré</h4><p>Email professionnel automatique et accès à Drive, Docs, Sheets et Meet.</p></div>
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><rect x="3" y="7" width="15" height="10" rx="2"/><path d="M18 10h2l2 3v4h-4"/><circle cx="7.5" cy="18" r="1.5"/><circle cx="17.5" cy="18" r="1.5"/></svg></div><h4>Transport scolaire</h4><p>Cars, trajets, abonnements étudiants, paiement de l'abonnement mensuel en ligne.</p></div>
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div><h4>Sécurité &amp; double authentification</h4><p>2FA pour les comptes sensibles, isolation stricte des données par établissement.</p></div>
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18"/></svg></div><h4>Dashboard 360°</h4><p>Vue globale direction : effectifs, recouvrement, RH, académique en temps réel.</p></div>
+        <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V4H6.5A2.5 2.5 0 004 6.5v13z"/></svg></div><h4>Bibliothèque numérique</h4><p>79 000+ ouvrages, documents établissement et partages étudiants validés.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ DOCUMENTS WALL ============ -->
+<section class="alt-sec">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow">Sortie documentaire</span>
+      <h2>Chaque document généré, archivé et vérifiable</h2>
+    </div>
+    <div class="doc-grid">
+      <div class="dcard rv"><svg viewBox="0 0 52 64"><rect x="2" y="2" width="48" height="60" rx="4" fill="var(--surface)" stroke="var(--navy-900)" stroke-width="2"/><rect x="10" y="12" width="32" height="4" rx="2" fill="var(--headc)"/><rect x="10" y="22" width="24" height="3" fill="var(--line)"/><rect x="10" y="29" width="24" height="3" fill="var(--line)"/><circle cx="36" cy="50" r="8" fill="none" stroke="var(--gold-600)" stroke-width="1.4" stroke-dasharray="2 2"/></svg><h5>Bulletin</h5><p>PDF par semestre</p></div>
+      <div class="dcard rv"><svg viewBox="0 0 52 64"><rect x="2" y="2" width="48" height="60" rx="4" fill="var(--surface)" stroke="var(--navy-900)" stroke-width="2"/><rect x="10" y="10" width="32" height="4" rx="2" fill="var(--headc)"/><rect x="10" y="20" width="32" height="26" fill="var(--surface-2)"/><rect x="14" y="24" width="24" height="2.5" fill="var(--line)"/><rect x="14" y="30" width="24" height="2.5" fill="var(--line)"/></svg><h5>Procès-verbal</h5><p>Semestre &amp; annuel</p></div>
+      <div class="dcard rv"><svg viewBox="0 0 52 64"><rect x="2" y="2" width="48" height="60" rx="4" fill="var(--surface)" stroke="var(--gold-600)" stroke-width="2"/><circle cx="26" cy="24" r="12" fill="none" stroke="var(--gold-600)" stroke-width="2"/><path d="M20 34l-3 12 9-5 9 5-3-12" fill="none" stroke="var(--gold-600)" stroke-width="1.6"/></svg><h5>Diplôme</h5><p>Vérifiable en ligne</p></div>
+      <div class="dcard rv"><svg viewBox="0 0 52 64"><rect x="2" y="2" width="48" height="60" rx="4" fill="var(--surface)" stroke="var(--navy-900)" stroke-width="2"/><rect x="10" y="12" width="32" height="4" rx="2" fill="var(--headc)"/><path d="M14 30l6 6 14-14" fill="none" stroke="var(--ok)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><h5>Attestation</h5><p>Scolarité &amp; réussite</p></div>
+      <div class="dcard rv"><svg viewBox="0 0 52 64"><rect x="6" y="4" width="40" height="56" rx="4" fill="var(--surface)" stroke="var(--navy-900)" stroke-width="2"/><rect x="14" y="14" width="24" height="4" fill="var(--line)"/><rect x="14" y="40" width="24" height="10" rx="2" fill="var(--gold-soft)"/></svg><h5>Reçu de paiement</h5><p>Instantané, SMS + email</p></div>
+      <div class="dcard rv"><svg viewBox="0 0 52 64"><rect x="4" y="10" width="44" height="30" rx="5" fill="var(--navy-950)"/><circle cx="16" cy="25" r="6" fill="#F2C9A0"/><rect x="26" y="20" width="18" height="3" fill="rgba(255,255,255,.6)"/></svg><h5>Carte étudiant</h5><p>Numérique &amp; imprimable</p></div>
+      <div class="dcard rv"><svg viewBox="0 0 52 64"><rect x="2" y="2" width="48" height="60" rx="4" fill="var(--surface)" stroke="var(--navy-900)" stroke-width="2"/><circle cx="26" cy="18" r="7" fill="var(--blue-soft)" stroke="var(--blue-600)"/><rect x="12" y="30" width="28" height="3" fill="var(--line)"/><rect x="12" y="36" width="28" height="3" fill="var(--line)"/></svg><h5>CV automatique</h5><p>Généré &amp; partageable</p></div>
+      <div class="dcard rv"><svg viewBox="0 0 52 64"><rect x="2" y="2" width="48" height="60" rx="4" fill="var(--surface)" stroke="var(--navy-900)" stroke-width="2"/><rect x="10" y="10" width="32" height="8" rx="2" fill="var(--navy-900)"/><rect x="10" y="24" width="14" height="14" fill="var(--surface-2)"/><rect x="28" y="24" width="14" height="14" fill="var(--surface-2)"/></svg><h5>Fiche de contrat</h5><p>Enseignant &amp; personnel</p></div>
+    </div>
+  </div>
+</section>
+<!-- ============ GALERIE VISUELS EDONE ============ -->
+<section id="galerie">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Sur le terrain</span>
+      <h2>EdOne, tel qu'il est présenté aux établissements</h2>
+      <p>Nos supports officiels de communication et de formation partenaires  utilisés lors des démonstrations et déploiements en établissement.</p>
+    </div>
+    <div class="carousel rv" id="brandCarousel">
+      <div class="car-track" id="carTrack">
+        <div class="car-slide"><img src="images/5.jpeg" alt="Modernisez la gestion de votre établissement  EdOne"><div class="car-cap"><div><span class="n">Support 01 / 06</span><span class="t">Présentation établissement</span></div></div></div>
+        <div class="car-slide"><img src="images/9.jpeg" alt="Transformez votre établissement avec EdOne"><div class="car-cap"><div><span class="n">Support 02 / 06</span><span class="t">Transformer l'établissement</span></div></div></div>
+        <div class="car-slide"><img src="images/3.jpeg" alt="Diriger un établissement, c'est voir, pas deviner"><div class="car-cap"><div><span class="n">Support 03 / 06</span><span class="t">Voir, pas deviner</span></div></div></div>
+        <div class="car-slide"><img src="images/6.jpeg" alt="Devenez intégrateur EdOne"><div class="car-cap"><div><span class="n">Support 04 / 06</span><span class="t">Programme intégrateurs</span></div></div></div>
+        <div class="car-slide"><img src="images/10.jpeg" alt="La solution intelligente EdOne"><div class="car-cap"><div><span class="n">Support 05 / 06</span><span class="t">La solution intelligente</span></div></div></div>
+        <div class="car-slide"><img src="images/4.jpeg" alt="Le futur de l'éducation est piloté par le système"><div class="car-cap"><div><span class="n">Support 06 / 06</span><span class="t">Une infrastructure numérique intégrée</span></div></div></div>
+      </div>
+      <button class="car-nav prev" id="carPrev" aria-label="Visuel précédent"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button class="car-nav next" id="carNext" aria-label="Visuel suivant"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+    <div class="car-dots" id="carDots"></div>
+  </div>
+</section>
+<!-- ============ BIBLIOTHEQUE ============ -->
+<section class="lib-sec" id="bibliotheque">
+  <div class="wrap lib-grid">
+    <div class="rv-l on-dark">
+      <span class="eyebrow">Bibliothèque numérique</span>
+      <div class="lib-num" style="margin-top:16px;">79 000<em>+</em></div>
+      <p class="lib-sub">Chaque établissement et ses étudiants accèdent gratuitement à une bibliothèque privée de plus de 79 000 ouvrages du domaine public, enrichie par les documents propres de l'école et les partages validés entre étudiants  le tout en lecture directe et sécurisée, sans téléchargement libre.</p>
+      <div class="lib-tags">
+        <span>Catalogue du domaine public</span>
+        <span>Documents de l'établissement</span>
+        <span>Partages entre étudiants</span>
+        <span>Favoris personnels</span>
+        <span>Validation par l'administration</span>
+        <span>Lecture intégrée sécurisée</span>
+      </div>
+      <a href="#demo" class="btn btn-gold">Explorer la bibliothèque avec une démo</a>
+    </div>
+    <div class="rv-r shelf" id="bookshelf"></div>
+  </div>
+</section>
+<!-- ============ DASHBOARDS ============ -->
+<section id="dashboards">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow">Tableaux de bord web &amp; mobile</span>
+      <h2>Le pilotage de votre école, en un coup d'œil</h2>
+      <p>Des tableaux de bord pensés pour la direction, les enseignants, les étudiants et les parents  sur ordinateur comme sur mobile.</p>
+    </div>
+    <div class="dash-tabs rv">
+      <button class="dtab active" data-target="dweb">Dashboard direction (web)</button>
+      <button class="dtab" data-target="dmob">Applications mobiles</button>
+    </div>
+    <div class="dash-panel active rv" id="dweb">
+      <div class="dweb">
+        <div class="dweb-side">
+          <div class="di active"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18"/></svg>Tableau de bord</div>
+          <div class="di"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="3.2"/><path d="M2 21v-1a6 6 0 0112 0v1"/></svg>Étudiants</div>
+          <div class="di"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="13" rx="2"/></svg>Scolarité</div>
+          <div class="di"><svg viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>Évaluations</div>
+          <div class="di"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M9 14l-2 7 5-3 5 3-2-7"/></svg>Diplômes</div>
+          <div class="di"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V4H6.5A2.5 2.5 0 004 6.5v13z"/></svg>Bibliothèque</div>
+          <div class="di"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2"/><circle cx="10" cy="7" r="4"/></svg>Personnel</div>
+        </div>
+        <div class="dweb-main">
+          <div class="dweb-cards">
+            <div class="dweb-card"><b>1 284</b><span>Étudiants inscrits</span></div>
+            <div class="dweb-card"><b>96%</b><span>Taux de recouvrement</span></div>
+            <div class="dweb-card"><b>18.4M</b><span>FCFA encaissés (mois)</span></div>
+            <div class="dweb-card"><b>42</b><span>Enseignants actifs</span></div>
+          </div>
+          <div class="dweb-charts">
+            <div class="chart-box">
+              <div class="t">Évolution des inscriptions &amp; paiements</div>
+              <svg class="line-chart" viewBox="0 0 300 110" preserveAspectRatio="none">
+                <polyline points="0,90 30,78 60,82 90,60 120,64 150,42 180,48 210,30 240,34 270,16 300,20" fill="none" stroke="#C9A24A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <polyline points="0,100 30,96 60,92 90,88 120,80 150,76 180,66 210,60 240,50 270,44 300,36" fill="none" stroke="#3A61FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4"/>
+              </svg>
+            </div>
+            <div class="chart-box">
+              <div class="t">Répartition par cycle</div>
+              <div class="donut-wrap">
+                <div class="donut" style="background:conic-gradient(#3A61FF 0% 38%, #C9A24A 38% 66%, #1B8F6B 66% 85%, #E0574A 85% 100%);"></div>
+                <div class="donut-legend">
+                  <div><i style="background:#3A61FF;"></i>Universitaire  38%</div>
+                  <div><i style="background:#C9A24A;"></i>Pro. jour  28%</div>
+                  <div><i style="background:#1B8F6B;"></i>Pro. soir  19%</div>
+                  <div><i style="background:#E0574A;"></i>En ligne  15%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chart-box">
+            <div class="t">Encaissements mensuels (FCFA)</div>
+            <div class="hv-bars" id="dashBars" style="display:flex;align-items:flex-end;gap:5px;height:70px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dash-panel rv" id="dmob">
+      <div class="dmobile">
+        <div class="mphone">
+          <div class="mscreen">
+            <div class="mh"><span class="sq"></span><span>Espace Parent</span></div>
+            <div class="mcardx"><strong>Scolarité réglée</strong><span>75 000 FCFA  Kouassi J-Marie</span></div>
+            <div class="mcardx i"><strong>Absence signalée</strong><span>08h15  Cours de mathématiques</span></div>
+            <div class="mcardx w"><strong>Échéance à venir</strong><span>Trimestre 2 dans 7 jours</span></div>
+            <div class="mcardx"><strong>Bulletin disponible</strong><span>2ᵉ trimestre  3ème B</span></div>
+          </div>
+        </div>
+        <div class="mphone">
+          <div class="mscreen">
+            <div class="mh"><span class="sq"></span><span>Espace Étudiant</span></div>
+            <div class="mcardx"><strong>Note publiée</strong><span>Mathématiques  17.2/20</span></div>
+            <div class="mcardx i"><strong>Quiz sécurisé</strong><span>Physique-Chimie  avant 18h</span></div>
+            <div class="mcardx"><strong>Livre ajouté aux favoris</strong><span>Bibliothèque  79 000+ titres</span></div>
+            <div class="mcardx w"><strong>Paiement en attente</strong><span>Reste à payer : 15 000 FCFA</span></div>
+          </div>
+        </div>
+        <div class="mphone">
+          <div class="mscreen">
+            <div class="mh"><span class="sq"></span><span>Espace Enseignant</span></div>
+            <div class="mcardx"><strong>Devoir à corriger</strong><span>28 soumissions  Terminale D</span></div>
+            <div class="mcardx i"><strong>Contrat en cours</strong><span>Volume horaire : 62%</span></div>
+            <div class="mcardx w"><strong>Demande d'acompte</strong><span>En attente de validation</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ PAIEMENTS ============ -->
+<section class="alt-sec" id="paiements">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Paiements en ligne</span>
+      <h2>La scolarité réglée en un clic, où que soit le parent</h2>
+      <p>EdOne connecte nativement Mobile Money, cartes bancaires et virements dans 25 pays, avec des frais fixés simplement à <strong>2% du montant + 100 FCFA</strong> par transaction  sans coût caché.</p>
+    </div>
+    <div class="pay-grid">
+      <div class="rv-l">
+        <div class="paymethods">
+          <div class="pm"><span class="b" style="background:#FF6600;">OM</span><div><div class="n">Orange Money</div><div class="s">Paiement instantané</div></div></div>
+          <div class="pm"><span class="b" style="background:#FFCC00;color:#111;">MTN</span><div><div class="n">MTN Mobile Money</div><div class="s">Paiement instantané</div></div></div>
+          <div class="pm"><span class="b" style="background:#0066CC;">MV</span><div><div class="n">Moov Money</div><div class="s">Paiement instantané</div></div></div>
+          <div class="pm"><span class="b" style="background:#1DC8CD;">W</span><div><div class="n">Wave</div><div class="s">Paiement instantané</div></div></div>
+          <div class="pm"><span class="b" style="background:#1A1F71;">V</span><div><div class="n">Visa</div><div class="s">Carte internationale</div></div></div>
+          <div class="pm"><span class="b" style="background:#EB001B;">MC</span><div><div class="n">Mastercard</div><div class="s">Carte internationale</div></div></div>
+        </div>
+        <ul style="display:flex;flex-direction:column;gap:12px;margin-top:26px;">
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:.88rem;color:var(--text-mut);"><svg style="width:16px;height:16px;stroke:#1B8F6B;flex-shrink:0;margin-top:3px;" fill="none" viewBox="0 0 24 24" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg>Wallet établissement avec demandes de reversement</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:.88rem;color:var(--text-mut);"><svg style="width:16px;height:16px;stroke:#1B8F6B;flex-shrink:0;margin-top:3px;" fill="none" viewBox="0 0 24 24" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg>Réconciliation automatique de chaque transaction</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:.88rem;color:var(--text-mut);"><svg style="width:16px;height:16px;stroke:#1B8F6B;flex-shrink:0;margin-top:3px;" fill="none" viewBox="0 0 24 24" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg>Reçu automatique par SMS et email à chaque règlement</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:.88rem;color:var(--text-mut);"><svg style="width:16px;height:16px;stroke:#1B8F6B;flex-shrink:0;margin-top:3px;" fill="none" viewBox="0 0 24 24" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg>Paiement possible pour la scolarité, le transport, la carte et les kits</li>
+        </ul>
+      </div>
+      <div class="calc rv-r">
+        <h4>Simulateur de frais</h4>
+        <p class="s">Frais fixés à 2% du montant + 100 FCFA fixe.</p>
+        <div class="calc-row">
+          <input type="range" id="feeRange" min="2000" max="500000" step="1000" value="75000">
+          <div class="amt" id="feeAmount">75 000 F</div>
+        </div>
+        <div class="calc-lines">
+          <div class="ln"><span>Montant de la scolarité</span><span class="v" id="lineBase">75 000 FCFA</span></div>
+          <div class="ln"><span>Frais (2% + 100 FCFA)</span><span class="v" id="lineFee">1 600 FCFA</span></div>
+          <div class="ln total"><span>Total débité au parent</span><span class="v" id="lineTotal">76 600 FCFA</span></div>
+        </div>
+        <p class="fine">Montant minimum par transaction : 2 000 FCFA. Frais identiques quel que soit le moyen de paiement utilisé.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ ROLES ============ -->
+<section>
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow">Un espace pour chaque profil</span>
+      <h2>Direction, enseignants, étudiants, parents  tous connectés</h2>
+    </div>
+    <div class="role-grid">
+      <div class="rcard rv"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.7"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div><h5>Direction &amp; administration</h5><ul><li>Multi-établissements &amp; campus</li><li>Permissions granulaires</li><li>Diplômes, PV &amp; attestations</li><li>Wallet &amp; réconciliation</li><li>Campagnes SMS &amp; email</li><li>Dashboard 360°</li></ul></div>
+      <div class="rcard rv"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.7"><circle cx="12" cy="8" r="3"/><path d="M5 21v-1a7 7 0 0114 0v1"/></svg></div><h5>Enseignants</h5><ul><li>Contrats &amp; volume horaire</li><li>Import de notes Excel</li><li>Quiz &amp; devoirs sécurisés</li><li>Configuration des coefficients</li><li>Demandes d'acompte</li><li>RIB &amp; fiches de présence</li></ul></div>
+      <div class="rcard rv"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.7"><path d="M12 3l7 4v5c0 5-3 8-7 9-4-1-7-4-7-9V7l7-4z"/></svg></div><h5>Étudiants</h5><ul><li>Maquette pédagogique complète</li><li>Quiz, devoirs, notes &amp; bulletins</li><li>Paiement Mobile Money / carte</li><li>CV automatique partageable</li><li>Bibliothèque de 79 000+ ouvrages</li><li>Email pro Google Workspace</li></ul></div>
+      <div class="rcard rv"><div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.7"><path d="M17 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2"/><circle cx="10" cy="7" r="4"/></svg></div><h5>Parents</h5><ul><li>Accès simple par matricule</li><li>Suivi cursus, notes &amp; bulletins</li><li>Alertes d'absences</li><li>Statut &amp; paiement de la scolarité</li><li>Frais divers réglables en ligne</li><li>Notifications SMS/Email automatiques</li></ul></div>
+    </div>
+  </div>
+</section>
+<!-- ============ SECURITE ============ -->
+<section class="dark-sec on-dark">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Sécurité &amp; conformité</span>
+      <h2>Vos données scolaires méritent une protection de niveau entreprise</h2>
+      <p>Chaque établissement évolue dans un environnement cloisonné : ses données ne sont jamais visibles par un autre établissement, même sur la même infrastructure.</p>
+    </div>
+    <div class="sec-grid">
+      <div class="sc2 rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div><h4>Isolation multi-établissement</h4><p>Chaque requête est filtrée par établissement : aucune fuite possible entre écoles.</p></div>
+      <div class="sc2 rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l7 4v5c0 5-3 9-7 11-4-2-7-6-7-11V6l7-4z"/></svg></div><h4>Chiffrement &amp; HTTPS</h4><p>Mots de passe hashés, connexions chiffrées de bout en bout.</p></div>
+      <div class="sc2 rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4"/></svg></div><h4>Double authentification (2FA)</h4><p>Vérification en deux étapes pour les comptes super administrateurs.</p></div>
+      <div class="sc2 rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 4v5h.6M20 20v-5h-.6"/></svg></div><h4>Sauvegardes automatisées</h4><p>Sauvegardes régulières avec procédure de restauration testée.</p></div>
+      <div class="sc2 rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h4>Conformité RGPD</h4><p>Traitement et conservation des données conformes aux exigences européennes.</p></div>
+      <div class="sc2 rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/></svg></div><h4>Traçabilité complète</h4><p>Chaque paiement et modification de note est horodaté et attribué à son auteur.</p></div>
+    </div>
+  </div>
+</section>
+<!-- ============ PARRAINAGE / AFFILIATION ============ -->
+<section class="aff-sec" id="parrainage">
+  <div class="wrap aff-grid">
+    <div class="rv-l">
+      <span style="display:inline-flex;align-items:center;gap:10px;font-family:var(--f-m);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--gold-500);">Programme partenaires</span>
+      <h2 style="color:#fff;margin-top:16px;font-size:clamp(2rem,3.2vw,2.6rem);">Devenez fournisseur officiel de la solution EdOne</h2>
+      <p style="color:rgba(255,255,255,.7);font-size:1rem;margin:18px 0 8px;max-width:480px;">Obtenez votre licence EdOne, gérez votre propre portefeuille d'écoles clientes et percevez une commission récurrente sur chaque abonnement  avec votre propre tableau de bord partenaire.</p>
+      <div class="astep" style="margin-top:32px;"><div class="n">1</div><div><h5>Devenez partenaire</h5><p>Rejoignez le programme et signez votre accord de distribution.</p></div></div>
+      <div class="astep"><div class="n">2</div><div><h5>Recevez votre licence marque blanche</h5><p>Déployez EdOne aux couleurs de votre propre structure commerciale.</p></div></div>
+      <div class="astep"><div class="n">3</div><div><h5>Onboardez vos écoles clientes</h5><p>Installez, formez et accompagnez chaque établissement que vous signez.</p></div></div>
+      <div class="astep"><div class="n">4</div><div><h5>Gérez &amp; percevez vos commissions</h5><p>Suivez vos clients et vos revenus depuis votre dashboard partenaire dédié.</p></div></div>
+    </div>
+    <div class="rv-r">
+      <div class="aff-visual"><img src="images/6.jpeg" alt="Devenez intégrateur EdOne  100 000 FCFA de prime, 10% à vie"></div>
+      <div class="aff-card">
+        <h4 style="color:#fff;font-size:1.05rem;font-weight:600;">Ce que comprend le programme</h4>
+        <div class="aff-stats">
+          <div class="aff-stat"><b>100 000 F</b><span>Prime d'installation / établissement signé</span></div>
+          <div class="aff-stat"><b>10% à vie</b><span>Sur chaque abonnement mensuel payé</span></div>
+        </div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg>Dashboard partenaire pour piloter tous vos clients</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg>Commission récurrente sur chaque abonnement actif</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg>Support technique &amp; formation dédiés</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg>Matériel commercial et démo prêts à l'emploi</li>
+        </ul>
+        <a href="#demo" class="btn btn-gold" style="width:100%;">Demander à rejoindre le programme</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ TARIFS ============ -->
+<section class="alt-sec" id="tarifs">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow">Tarifs</span>
+      <h2>Un plan pour chaque taille d'établissement</h2>
+      <p>Frais de transaction de 2% + 100 FCFA identiques quel que soit le plan choisi.</p>
+    </div>
+    <div class="price-grid">
+      <div class="pcard rv">
+        <div class="phead"><div class="nm">Starter</div><div class="amt">25 000</div><div class="per">FCFA/mois · ou 38 EUR/mois</div></div>
+        <div class="pbody">
+          <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Jusqu'à 200 étudiants</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Inscriptions &amp; notes</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Paiements Mobile Money</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Bulletins PDF</li></ul>
+          <div class="ideal">Idéal : petites écoles, centres de formation</div>
+        </div>
+      </div>
+      <div class="pcard feat rv">
+        <div class="phead"><span class="star">★</span><div class="nm">School</div><div class="amt">75 000</div><div class="per">FCFA/mois · ou 115 EUR/mois</div></div>
+        <div class="pbody">
+          <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Jusqu'à 800 étudiants</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Quiz, devoirs &amp; RH</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Bibliothèque 79 000+ ouvrages</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Campagnes SMS &amp; email</li></ul>
+          <div class="ideal">Idéal : collèges, lycées 200–800 élèves</div>
+        </div>
+      </div>
+      <div class="pcard rv">
+        <div class="phead"><div class="nm">Campus</div><div class="amt">200 000</div><div class="per">FCFA/mois · ou 300 EUR/mois</div></div>
+        <div class="pbody">
+          <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Jusqu'à 3 000 étudiants</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Tous les modules, diplômes inclus</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Transport &amp; multi-campus</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>LMD / ECTS</li></ul>
+          <div class="ideal">Idéal : universités, grandes écoles</div>
+        </div>
+      </div>
+      <div class="pcard ent rv">
+        <div class="phead"><div class="nm">Enterprise</div><div class="amt">Sur devis</div><div class="per">Personnalisé</div></div>
+        <div class="pbody">
+          <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Étudiants illimités</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>SLA dédié garanti</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Migration de données</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Formation sur site</li></ul>
+          <div class="ideal">Idéal : groupes scolaires, réseaux &amp; partenaires</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ TEMOIGNAGE ============ -->
+<section>
+  <div class="wrap">
+    <div class="quote rv">
+      <span class="mk2">"</span>
+      <div>
+        <p>Depuis que nous utilisons EdOne, les parents paient la scolarité depuis leur téléphone, les enseignants corrigent leurs quiz automatiquement, et notre équipe administrative a divisé par trois le temps passé sur les bulletins.</p>
+        <div class="who"> Direction d'un établissement partenaire, Abidjan</div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ FAQ ============ -->
+<section class="alt-sec">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Questions fréquentes</span>
+      <h2>Tout savoir sur EdOne</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-list rv">
+        <details class="faqi" open><summary>Combien coûte un paiement en ligne pour un parent ?</summary><div class="body">Les frais sont fixés simplement à 2% du montant réglé, plus 100 FCFA fixes par transaction, quel que soit le moyen de paiement utilisé (Mobile Money ou carte bancaire).</div></details>
+        <details class="faqi"><summary>Comment fonctionne la bibliothèque de 79 000 ouvrages ?</summary><div class="body">Chaque établissement et ses étudiants accèdent gratuitement à un catalogue d'ouvrages du domaine public, enrichi par les documents propres de l'école et les partages entre étudiants, validés avant publication.</div></details>
+        <details class="faqi"><summary>Puis-je devenir partenaire et revendre EdOne ?</summary><div class="body">Oui, via notre programme d'intégrateurs : vous obtenez une prime d'installation de 100 000 FCFA par établissement signé, 10% à vie sur chaque abonnement mensuel, et une marge sur les paiements en ligne.</div></details>
+        <details class="faqi"><summary>Quels pays sont couverts pour les paiements ?</summary><div class="body">EdOne encaisse dans plus de 25 pays d'Afrique et d'Europe, avec plus de 15 devises supportées nativement.</div></details>
+        <details class="faqi"><summary>Nos données sont-elles en sécurité ?</summary><div class="body">Oui. Chaque établissement est totalement isolé des autres, les connexions sont chiffrées, les sauvegardes sont automatiques et le traitement des données est conforme au RGPD.</div></details>
+        <details class="faqi"><summary>Combien de temps prend le déploiement ?</summary><div class="body">Selon le nombre de modules choisis, comptez généralement entre une et trois semaines, import des données et formation des équipes compris.</div></details>
+      </div>
+      <div class="faq-side rv-r">
+        <h4>Une autre question ?</h4>
+        <p>Notre équipe répond en direct, du lundi au samedi.</p>
+        <div class="acts">
+          <a href="https://wa.me/2250105232335" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.5 8.5 0 01-12.3 7.6L3 20l1-5.4A8.5 8.5 0 1121 11.5z"/></svg> Discuter sur WhatsApp</a>
+          <a href="mailto:octogone.techs@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 6 10-6"/></svg> octogone.techs@gmail.com</a>
+          <a href="#demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l4 4 10-10"/></svg> Demander une démo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ DEMO ============ -->
+<section id="demo" class="demo-sec">
+  <div class="wrap demo-grid">
+    <div class="demo-copy rv-l on-dark">
+      <span class="eyebrow">Contact</span>
+      <h2>Voyez EdOne fonctionner avec les données de votre établissement</h2>
+      <p>Un échange de 30 minutes avec notre équipe pour comprendre vos besoins  établissement, ou candidature au programme de parrainage.</p>
+      <ul class="dperks">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12l4 4 10-10"/></svg> Démo personnalisée, sans engagement</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12l4 4 10-10"/></svg> Réponse sous 24h ouvrées</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12l4 4 10-10"/></svg> Accompagnement au déploiement inclus</li>
+      </ul>
+    </div>
+    <div class="demo-card rv-r">
+      <h3>Réservez votre échange</h3>
+      <p class="sub">Remplissez ce formulaire, notre équipe vous recontacte rapidement.</p>
+      <div class="falert" id="formAlert"></div>
+      <form id="demoForm" novalidate>
+        <div class="fgrid">
+          <div class="field full">
+            <label for="full_name">Nom complet <span class="req">*</span></label>
+            <input type="text" id="full_name" name="full_name" required placeholder="Votre nom et prénom" autocomplete="name">
+            <span class="field-err" id="err_full_name"></span>
+          </div>
+          <div class="field">
+            <label for="position">Fonction</label>
+            <input type="text" id="position" name="position" placeholder="Ex: Proviseur, Directeur" autocomplete="organization-title">
+          </div>
+          <div class="field">
+            <label for="school_name">Établissement <span class="req">*</span></label>
+            <input type="text" id="school_name" name="school_name" required placeholder="Nom de l'établissement" autocomplete="organization">
+            <span class="field-err" id="err_school_name"></span>
+          </div>
+          <div class="field">
+            <label for="school_type">Type d'établissement</label>
+            <select id="school_type" name="school_type">
+              <option value="">Sélectionner…</option>
+              <option value="Maternelle">Maternelle</option>
+              <option value="Primaire">Primaire</option>
+              <option value="College">Collège</option>
+              <option value="Lycee">Lycée</option>
+              <option value="Superieur">Enseignement supérieur / Université</option>
+              <option value="Centre de formation">Centre de formation</option>
+              <option value="Autre">Autre</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="students_count">Nombre d'élèves</label>
+            <input type="text" id="students_count" name="students_count" placeholder="Ex: 300, 500–1000, +2000">
+          </div>
+          <div class="field">
+            <label for="email">E-mail <span class="req">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="vous@ecole.ci" autocomplete="email">
+            <span class="field-err" id="err_email"></span>
+          </div>
+          <div class="field">
+            <label for="phone">Téléphone</label>
+            <input type="tel" id="phone" name="phone" placeholder="+225 07 00 00 00" autocomplete="tel">
+          </div>
+          <div class="field full">
+            <label for="preferred_slot">Créneau préféré pour l'appel</label>
+            <input type="text" id="preferred_slot" name="preferred_slot" placeholder="Ex: Lundi matin, soir après les cours">
+          </div>
+          <div class="field full">
+            <label for="message">Votre message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Parlez-nous de votre besoin…"></textarea>
+          </div>
+          <div class="field full">
+            <label for="captcha_answer">Question de sécurité : combien font <span id="captchaQuestion">4 + 5</span> ? <span class="req">*</span></label>
+            <input type="text" id="captcha_answer" name="captcha_answer" required inputmode="numeric" autocomplete="off" placeholder="Votre réponse">
+            <span class="field-err" id="err_captcha"></span>
+          </div>
+          <!-- Champ piège anti-robot : invisible pour un humain, souvent rempli par les bots -->
+          <div class="field full hp-field" aria-hidden="true">
+            <label for="website">Ne pas remplir ce champ</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <input type="hidden" id="form_loaded_at" value="">
+        </div>
+        <button type="submit" class="btn btn-gold" id="demoSubmitBtn">Envoyer via WhatsApp</button>
+        <p class="fine">En envoyant ce formulaire, vous serez redirigé vers WhatsApp avec votre demande déjà pré-remplie, prête à être envoyée à l'équipe EdOne.</p>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid2">
+      <div class="fbrand">
+        <a href="#top" class="brand" style="font-size:1.15rem;"><span class="mk"><img src="images/1.jpeg" alt="Logo EdOne"></span> EdOne</a>
+        <p>Le système d'exploitation de votre école. Académique, scolarité, paiements et bibliothèque, réunis dans une seule plateforme active dans 25 pays.</p>
+      </div>
+      <div>
+        <h5>Plateforme</h5>
+        <ul>
+          <li><a href="#modules">Fonctionnalités</a></li>
+          <li><a href="#bibliotheque">Bibliothèque</a></li>
+          <li><a href="#dashboards">Tableaux de bord</a></li>
+          <li><a href="#paiements">Paiements</a></li>
+          <li><a href="#parrainage">Devenir partenaire</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Établissements</h5>
+        <ul>
+          <li><a href="#pourquoi">École maternelle &amp; primaire</a></li>
+          <li><a href="#pourquoi">Collège &amp; lycée</a></li>
+          <li><a href="#pourquoi">Enseignement supérieur</a></li>
+          <li><a href="#pourquoi">Centres de formation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul class="fcontact">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L7.9 9.6a16 16 0 006.5 6.5l1.2-1.2a2 2 0 012.1-.5c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"/></svg> +225 01 05 23 23 35</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 6 10-6"/></svg> octogone.techs@gmail.com</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Abidjan, Cocody Riviera</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbottom">
+      <span id="footYear">© EdOne  OCTOGONE TECHNOLOGIES. Tous droits réservés.</span>
+      <span>25 pays · 79 000+ ouvrages · Paiements 2% + 100 FCFA</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ==========================================================
+     ENVOI VIA WHATSAPP (aucun backend, aucun compte tiers requis)
+     Le numéro WhatsApp de l'établissement est centralisé ici :
+     ========================================================== -->
+<script>
+window.__EDONE_WHATSAPP_NUMBER__ = "2250105232335"; /* format international, sans + ni espaces */
+</script>
+
+<script>
+(function(){
+  var root = document.documentElement;
+  var saved = localStorage.getItem('edone-theme');
+  var theme = saved || 'dark';
+  root.setAttribute('data-theme', theme);
+  document.getElementById('themeToggle').addEventListener('click', function(){
+    var current = root.getAttribute('data-theme');
+    var next = current === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('edone-theme', next);
+  });
+})();
+var navToggle = document.getElementById('navToggle');
+navToggle.addEventListener('click', function(){
+  document.getElementById('navLinks').classList.toggle('open');
+  navToggle.classList.toggle('open');
+  document.body.style.overflow = document.getElementById('navLinks').classList.contains('open') ? 'hidden' : '';
+});
+document.querySelectorAll('#navLinks a').forEach(function(a){
+  a.addEventListener('click', function(){
+    document.getElementById('navLinks').classList.remove('open');
+    navToggle.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+document.getElementById('footYear').textContent = '© ' + new Date().getFullYear() + ' EdOne  OCTOGONE TECHNOLOGIES. Tous droits réservés.';
+/* reveal on scroll */
+var revealEls = document.querySelectorAll('.rv, .rv-l, .rv-r');
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(entry, i){
+    if(entry.isIntersecting){ setTimeout(function(){ entry.target.classList.add('in'); }, i * 20); io.unobserve(entry.target); }
+  });
+}, {threshold:.08, rootMargin:"0px 0px -60px 0px"});
+revealEls.forEach(function(el){ io.observe(el); });
+/* marquee duplicate */
+var marquee = document.getElementById('marquee');
+marquee.innerHTML += marquee.innerHTML;
+/* dashboard bar chart */
+function fillBars(id, values, color){
+  var host = document.getElementById(id);
+  if(!host) return;
+  host.innerHTML = '';
+  values.forEach(function(v, i){
+    var b = document.createElement('i');
+    b.style.flex = '1'; b.style.borderRadius = '3px 3px 0 0'; b.style.transformOrigin = 'bottom';
+    b.style.animation = 'barUp .9s cubic-bezier(.16,.8,.3,1) both'; b.style.animationDelay = (i * 0.05) + 's';
+    b.style.height = v + '%';
+    b.style.background = color || 'linear-gradient(180deg,#C9A24A,rgba(201,162,74,.2))';
+    host.appendChild(b);
+  });
+}
+var styleTag = document.createElement('style');
+styleTag.textContent = '@keyframes barUp{from{transform:scaleY(0);}to{transform:scaleY(1);}}';
+document.head.appendChild(styleTag);
+fillBars('dashBars', [40,52,48,65,58,72,68,80,76,88,82,95]);
+/* brand carousel  défilement auto, image entière visible, sans découpe */
+(function(){
+  var track = document.getElementById('carTrack');
+  var dotsHost = document.getElementById('carDots');
+  var prevBtn = document.getElementById('carPrev');
+  var nextBtn = document.getElementById('carNext');
+  var carousel = document.getElementById('brandCarousel');
+  if(!track) return;
+  var slides = track.children;
+  var count = slides.length;
+  var index = 0;
+  var timer = null;
+  for(var i=0;i<count;i++){
+    var dot = document.createElement('button');
+    dot.className = 'car-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Aller au visuel ' + (i+1));
+    dot.addEventListener('click', function(idx){ return function(){ goTo(idx); restart(); }; }(i));
+    dotsHost.appendChild(dot);
+  }
+  var dots = dotsHost.children;
+  function render(){
+    track.style.transform = 'translateX(-' + (index * 100) + '%)';
+    for(var d=0; d<dots.length; d++){ dots[d].classList.toggle('active', d === index); }
+  }
+  function goTo(i){ index = (i + count) % count; render(); }
+  function next(){ goTo(index + 1); }
+  function prev(){ goTo(index - 1); }
+  function restart(){ if(timer) clearInterval(timer); timer = setInterval(next, 4600); }
+  nextBtn.addEventListener('click', function(){ next(); restart(); });
+  prevBtn.addEventListener('click', function(){ prev(); restart(); });
+  carousel.addEventListener('mouseenter', function(){ if(timer) clearInterval(timer); });
+  carousel.addEventListener('mouseleave', restart);
+  /* swipe tactile */
+  var startX = null;
+  track.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; if(timer) clearInterval(timer); }, {passive:true});
+  track.addEventListener('touchend', function(e){
+    if(startX === null) return;
+    var dx = e.changedTouches[0].clientX - startX;
+    if(dx > 40) prev(); else if(dx < -40) next();
+    startX = null; restart();
+  }, {passive:true});
+  render();
+  restart();
+})();
+/* dashboard tabs */
+document.querySelectorAll('.dtab').forEach(function(tab){
+  tab.addEventListener('click', function(){
+    document.querySelectorAll('.dtab').forEach(function(t){t.classList.remove('active');});
+    document.querySelectorAll('.dash-panel').forEach(function(p){p.classList.remove('active');});
+    tab.classList.add('active');
+    document.getElementById(tab.dataset.target).classList.add('active');
+  });
+});
+/* bookshelf */
+(function(){
+  var host = document.getElementById('bookshelf');
+  if(!host) return;
+  var colors = ['#C9A24A','#3A61FF','#1B8F6B','#E0574A','#8B7CFF','#2FD9B4','#E0A93A','#5B8DEF'];
+  for(var i=0;i<26;i++){
+    var b = document.createElement('div');
+    var h = 140 + Math.random()*160;
+    var w = 14 + Math.random()*10;
+    b.className = 'book';
+    b.style.width = w+'px';
+    b.style.height = h+'px';
+    b.style.background = colors[i % colors.length];
+    b.style.animationDelay = (i*0.04)+'s';
+    host.appendChild(b);
+  }
+})();
+/* fee calculator : 2% + 100 FCFA */
+var feeRange = document.getElementById('feeRange');
+var feeAmount = document.getElementById('feeAmount');
+var lineBase = document.getElementById('lineBase');
+var lineFee = document.getElementById('lineFee');
+var lineTotal = document.getElementById('lineTotal');
+function fmt(n){ return Math.round(n).toLocaleString('fr-FR').replace(/,/g,' '); }
+function updateCalc(){
+  var base = parseInt(feeRange.value, 10);
+  var fee = Math.round(base * 0.02) + 100;
+  var total = base + fee;
+  feeAmount.textContent = fmt(base) + ' F';
+  lineBase.textContent = fmt(base) + ' FCFA';
+  lineFee.textContent = fmt(fee) + ' FCFA';
+  lineTotal.textContent = fmt(total) + ' FCFA';
+}
+if(feeRange){ feeRange.addEventListener('input', updateCalc); updateCalc(); }
+/* ===== Africa coverage map  tracé côtier réel + drapeaux ===== */
+(function(){
+  var svgHost = document.getElementById('africaMap');
+  var flagHost = document.getElementById('mapFlags');
+  var legendHost = document.getElementById('countryLegend');
+  if(!svgHost) return;
+  var svgNS = "http://www.w3.org/2000/svg";
+  var svg = document.createElementNS(svgNS, "svg");
+  svg.setAttribute('viewBox', '0 0 100 101');
+  svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+  svg.style.width = '100%'; svg.style.height = '100%'; svg.style.position = 'relative'; svg.style.zIndex = '1';
+  svgHost.appendChild(svg);
+  var LON_MIN = -18, LON_MAX = 52, LAT_MAX = 38, LAT_MIN = -35;
+  function proj(lon, lat){
+    var x = (lon - LON_MIN) / (LON_MAX - LON_MIN) * 100;
+    var y = (LAT_MAX - lat) / (LAT_MAX - LAT_MIN) * 100;
+    return [x, y];
+  }
+  var coastline = [
+    [-5.8,35.8],[-7.6,33.6],[-9.6,30.4],[-9.9,27.7],[-13.0,25.0],[-15.9,23.7],
+    [-17.0,20.9],[-16.5,17.8],[-17.5,14.7],[-16.6,12.6],[-15.6,11.9],[-13.7,9.5],
+    [-13.2,8.5],[-11.7,7.0],[-10.8,6.3],[-8.0,5.0],[-4.0,5.3],[-2.0,5.1],
+    [-0.2,5.6],[1.2,6.1],[2.4,6.3],[3.4,6.5],[5.8,5.3],[7.2,4.4],[8.8,4.3],
+    [9.7,4.0],[9.4,1.8],[9.5,0.4],[8.8,-0.7],[9.3,-2.0],[11.8,-4.8],[12.4,-6.0],
+    [13.2,-8.8],[12.8,-11.0],[12.1,-15.2],[12.5,-17.9],[14.5,-22.9],[14.4,-26.6],
+    [16.5,-28.6],[18.4,-33.9],[20.0,-34.8],[22.9,-34.0],[26.8,-33.7],[31.0,-29.9],
+    [32.6,-25.9],[34.8,-19.8],[35.5,-17.1],[40.5,-12.9],[39.3,-6.8],[39.7,-4.0],
+    [41.6,-1.6],[42.5,-0.4],[45.3,2.0],[48.9,7.9],[51.3,11.8],[49.0,10.4],
+    [43.1,11.6],[42.4,13.0],[39.5,15.6],[37.2,19.6],[35.5,23.0],[33.8,27.8],
+    [32.3,29.9],[29.9,31.2],[25.2,31.4],[20.1,32.1],[15.2,32.6],[13.2,32.9],
+    [11.0,34.6],[10.2,37.3],[8.8,36.9],[5.4,35.7],[3.0,36.8],[-1.0,35.2],
+    [-2.2,35.7],[-5.8,35.8]
+  ].map(function(p){ return proj(p[0], p[1]); });
+  var madagascar = [
+    [49.3,-12.0],[50.2,-15.5],[49.9,-18.2],[48.5,-18.9],[47.0,-21.0],
+    [45.2,-25.6],[43.6,-21.0],[44.0,-17.5],[45.5,-14.0],[47.8,-12.5],[49.3,-12.0]
+  ].map(function(p){ return proj(p[0], p[1]); });
+  function pathFromPoints(pts){
+    return pts.map(function(p, i){ return (i === 0 ? 'M' : 'L') + p[0].toFixed(2) + ',' + p[1].toFixed(2); }).join(' ') + ' Z';
+  }
+  var defs = document.createElementNS(svgNS,'defs');
+  defs.innerHTML = '<linearGradient id="afGrad" x1="0" y1="0" x2="1" y2="1">' +
+    '<stop offset="0%" stop-color="rgba(201,162,74,.30)"/>' +
+    '<stop offset="100%" stop-color="rgba(58,97,255,.14)"/>' +
+    '</linearGradient>';
+  svg.appendChild(defs);
+  var continent = document.createElementNS(svgNS,'path');
+  continent.setAttribute('d', pathFromPoints(coastline));
+  continent.setAttribute('fill', 'url(#afGrad)');
+  continent.setAttribute('stroke', 'rgba(255,255,255,.5)');
+  continent.setAttribute('stroke-width', '.5');
+  continent.setAttribute('stroke-linejoin', 'round');
+  svg.appendChild(continent);
+  var madaPath = document.createElementNS(svgNS,'path');
+  madaPath.setAttribute('d', pathFromPoints(madagascar));
+  madaPath.setAttribute('fill', 'rgba(201,162,74,.18)');
+  madaPath.setAttribute('stroke', 'rgba(255,255,255,.4)');
+  madaPath.setAttribute('stroke-width', '.4');
+  svg.appendChild(madaPath);
+  var countries = [
+    {n:"Côte d'Ivoire", iso:"ci", lon:-5.3, lat:6.8, hub:true},
+    {n:"Sénégal", iso:"sn", lon:-17.4, lat:14.7},
+    {n:"Mali", iso:"ml", lon:-8.0, lat:12.6},
+    {n:"Guinée", iso:"gn", lon:-13.7, lat:9.5},
+    {n:"Sierra Leone", iso:"sl", lon:-11.8, lat:8.5},
+    {n:"Burkina Faso", iso:"bf", lon:-1.5, lat:12.4},
+    {n:"Ghana", iso:"gh", lon:-1.0, lat:7.9},
+    {n:"Togo", iso:"tg", lon:1.2, lat:8.6},
+    {n:"Bénin", iso:"bj", lon:2.3, lat:9.3},
+    {n:"Niger", iso:"ne", lon:8.1, lat:17.6},
+    {n:"Nigéria", iso:"ng", lon:8.7, lat:9.1},
+    {n:"Tchad", iso:"td", lon:18.7, lat:15.5},
+    {n:"Cameroun", iso:"cm", lon:12.4, lat:5.7},
+    {n:"Gabon", iso:"ga", lon:11.6, lat:-0.6},
+    {n:"Congo", iso:"cg", lon:15.3, lat:-1.4},
+    {n:"RD Congo", iso:"cd", lon:23.6, lat:-2.9},
+    {n:"Éthiopie", iso:"et", lon:39.6, lat:9.1},
+    {n:"Ouganda", iso:"ug", lon:32.3, lat:1.4},
+    {n:"Kenya", iso:"ke", lon:37.9, lat:0.0},
+    {n:"Rwanda", iso:"rw", lon:29.9, lat:-1.9},
+    {n:"Tanzanie", iso:"tz", lon:34.9, lat:-6.4},
+    {n:"Zambie", iso:"zm", lon:27.8, lat:-13.5},
+    {n:"Malawi", iso:"mw", lon:34.3, lat:-13.3},
+    {n:"Mozambique", iso:"mz", lon:35.5, lat:-18.7},
+    {n:"Lesotho", iso:"ls", lon:28.2, lat:-29.6}
+  ];
+  countries.forEach(function(c){
+    var p = proj(c.lon, c.lat);
+    c.x = p[0]; c.y = p[1];
+  });
+  var hub = countries.filter(function(c){ return c.hub; })[0];
+  countries.forEach(function(c){
+    if(c === hub) return;
+    var mx = (hub.x + c.x)/2, my = (hub.y + c.y)/2;
+    var dx = c.x - hub.x, dy = c.y - hub.y;
+    var nx = -dy, ny = dx;
+    var len = Math.sqrt(nx*nx+ny*ny) || 1;
+    var bow = 5;
+    var cx = mx + (nx/len)*bow, cy = my + (ny/len)*bow;
+    var path = document.createElementNS(svgNS,'path');
+    path.setAttribute('d', 'M'+hub.x.toFixed(2)+','+hub.y.toFixed(2)+' Q'+cx.toFixed(2)+','+cy.toFixed(2)+' '+c.x.toFixed(2)+','+c.y.toFixed(2));
+    path.setAttribute('fill','none');
+    path.setAttribute('stroke','rgba(201,162,74,.5)');
+    path.setAttribute('stroke-width','.35');
+    path.setAttribute('stroke-dasharray','1.4 1.6');
+    svg.appendChild(path);
+  });
+  countries.forEach(function(c, i){
+    var ring = document.createElementNS(svgNS,'circle');
+    ring.setAttribute('cx', c.x); ring.setAttribute('cy', c.y);
+    ring.setAttribute('r', c.hub ? 2.4 : 1.3);
+    ring.setAttribute('fill','none');
+    ring.setAttribute('stroke', c.hub ? '#C9A24A' : '#3A61FF');
+    ring.setAttribute('stroke-width','.4');
+    ring.setAttribute('opacity','.6');
+    var anim = document.createElementNS(svgNS,'animate');
+    anim.setAttribute('attributeName','r');
+    anim.setAttribute('values', (c.hub?2.4:1.3)+';'+(c.hub?4.4:3.0)+';'+(c.hub?2.4:1.3));
+    anim.setAttribute('dur', (2.6 + (i%5)*0.3)+'s');
+    anim.setAttribute('repeatCount','indefinite');
+    ring.appendChild(anim);
+    svg.appendChild(ring);
+  });
+  if(flagHost){
+    countries.forEach(function(c){
+      var pin = document.createElement('div');
+      pin.className = 'flagpin' + (c.hub ? ' hub' : '');
+      pin.style.left = c.x + '%';
+      pin.style.top = c.y + '%';
+      pin.innerHTML = '<img src="https://flagcdn.com/w40/' + c.iso + '.png" alt="Drapeau ' + c.n + '" loading="lazy">' +
+        '<span class="fl-label">' + c.n + (c.hub ? '  Hub EdOne' : '') + '</span>';
+      flagHost.appendChild(pin);
+    });
+  }
+  if(legendHost){
+    countries.forEach(function(c){
+      var span = document.createElement('span');
+      span.innerHTML = '<img src="https://flagcdn.com/w20/' + c.iso + '.png" alt="">' + c.n + (c.hub ? ' (Hub)' : '');
+      legendHost.appendChild(span);
+    });
+  }
+})();
+
+/* ==========================================================
+   FORMULAIRE DE DÉMO : validation, anti-bot, envoi via WhatsApp
+   ========================================================== */
+(function(){
+  var form = document.getElementById('demoForm');
+  if(!form) return;
+
+  var alertBox = document.getElementById('formAlert');
+  var submitBtn = document.getElementById('demoSubmitBtn');
+  var loadedAtField = document.getElementById('form_loaded_at');
+  var honeypot = document.getElementById('website');
+  var captchaQuestionEl = document.getElementById('captchaQuestion');
+  var captchaAnswerField = document.getElementById('captcha_answer');
+  var WHATSAPP_NUMBER = window.__EDONE_WHATSAPP_NUMBER__ || "2250105232335";
+
+  /* horodatage de chargement du formulaire, utilisé pour détecter
+     une soumission anormalement rapide (typique des robots) */
+  loadedAtField.value = Date.now().toString();
+  var MIN_FILL_TIME_MS = 3000; /* 3 secondes minimum avant envoi accepté */
+
+  /* mini-captcha maths généré côté client */
+  var captchaA = 0, captchaB = 0, captchaSum = 0;
+  function newCaptcha(){
+    captchaA = Math.floor(Math.random() * 8) + 2;
+    captchaB = Math.floor(Math.random() * 8) + 2;
+    captchaSum = captchaA + captchaB;
+    if(captchaQuestionEl){ captchaQuestionEl.textContent = captchaA + ' + ' + captchaB; }
+    if(captchaAnswerField){ captchaAnswerField.value = ''; }
+  }
+  newCaptcha();
+
+  function showAlert(message, type){
+    alertBox.textContent = message;
+    alertBox.className = 'falert show' + (type === 'err' ? ' err' : '');
+    alertBox.scrollIntoView({behavior:'smooth', block:'center'});
+  }
+  function clearFieldErrors(){
+    document.querySelectorAll('.field-err').forEach(function(el){ el.textContent = ''; });
+  }
+  function setFieldError(id, message){
+    var el = document.getElementById('err_' + id);
+    if(el) el.textContent = message;
+  }
+  function isValidEmail(value){
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  }
+
+  /* construit le message pré-rempli envoyé sur WhatsApp */
+  function buildWhatsAppMessage(data){
+    var lines = [
+      '*Nouvelle demande de démo  EdOne*',
+      '',
+      '*Nom complet :* ' + data.full_name,
+      '*Fonction :* ' + (data.position || ''),
+      '*Établissement :* ' + data.school_name,
+      '*Type :* ' + (data.school_type || ''),
+      '*Nombre d\'élèves :* ' + (data.students_count || ''),
+      '*E-mail :* ' + (data.email || ''),
+      '*Téléphone :* ' + (data.phone || ''),
+      '*Créneau préféré :* ' + (data.preferred_slot || ''),
+      '',
+      '*Message :*',
+      data.message || ''
+    ];
+    return lines.join('\n');
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    clearFieldErrors();
+
+    var data = {
+      full_name: form.full_name.value.trim(),
+      position: form.position.value.trim(),
+      school_name: form.school_name.value.trim(),
+      school_type: form.school_type.value,
+      students_count: form.students_count.value.trim(),
+      email: form.email.value.trim(),
+      phone: form.phone.value.trim(),
+      preferred_slot: form.preferred_slot.value.trim(),
+      message: form.message.value.trim()
+    };
+
+    /* ---- 1) piège à robots (honeypot) : un humain ne remplit jamais ce champ ---- */
+    if(honeypot && honeypot.value.trim() !== ''){
+      /* on n'ouvre rien et on n'affiche aucune indication au robot */
+      return;
+    }
+
+    /* ---- 2) piège temporel : une soumission trop rapide trahit un script automatisé ---- */
+    var elapsed = Date.now() - parseInt(loadedAtField.value || '0', 10);
+    if(elapsed < MIN_FILL_TIME_MS){
+      showAlert('Merci de patienter quelques secondes avant d\'envoyer le formulaire.', 'err');
+      return;
+    }
+
+    /* ---- 3) validation des champs obligatoires ---- */
+    var hasError = false;
+    if(!data.full_name){ setFieldError('full_name', 'Ce champ est requis.'); hasError = true; }
+    if(!data.school_name){ setFieldError('school_name', 'Ce champ est requis.'); hasError = true; }
+    if(!data.email || !isValidEmail(data.email)){ setFieldError('email', 'Merci d\'indiquer un e-mail valide.'); hasError = true; }
+
+    /* ---- 4) captcha mathématique ---- */
+    var answer = parseInt((captchaAnswerField.value || '').trim(), 10);
+    if(isNaN(answer) || answer !== captchaSum){
+      setFieldError('captcha', 'Réponse incorrecte, réessayez.');
+      newCaptcha();
+      hasError = true;
+    }
+
+    if(hasError){
+      showAlert('Merci de corriger les champs indiqués ci-dessous.', 'err');
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Redirection vers WhatsApp…';
+
+    var message = buildWhatsAppMessage(data);
+    var waUrl = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(message);
+
+    showAlert('Merci ' + data.full_name + ' ! Vous allez être redirigé vers WhatsApp pour envoyer votre demande, déjà pré-remplie.', 'ok');
+
+    window.open(waUrl, '_blank', 'noopener');
+
+    form.reset();
+    newCaptcha();
+    loadedAtField.value = Date.now().toString();
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Envoyer ma demande';
+  });
+})();
+</script>
+</body>
+</html>
