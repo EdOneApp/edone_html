@@ -242,7 +242,7 @@ Généralement une à trois semaines, import des données et formation comprises
 ## 💬 Contact & démo
 
 - **WhatsApp :** [+225 01 05 23 23 35](https://wa.me/2250105232335)
-- **E-mail :** octogone.techs@gmail.com
+- **E-mail :** edoneapp@gmail.com
 - **Adresse :** Abidjan, Cocody Riviera
 
 La page inclut un formulaire de demande de démo qui redirige directement vers WhatsApp avec un message pré-rempli, prêt à être envoyé à l'équipe EdOne.
