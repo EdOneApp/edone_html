@@ -1,6 +1,6 @@
 ## Navigation de pied de page
 
-Le footer commun est défini dans `partials/footer.html` et appliqué aux 20 pages publiques par `python3 scripts/update-footer.py`. Il relie les 17 sections de la page d’accueil, le guide, les pages légales et les pages d’erreur. Les sections détaillées du guide et les pages d’assistance sont regroupées dans des volets dépliables. La synchronisation du catalogue réapplique automatiquement ce footer.
+Le footer commun est défini dans `partials/footer.html` et appliqué aux 20 pages publiques par `python3 scripts/update-footer.py`. Il relie les 17 sections de la page d’accueil, le guide et les pages légales. Les sections détaillées du guide sont regroupées dans un volet dépliable. La synchronisation du catalogue réapplique automatiquement ce footer.
 
 ## Film de présentation et informations légales
 
