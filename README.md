@@ -1,3 +1,11 @@
+## Film actuel fourni par EdOne
+
+Le lecteur `#film` affiche uniquement la vidéo dans son cadre, avec les commandes natives. Aucun titre éditorial, transcription ou barre de commandes supplémentaire n’entoure le film.
+
+`media/edone-pub-avec-son.mp4` fusionne la vidéo fournie de 30 secondes (1920 × 1080) et l’audio fourni de 25,224 secondes. Le son commence à 0 ; la fin du film reste visuelle. La piste vidéo H.264 est conservée sans réencodage ; la piste audio est en AAC. Le chargement est à la demande, sans autoplay, et la lecture déclenchée par le visiteur inclut le son.
+
+Les anciens fichiers `edone-presentation-*`, leur storyboard et le script de génération restent des archives de la première version ; ils ne sont plus utilisés par le lecteur ni par les métadonnées.
+
 ## Icônes cohérentes sur tous les écrans
 
 Les icônes d’interface sont des SVG locaux définis dans `icons.json` et servis par `icons.js`. Les éléments statiques sont intégrés dans le HTML par `scripts/update-icons.py`, qui est appelé lors de la synchronisation du footer et du catalogue. Les coches de listes utilisent un masque SVG. Les logos de marque restent des fichiers d’image distincts. Aucun rendu d’icône ne dépend d’une police emoji sur iOS ou Android.

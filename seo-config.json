@@ -3,8 +3,8 @@
   "site_name": "EdOne",
   "language": "fr",
   "locale": "fr_CI",
-  "social_image": "/media/edone-presentation-poster.jpg",
-  "video_upload_date": "2026-10-26T03:36:25+00:00",
+  "social_image": "/media/edone-pub-poster.jpg",
+  "video_upload_date": "2026-10-26T12:49:56+00:00",
   "pages": [
     {
       "file": "index.html",
@@ -41,5 +41,8 @@
       "description": "Consultez les conditions d’utilisation du site EdOne : accès, demandes de démonstration, informations commerciales, contenus et services externes.",
       "name": "Conditions générales d’utilisation"
     }
-  ]
+  ],
+  "video_path": "/media/edone-pub-avec-son.mp4",
+  "video_duration_seconds": 30,
+  "video_description": "Présentation EdOne en 30 secondes : gestion scolaire, tableau de bord administratif, suivi des familles et paiements de scolarité."
 }

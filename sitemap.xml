@@ -22,12 +22,12 @@
       <image:loc>https://edone.my/images/campus-vie-edone.jpg</image:loc>
     </image:image>
     <video:video>
-      <video:thumbnail_loc>https://edone.my/media/edone-presentation-poster.jpg</video:thumbnail_loc>
+      <video:thumbnail_loc>https://edone.my/media/edone-pub-poster.jpg</video:thumbnail_loc>
       <video:title>EdOne : une école mieux connectée</video:title>
-      <video:description>Présentation illustrée d’EdOne : gestion académique, paiements, lien avec les familles et bibliothèque numérique. Voix de synthèse française, musique originale et sous-titres.</video:description>
-      <video:content_loc>https://edone.my/media/edone-presentation-fr.mp4</video:content_loc>
-      <video:duration>35</video:duration>
-      <video:publication_date>2026-10-26T03:36:25+00:00</video:publication_date>
+      <video:description>Présentation EdOne en 30 secondes : gestion scolaire, tableau de bord administratif, suivi des familles et paiements de scolarité.</video:description>
+      <video:content_loc>https://edone.my/media/edone-pub-avec-son.mp4</video:content_loc>
+      <video:duration>30</video:duration>
+      <video:publication_date>2026-10-26T12:49:56+00:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
