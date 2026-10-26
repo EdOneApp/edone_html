@@ -1,4 +1,4 @@
-# Fichier note.md — Liste exhaustive des fonctionnalités d’EdOne
+# Fichier note.md · Liste exhaustive des fonctionnalités d’EdOne
 # Généré pour l’application EdOne (ERP scolaire / gestion académique)
 # Aucun module, aucun rôle, aucune fonctionnalité n’est omis.
 
@@ -188,7 +188,7 @@
 - **Email professionnel** : chaque utilisateur dispose d’une adresse pro
 - **Google Workspace** : accès gratuit à Gmail, Drive, Docs, Sheets, Meet (pour étudiants, enseignants, parents, personnel, direction)
 - **Bibliothèque numérique** : 79 000+ ouvrages accessibles gratuitement, plus documents école et partages validés
-- **Paiements numériques** : Mobile Money (Orange, MTN, Moov), Wave, Visa, Mastercard — 25 pays, 15+ devises
+- **Paiements numériques** : Mobile Money (Orange, MTN, Moov), Wave, Visa, Mastercard · 25 pays, 15+ devises
 - **Vérification publique** : bulletins, diplômes, attestations vérifiables par code unique
 - **Dashboard 360°** : vue d’ensemble pour la direction
 - **Programme partenaire** : licence marque blanche, prime d’installation, commissions récurrentes
@@ -198,14 +198,14 @@
 ## 6. Tarifs & déploiement (mentionnés pour exhaustivité)
 
 - **Starter** : 25 000 FCFA/mois (jusqu’à 200 étudiants)
-- **School** : 75 000 FCFA/mois (jusqu’à 800 étudiants) — inclut bibliothèque 79 000+, campagnes SMS/email
-- **Campus** : 200 000 FCFA/mois (jusqu’à 3 000 étudiants) — diplômes inclus, transport, multi-campus, LMD/ECTS
+- **School** : 75 000 FCFA/mois (jusqu’à 800 étudiants) · inclut bibliothèque 79 000+, campagnes SMS/email
+- **Campus** : 200 000 FCFA/mois (jusqu’à 3 000 étudiants) · diplômes inclus, transport, multi-campus, LMD/ECTS
 - **Enterprise** : sur devis (illimité, SLA dédié, migration, formation sur site)
 - **Frais de transaction** : 3% du montant (uniques, sans frais fixes additionnels, identiques sur tous les plans et moyens de paiement)
 
 ---
 
-## 7. Résumé exhaustif — “Rien n’est oublié”
+## 7. Résumé exhaustif · “Rien n’est oublié”
 
 Cette liste couvre :
 - Tous les rôles (direction, enseignants, étudiants, parents, personnel, partenaires/intégrateurs)

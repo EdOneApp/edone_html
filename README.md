@@ -39,7 +39,7 @@ Pages disponibles : `400.html`, `401.html`, `403.html`, `404.html`, `405.html`, 
 
 # EdOne
 
-## Refonte visuelle — octobre 2026
+## Refonte visuelle · octobre 2026
 
 Direction « campus vivant » : fond ivoire, vert profond, accents corail, typographies Manrope et DM Sans. Photo de campus illustrative créée avec ImageGen, illustrations de livres en CSS, animations au défilement respectant la préférence de réduction des mouvements.
 
@@ -51,7 +51,7 @@ Direction « campus vivant » : fond ivoire, vert profond, accents corail, typog
 
 Pour prévisualiser : `python3 -m http.server 4173`, puis ouvrir `http://localhost:4173`. Aucun build ni installation nécessaire. Les polices Google nécessitent Internet ; des polices système prennent le relais hors ligne.
 
-### Le système d'exploitation scolaire — Afrique & Europe
+### Le système d'exploitation scolaire · Afrique & Europe
 
 EdOne réunit **gestion académique, scolarité, paiements Mobile Money, bibliothèque numérique, quiz sécurisés, bulletins et diplômes vérifiables** dans une seule plateforme, active dans **25 pays** d'Afrique et d'Europe.
 
@@ -74,7 +74,7 @@ EdOne réunit **gestion académique, scolarité, paiements Mobile Money, bibliot
 
 ---
 
-## 🎓 Fonctionnalités — Pédagogie & vie de classe
+## 🎓 Fonctionnalités · Pédagogie & vie de classe
 
 - **Gestion académique** : années académiques, campus, salles, filières, niveaux, classes, maquettes pédagogiques
 - **Inscription & réinscription** : dossier électronique complet, cartes étudiants, kits & accessoires, statistiques en direct
@@ -87,7 +87,7 @@ EdOne réunit **gestion académique, scolarité, paiements Mobile Money, bibliot
 
 ---
 
-## 📄 Fonctionnalités — Documents & certification officielle
+## 📄 Fonctionnalités · Documents & certification officielle
 
 - **Bulletins** générés automatiquement par semestre (moyennes pondérées, rangs, appréciations)
 - **Procès-verbaux** de semestre et annuels, calcul des crédits, décisions de passage automatisées
@@ -102,7 +102,7 @@ EdOne réunit **gestion académique, scolarité, paiements Mobile Money, bibliot
 
 ---
 
-## 💰 Fonctionnalités — Finance, wallet & ressources
+## 💰 Fonctionnalités · Finance, wallet & ressources
 
 - **Comptabilité & scolarité** : frais, plans de paiement, historique complet, statuts de solde
 - **Wallet établissement** : solde en temps réel, demandes de reversement, historique des transactions
@@ -115,7 +115,7 @@ EdOne réunit **gestion académique, scolarité, paiements Mobile Money, bibliot
 
 ---
 
-## 📢 Fonctionnalités — Communication, sécurité & pilotage
+## 📢 Fonctionnalités · Communication, sécurité & pilotage
 
 - **Espace parent sécurisé** : accès par matricule, suivi complet du cursus, absences et paiements
 - **Campagnes SMS & e-mail** ciblées par classe, filière ou niveau
@@ -130,7 +130,7 @@ EdOne réunit **gestion académique, scolarité, paiements Mobile Money, bibliot
 
 ---
 
-## 📚 Bibliothèque numérique — 79 000+ ouvrages
+## 📚 Bibliothèque numérique · 79 000+ ouvrages
 
 Chaque établissement et ses étudiants accèdent **gratuitement** à une bibliothèque privée enrichie de :
 - Catalogue du domaine public (79 000+ titres)
@@ -141,13 +141,13 @@ Chaque établissement et ses étudiants accèdent **gratuitement** à une biblio
 
 ---
 
-## 📈 Tableaux de bord — Web & mobile
+## 📈 Tableaux de bord · Web & mobile
 
 - **Dashboard direction (web)** : effectifs, taux de recouvrement, encaissements du mois, enseignants actifs, évolution des inscriptions & paiements, répartition par cycle
 - **Applications mobiles dédiées** pour chaque profil :
-  - **Espace Parent** — scolarité réglée, absences, échéances, bulletins
-  - **Espace Étudiant** — notes, quiz sécurisés, bibliothèque, paiements en attente
-  - **Espace Enseignant** — devoirs à corriger, contrats, demandes d'acompte
+  - **Espace Parent** · scolarité réglée, absences, échéances, bulletins
+  - **Espace Étudiant** · notes, quiz sécurisés, bibliothèque, paiements en attente
+  - **Espace Enseignant** · devoirs à corriger, contrats, demandes d'acompte
 
 ![Voir, pas deviner](images/3.jpeg)
 
@@ -157,8 +157,8 @@ Chaque établissement et ses étudiants accèdent **gratuitement** à une biblio
 
 EdOne connecte nativement, dans **25 pays** :
 
-**Mobile Money** — Orange Money · MTN Mobile Money · Moov Money · Wave
-**Cartes bancaires** — Visa · Mastercard
+**Mobile Money** · Orange Money · MTN Mobile Money · Moov Money · Wave
+**Cartes bancaires** · Visa · Mastercard
 
 Frais simples et transparents : **3 % du montant, sans frais fixes**, identiques quel que soit le moyen de paiement.
 
@@ -207,10 +207,10 @@ Côte d'Ivoire · Sénégal · Mali · Guinée · Sierra Leone · Burkina Faso �
 
 Devenez fournisseur officiel de la solution EdOne :
 
-1. **Devenez partenaire** — signez l'accord de distribution
-2. **Recevez votre licence marque blanche** — déployez EdOne à vos couleurs
-3. **Onboardez vos écoles clientes** — installation, formation, accompagnement
-4. **Gérez & percevez vos commissions** — depuis votre dashboard partenaire dédié
+1. **Devenez partenaire** · signez l'accord de distribution
+2. **Recevez votre licence marque blanche** · déployez EdOne à vos couleurs
+3. **Onboardez vos écoles clientes** · installation, formation, accompagnement
+4. **Gérez & percevez vos commissions** · depuis votre dashboard partenaire dédié
 
 **Avantages :**
 - **100 000 FCFA** de prime d'installation par établissement signé
@@ -227,10 +227,10 @@ Devenez fournisseur officiel de la solution EdOne :
 
 | Plan | Prix | Cible |
 |---|---|---|
-| **Starter** | 25 000 FCFA/mois (~38 EUR) | Jusqu'à 200 étudiants — petites écoles, centres de formation |
-| **School** ⭐ | 75 000 FCFA/mois (~115 EUR) | Jusqu'à 800 étudiants — collèges, lycées |
-| **Campus** | 200 000 FCFA/mois (~300 EUR) | Jusqu'à 3 000 étudiants — universités, grandes écoles |
-| **Enterprise** | Sur devis | Étudiants illimités — groupes scolaires, réseaux & partenaires |
+| **Starter** | 25 000 FCFA/mois (~38 EUR) | Jusqu'à 200 étudiants · petites écoles, centres de formation |
+| **School** ⭐ | 75 000 FCFA/mois (~115 EUR) | Jusqu'à 800 étudiants · collèges, lycées |
+| **Campus** | 200 000 FCFA/mois (~300 EUR) | Jusqu'à 3 000 étudiants · universités, grandes écoles |
+| **Enterprise** | Sur devis | Étudiants illimités · groupes scolaires, réseaux & partenaires |
 
 *Frais de transaction (3 % sans frais fixes) identiques quel que soit le plan choisi.*
 
@@ -253,7 +253,7 @@ Oui, via le programme d'intégrateurs (prime + commission récurrente).
 Plus de 25 pays d'Afrique et d'Europe, 15+ devises.
 
 **Nos données sont-elles en sécurité ?**
-Oui — isolation totale entre établissements, chiffrement, sauvegardes automatiques, conformité RGPD.
+Oui · isolation totale entre établissements, chiffrement, sauvegardes automatiques, conformité RGPD.
 
 **Combien de temps prend le déploiement ?**
 Généralement une à trois semaines, import des données et formation comprises.
