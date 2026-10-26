@@ -1,3 +1,7 @@
+## Aperçu MacBook et iPhone
+
+La section `#apercu`, placée immédiatement après les chiffres, présente un MacBook et un iPhone en HTML/CSS avec des données de démonstration. Trois vues synchronisées couvrent la vue 360°, l’académique et les finances. `device-showcase.js` gère les compteurs, graphiques et événements simulés, avec pause explicite, suspension hors écran et réduction des mouvements. Les écrans ne sont pas des captures d’un établissement réel et ne présentent pas de données de production.
+
 ## Moyens de paiement et aperçu mobile
 
 La section paiements utilise les logos Wave, Orange Money, Moov Money, MTN MoMo et Djamo, avec des fichiers hébergés localement issus des sites officiels (provenance dans `images/payments/README.md`). Visa et Mastercard restent mentionnés en complément.
@@ -6,7 +10,7 @@ Le téléphone est un composant HTML/CSS à l’apparence réaliste, avec choix 
 
 ## Navigation de pied de page
 
-Le footer commun est défini dans `partials/footer.html` et appliqué aux 20 pages publiques par `python3 scripts/update-footer.py`. Il relie les 17 sections de la page d’accueil, le guide et les pages légales. Les sections détaillées du guide sont regroupées dans un volet dépliable. La synchronisation du catalogue réapplique automatiquement ce footer.
+Le footer commun est défini dans `partials/footer.html` et appliqué aux 20 pages publiques par `python3 scripts/update-footer.py`. Il relie les 18 sections de la page d’accueil, le guide et les pages légales. Les sections détaillées du guide sont regroupées dans un volet dépliable. La synchronisation du catalogue réapplique automatiquement ce footer.
 
 ## Film de présentation et informations légales
 

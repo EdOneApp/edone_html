@@ -1,0 +1,43 @@
+'use strict';
+(()=>{
+ const stage=document.getElementById('devicesStage');if(!stage)return;
+ const prefersReduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+ let paused=prefersReduced.matches,visible=false,timer=null,current='overview',tick=0,frame=null;
+ const views={
+  overview:{title:'Bonjour, votre école avance.',phoneTitle:'La direction, en poche.',labels:['Étudiants inscrits','Taux de recouvrement','Enseignants actifs','Campus'],values:[1248,87,68,4],suffix:['',' %','',''],notes:['Effectifs de l’établissement','Suivi des frais de scolarité','Votre équipe pédagogique','Un pilotage centralisé'],chart:'Inscriptions & vie de campus',subtitle:'Une lecture claire, mois après mois.',distribution:'Répartition par cycle',donut:'1 248',donutLabel:'étudiants',legend:[['Licence','58 %'],['Master','27 %'],['Formation','15 %']],bars:[36,48,43,66,74,89],phoneLabel:'Étudiants inscrits',phoneNote:'Tous vos campus réunis',progressLabel:'Recouvrement',progress:87},
+  academic:{title:'Chaque parcours prend forme.',phoneTitle:'Le suivi des parcours.',labels:['Dossiers complets','Présence en cours','Évaluations','Filières'],values:[1184,96,42,12],suffix:['',' %','',''],notes:['Inscriptions validées','Assiduité de démonstration','Ce semestre','Vos parcours de formation'],chart:'L’activité pédagogique',subtitle:'Inscriptions, évaluations et suivi des cours.',distribution:'Dossiers étudiants',donut:'96 %',donutLabel:'complétés',legend:[['Validés','76 %'],['En cours','20 %'],['À compléter','4 %']],bars:[44,62,55,76,83,94],phoneLabel:'Dossiers complets',phoneNote:'Le suivi pédagogique en un regard',progressLabel:'Présence en cours',progress:96},
+  finance:{title:'Vos finances, au même endroit.',phoneTitle:'Les finances, en clair.',labels:['Encaissements du mois','Taux de recouvrement','Paiements reçus','Reversements'],values:[2850000,87,184,8],suffix:[' F',' %','',''],notes:['Montant de démonstration','Votre scolarité suivie','Transactions d’exemple','Suivi du wallet'],chart:'Évolution des encaissements',subtitle:'Des règlements suivis au fil des mois.',distribution:'Moyens de paiement',donut:'184',donutLabel:'règlements',legend:[['Mobile Money','68 %'],['Cartes','22 %'],['Autres','10 %']],bars:[30,56,48,72,64,91],phoneLabel:'Encaissements du mois',phoneNote:'Données fictives de votre wallet',progressLabel:'Recouvrement',progress:87}
+ };
+ const events=[{title:'Scolarité réglée',detail:'Aïcha K. · Licence 2',value:'50 000 FCFA',status:'Confirmé',symbol:'✓'},{title:'Nouvelle inscription',detail:'Moussa D. · Sciences de gestion',value:'Dossier complet',status:'Inscrit',symbol:'+'},{title:'Bulletins disponibles',detail:'Licence 2 · semestre en cours',value:'32 documents',status:'Générés',symbol:'▧'},{title:'Cours confirmé',detail:'Économie · salle B12',value:'Émargement prêt',status:'Planifié',symbol:'✓'}];
+ const format=n=>new Intl.NumberFormat('fr-FR').format(Math.round(n));
+ const metrics=[...stage.querySelectorAll('[data-device-metric]')];
+ function renderCounters(view,animate){
+  if(frame)cancelAnimationFrame(frame);
+  if(!animate){metrics.forEach((el,i)=>el.textContent=format(view.values[i])+view.suffix[i]);return;}
+  const start=performance.now();function draw(now){const progress=Math.min(1,(now-start)/800),eased=1-(1-progress)**3;metrics.forEach((el,i)=>el.textContent=format(view.values[i]*(.8+.2*eased))+view.suffix[i]);if(progress<1)frame=requestAnimationFrame(draw);else frame=null;}frame=requestAnimationFrame(draw);
+ }
+ function showView(name){current=name;const v=views[name];document.querySelectorAll('[data-device-view]').forEach(button=>{const selected=button.dataset.deviceView===name;button.classList.toggle('active',selected);button.setAttribute('aria-pressed',String(selected));});stage.querySelectorAll('[data-admin-menu]').forEach(item=>item.classList.toggle('selected',item.dataset.adminMenu===name));
+  document.getElementById('deviceViewTitle').textContent=v.title;document.getElementById('devicePhoneTitle').textContent=v.phoneTitle;
+  metrics.forEach((el,i)=>{el.parentElement.querySelector('span').textContent=v.labels[i];el.parentElement.querySelector('small').textContent=v.notes[i];});renderCounters(v,!paused&&!prefersReduced.matches);
+  document.getElementById('deviceChartTitle').textContent=v.chart;document.getElementById('deviceChartSubtitle').textContent=v.subtitle;document.getElementById('deviceDistributionTitle').textContent=v.distribution;document.getElementById('deviceDonutValue').textContent=v.donut;document.getElementById('deviceDonutLabel').textContent=v.donutLabel;const split1=parseFloat(v.legend[0][1]),split2=split1+parseFloat(v.legend[1][1]);stage.querySelector('.admin-donut').style.background='conic-gradient(#568048 0 '+split1+'%,#bad095 '+split1+'% '+split2+'%,#e5ad87 '+split2+'%)';
+  document.getElementById('deviceDistributionLegend').replaceChildren(...v.legend.map(([name,value])=>{const span=document.createElement('span'),b=document.createElement('b');span.append(document.createTextNode(name+' '));b.textContent=value;span.append(b);return span;}));
+  [...document.querySelectorAll('#deviceBars>div')].forEach((bar,i)=>bar.style.setProperty('--height',v.bars[i]+'%'));
+  document.getElementById('devicePhoneMetricLabel').textContent=v.phoneLabel;document.getElementById('devicePhoneMetric').textContent=format(v.values[0])+v.suffix[0];document.getElementById('devicePhoneMetricNote').textContent=v.phoneNote;document.getElementById('devicePhoneChartLabel').textContent=v.progressLabel;document.getElementById('devicePhonePercent').textContent=v.progress+' %';document.getElementById('devicePhoneProgress').style.width=v.progress+'%';
+ }
+ function renderActivity(){const event=events[tick%events.length],next=events[(tick+1)%events.length];const rows=document.getElementById('deviceActivity');rows.replaceChildren(...[event,next].map((e,i)=>{const row=document.createElement('div');const icon=document.createElement('span');icon.className='admin-event-icon'+(i?' coral':'');icon.textContent=e.symbol;const copy=document.createElement('div'),title=document.createElement('b'),detail=document.createElement('small'),amount=document.createElement('strong'),status=document.createElement('span');title.textContent=e.title;detail.textContent=e.detail;copy.append(title,detail);amount.textContent=e.value;status.className='admin-event-status';status.textContent=e.status;row.append(icon,copy,amount,status);return row;}));
+ const phoneEvent=document.getElementById('devicePhoneEvent');phoneEvent.querySelector(':scope>span').textContent=event.symbol;phoneEvent.querySelector('b').textContent=event.title;phoneEvent.querySelector('small').textContent=event.detail;document.getElementById('deviceSync').textContent='Exemple actualisé · '+String(tick+1).padStart(2,'0');
+ const v=views[current];[...document.querySelectorAll('#deviceBars>div')].forEach((bar,i)=>bar.style.setProperty('--height',Math.max(20,Math.min(96,v.bars[i]+((tick+i)%3-1)*5))+'%'));tick++;
+ }
+ function stop(){if(timer){clearInterval(timer);timer=null;}}
+ function start(){stop();if(!paused&&visible&&!document.hidden)timer=setInterval(renderActivity,4500);}
+ const motion=document.getElementById('deviceMotionToggle');
+ function motionState(){stage.classList.toggle('device-paused',paused);motion.setAttribute('aria-pressed',String(paused));motion.textContent=paused?'Activer l’animation ▷':'Mettre l’animation en pause Ⅱ';}
+ motion.addEventListener('click',()=>{paused=!paused;if(paused&&frame){cancelAnimationFrame(frame);frame=null;renderCounters(views[current],false);}motionState();start();});
+ document.querySelectorAll('[data-device-view]').forEach(button=>button.addEventListener('click',()=>showView(button.dataset.deviceView)));
+ const display=stage.querySelector('.macbook-display'),surface=document.getElementById('adminSurface');
+ function resize(){surface.style.transform='scale('+(display.clientWidth/1000)+')';}
+ if('ResizeObserver' in window)new ResizeObserver(resize).observe(display);else window.addEventListener('resize',resize);resize();
+ if('IntersectionObserver' in window)new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;if(visible&&!stage.dataset.animated){stage.dataset.animated='true';renderCounters(views[current],!paused);}start();},{threshold:.15}).observe(stage);else{visible=true;start();}
+ document.addEventListener('visibilitychange',start);prefersReduced.addEventListener('change',()=>{paused=prefersReduced.matches;motionState();showView(current);start();});
+ motionState();showView('overview');
+})();
