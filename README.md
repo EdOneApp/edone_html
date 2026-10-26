@@ -1,4 +1,24 @@
+## Lisibilité et pages d’erreur
+
+Les textes ont été agrandis (descriptions 16–18 px, champs de formulaire 16 px) et les grilles adaptées à ces nouvelles tailles.
+
+Pages disponibles : `400.html`, `401.html`, `403.html`, `404.html`, `405.html`, `408.html`, `410.html`, `422.html`, `429.html`, `500.html`, `502.html`, `503.html`, `504.html`, `offline.html`, `maintenance.html`. Elles partagent `styles.css`, `error.css` et `error.js`, avec retour à l’accueil, contact et bouton de nouvelle tentative lorsque pertinent. Elles sont exclues de l’indexation par une balise robots.
+
+**Hébergement :** le domaine racine est `edone.my` (`CNAME`). GitHub Pages utilise automatiquement `404.html` pour une adresse inexistante. Les autres fichiers sont des pages statiques : leur ouverture directe renvoie normalement HTTP 200. Pour les servir automatiquement avec leurs codes 4xx/5xx, il faut configurer un serveur ou un proxy ; GitHub Pages ne propose pas cette configuration. `offline.html` n’est pas un cache hors connexion : sans service worker installé, elle doit avoir déjà été chargée pour rester visible après une coupure. `maintenance.html` ne met pas le site en maintenance à elle seule.
+
 # EdOne
+
+## Refonte visuelle — octobre 2026
+
+Direction « campus vivant » : fond ivoire, vert profond, accents corail, typographies Manrope et DM Sans. Photo de campus illustrative créée avec ImageGen, illustrations de livres en CSS, animations au défilement respectant la préférence de réduction des mouvements.
+
+- `index.html` : nouvelle page et formulaire de démonstration vers WhatsApp.
+- `styles.css` : design responsive, navigation mobile et animations.
+- `app.js` : quatre profils interactifs, filtres de fonctionnalités, calculateur de frais, pays et validation du formulaire.
+- `modules.json` : catalogue des 32 fiches conservées ; une copie est intégrée dans `app.js` pour permettre l’ouverture directe sans serveur.
+- `images/campus-edone.jpg` : nouveau visuel optimisé (environ 460 Ko). Les personnes et les chiffres des aperçus sont illustratifs.
+
+Pour prévisualiser : `python3 -m http.server 4173`, puis ouvrir `http://localhost:4173`. Aucun build ni installation nécessaire. Les polices Google nécessitent Internet ; des polices système prennent le relais hors ligne.
 
 ### Le système d'exploitation scolaire — Afrique & Europe
 
@@ -231,7 +251,10 @@ edone_html/
 │   ├── 6.jpeg     → support « Programme intégrateurs »
 │   ├── 9.jpeg     → support « Transformer l'établissement »
 │   └── 10.jpeg    → support « La solution intelligente »
-├── landing.html   → page complète (HTML/CSS/JS pur, sans backend)
+├── index.html     → page principale (sans backend)
+├── styles.css     → design et adaptation mobile
+├── app.js         → interactions et formulaire
+├── modules.json   → catalogue des fonctionnalités
 └── README.md      → ce document
 ```
 

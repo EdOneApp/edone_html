@@ -1,0 +1,162 @@
+[
+  {
+    "category": "Pédagogie",
+    "title": "Gestion académique",
+    "description": "Années académiques, campus, salles, filières, niveaux, classes et maquettes pédagogiques."
+  },
+  {
+    "category": "Pédagogie",
+    "title": "Inscription &amp; réinscription",
+    "description": "Dossier électronique complet, cartes étudiants, kits &amp; accessoires, statistiques en direct."
+  },
+  {
+    "category": "Pédagogie",
+    "title": "Emploi du temps",
+    "description": "Planification par classe, émargements numériques, export PDF/Excel."
+  },
+  {
+    "category": "Pédagogie",
+    "title": "Espace enseignant",
+    "description": "Contrats, volume horaire, travaux dirigés, dépôt de supports, RIB, acomptes."
+  },
+  {
+    "category": "Pédagogie",
+    "title": "Quiz sécurisés anti-triche",
+    "description": "QCM, choix multiples, réponses libres, tentatives limitées, détection de changement d'onglet."
+  },
+  {
+    "category": "Pédagogie",
+    "title": "Devoirs individuels",
+    "description": "Dépôt de fichier, consigne jointe, correction et appréciation par l'enseignant."
+  },
+  {
+    "category": "Pédagogie",
+    "title": "Devoirs de groupe",
+    "description": "Constitution des groupes, chef de groupe désigné, soumission et notation collective."
+  },
+  {
+    "category": "Pédagogie",
+    "title": "Évaluations &amp; notation",
+    "description": "Import de notes par Excel, coefficients configurables, gestion des réclamations."
+  },
+  {
+    "category": "Documents",
+    "title": "Bulletins",
+    "description": "Génération automatique par semestre, moyennes pondérées, rangs et appréciations."
+  },
+  {
+    "category": "Documents",
+    "title": "Procès-verbaux",
+    "description": "PV de semestre et annuel, calcul des crédits, décisions de passage automatisées."
+  },
+  {
+    "category": "Documents",
+    "title": "Diplômes &amp; certificats",
+    "description": "Sessions de délivrance, génération en masse, code de vérification publique."
+  },
+  {
+    "category": "Documents",
+    "title": "Attestations de scolarité",
+    "description": "Certificats de scolarité, de réussite et d'admission, vérifiables via lien public."
+  },
+  {
+    "category": "Documents",
+    "title": "Reçus de paiement",
+    "description": "Reçu automatique à chaque paiement, envoyé par SMS et email, historique complet."
+  },
+  {
+    "category": "Documents",
+    "title": "Carte étudiant",
+    "description": "Carte numérique et imprimable avec photo, statut de remise suivi par la direction."
+  },
+  {
+    "category": "Documents",
+    "title": "CV automatique",
+    "description": "Généré à partir du parcours de l'étudiant, personnalisable et partageable via un lien."
+  },
+  {
+    "category": "Documents",
+    "title": "Vérification en ligne",
+    "description": "Chaque document officiel est vérifiable publiquement via son code unique."
+  },
+  {
+    "category": "Finance",
+    "title": "Comptabilité &amp; scolarité",
+    "description": "Frais de scolarité, plans de paiement, historique complet, statuts de solde."
+  },
+  {
+    "category": "Finance",
+    "title": "Wallet établissement",
+    "description": "Solde en temps réel, demandes de reversement, historique de toutes les transactions."
+  },
+  {
+    "category": "Finance",
+    "title": "Abonnement &amp; facturation",
+    "description": "Facturation SaaS mensuelle automatisée, prélèvement wallet ou paiement en ligne."
+  },
+  {
+    "category": "Finance",
+    "title": "Réconciliation automatique",
+    "description": "Rapprochement automatique des transactions et détection d'écarts."
+  },
+  {
+    "category": "Finance",
+    "title": "Stock &amp; moyens généraux",
+    "description": "Produits, catégories, fournisseurs, commandes, remise de kits &amp; accessoires."
+  },
+  {
+    "category": "Finance",
+    "title": "Ressources humaines",
+    "description": "Fiches personnel administratif, services, contrats et suivi RH."
+  },
+  {
+    "category": "Finance",
+    "title": "Demandes d'acompte",
+    "description": "Enseignants et personnel demandent un acompte en ligne, validé par la comptabilité."
+  },
+  {
+    "category": "Finance",
+    "title": "Infirmerie",
+    "description": "Dossiers médicaux, antécédents, consultations, arrêts de travail."
+  },
+  {
+    "category": "Communication",
+    "title": "Espace parent sécurisé",
+    "description": "Accès par matricule et contact, suivi complet du cursus, absences et paiements."
+  },
+  {
+    "category": "Communication",
+    "title": "Campagnes SMS &amp; email",
+    "description": "Ciblées par classe, filière ou niveau  relances de paiement, notes, messages libres."
+  },
+  {
+    "category": "Communication",
+    "title": "Comptes &amp; permissions",
+    "description": "Rôles et droits d'accès finement configurables pour chaque profil."
+  },
+  {
+    "category": "Communication",
+    "title": "Google Workspace intégré",
+    "description": "Email professionnel automatique et accès à Drive, Docs, Sheets et Meet."
+  },
+  {
+    "category": "Communication",
+    "title": "Transport scolaire",
+    "description": "Cars, trajets, abonnements étudiants, paiement de l'abonnement mensuel en ligne."
+  },
+  {
+    "category": "Communication",
+    "title": "Sécurité &amp; double authentification",
+    "description": "2FA pour les comptes sensibles, isolation stricte des données par établissement."
+  },
+  {
+    "category": "Communication",
+    "title": "Dashboard 360°",
+    "description": "Vue globale direction : effectifs, recouvrement, RH, académique en temps réel."
+  },
+  {
+    "category": "Communication",
+    "title": "Bibliothèque numérique",
+    "description": "79 000+ ouvrages, documents établissement et partages étudiants validés."
+  }
+]
