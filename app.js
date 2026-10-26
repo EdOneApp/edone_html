@@ -7,179 +7,577 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMenu();}});
 const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 if(!reducedMotion&&'IntersectionObserver' in window){document.documentElement.classList.add('js-motion');const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}}),{threshold:.08});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));}
 const roles={
-direction:{label:"VOTRE ÉTABLISSEMENT, EN VUE D’ENSEMBLE",title:'Piloter avec une longueur d’avance.',description:'Effectifs, recouvrement, académique : retrouvez les indicateurs qui éclairent vos décisions, sans courir après les fichiers.',list:['Tableau de bord 360°','Gestion multi-campus et permissions','Documents officiels vérifiables'],dash:'Votre école avance.',metrics:['Étudiants inscrits','1 248','Année académique en cours','Recouvrement','87 %','Une vision en temps réel'],chart:'Les inscriptions, mois après mois'},
-enseignants:{label:'PLUS DE TEMPS POUR TRANSMETTRE',title:'Préparer, partager. Et voir progresser.',description:'Vos cours, vos évaluations et vos échanges au même endroit. Retrouvez le temps de vous concentrer sur vos étudiants.',list:['Quiz sécurisés et devoirs individuels ou de groupe','Saisie et import des notes par Excel','Contrats, volumes horaires et acomptes'],dash:'Une journée pour transmettre.',metrics:['Cours cette semaine','12','Votre emploi du temps','Devoirs à corriger','24','Individuels et collectifs'],chart:'Les évaluations au fil du semestre'},
-etudiants:{label:'VOTRE PARCOURS PREND FORME',title:'Apprendre avec tous les repères.',description:'Un cours à retrouver, une note à consulter, un devoir à rendre : votre vie étudiante tient dans un espace qui vous suit partout.',list:['Notes, bulletins et emploi du temps','Bibliothèque numérique intégrée','Paiements en ligne et CV automatique'],dash:'À vous le prochain chapitre.',metrics:['Moyenne du semestre','14,5','Sur 20 · Exemple','Devoirs rendus','8 / 9','Votre progression'],chart:'Votre parcours, mois après mois'},
-parents:{label:'LE LIEN AVEC L’ÉCOLE, TOUT SIMPLEMENT',title:'Être présent, même à distance.',description:'Suivez le parcours de votre enfant et réglez la scolarité depuis votre téléphone. Le lien avec son école devient plus simple.',list:['Suivi des notes et des bulletins','Alertes d’absences et notifications','Paiement de la scolarité par Mobile Money'],dash:'Gardez le lien avec son école.',metrics:['Scolarité réglée','75 %','Suivi des échéances','Prochaine échéance','50 000 F','Montant illustratif'],chart:'Les règlements au fil de l’année'}};
+  "direction": {
+    "label": "VOTRE ÉTABLISSEMENT, EN VUE D’ENSEMBLE",
+    "title": "Piloter avec une longueur d’avance.",
+    "description": "Académique, finances et équipes : une vue d’ensemble, des accès maîtrisés et des décisions éclairées.",
+    "list": [
+      "Multi-établissements & campus (gestion de plusieurs écoles sur une même plateforme)",
+      "Permissions granulaires (rôles, accès par module, par établissement)",
+      "Dashboard 360° (vue d’ensemble des indicateurs)",
+      "Campagnes SMS & email",
+      "Diplômes, PV (procès-verbaux), attestations de scolarité, certificats de réussite",
+      "Wallet établissement (solde temps réel, demandes de reversement, historique)",
+      "Réconciliation automatique des transactions",
+      "Gestion des abonnements et facturation SaaS automatisée",
+      "Programme partenaire / intégrateur (licence marque blanche, prime 100 000 FCFA / école, 10% à vie, dashboard partenaire)",
+      "Configuration des coefficients, maquettes pédagogiques, filières, niveaux, salles",
+      "Import / export de données (Excel, PDF)",
+      "Traçabilité complète (chaque modification de note et chaque paiement horodaté et attribué)",
+      "Sauvegardes automatisées + procédure de restauration testée",
+      "Isolation multi-établissement (données cloisonnées)"
+    ],
+    "dash": "Votre école avance.",
+    "metrics": [
+      "Étudiants inscrits",
+      "1 248",
+      "Année académique en cours",
+      "Recouvrement",
+      "87 %",
+      "Une vision en temps réel"
+    ],
+    "chart": "Les inscriptions, mois après mois",
+    "photo": "images/administration-edone.jpg",
+    "photoAlt": "Illustration : Une équipe administrative scolaire autour d’un ordinateur",
+    "photoCaption": "Les équipes qui font avancer l’école."
+  },
+  "enseignants": {
+    "label": "PLUS DE TEMPS POUR TRANSMETTRE",
+    "title": "Préparer, partager. Et voir progresser.",
+    "description": "Du planning à la correction, retrouvez vos cours, vos étudiants et vos démarches administratives dans un même espace.",
+    "list": [
+      "Contrats & volume horaire (suivi administratif du corps enseignant)",
+      "Import de notes par Excel (import massif, correction rapide)",
+      "Quiz sécurisés anti-triche (QCM, choix multiples, réponses libres, tentatives limitées, détection de changement d’onglet/navigateur)",
+      "Devoirs individuels (dépôt de fichier, consigne jointe, correction et appréciation)",
+      "Devoirs de groupe (constitution des groupes, chef de groupe, soumission collective, notation collective)",
+      "Évaluations et notation (coefficients configurables, gestion des réclamations)",
+      "Dépôt de supports de cours",
+      "RIB (relevé d’identité bancaire) et demandes d’acompte",
+      "Fiches de présence numériques",
+      "Espace enseignant dédié (maquette, planning)",
+      "Configuration des coefficients par matière / niveau"
+    ],
+    "dash": "Une journée pour transmettre.",
+    "metrics": [
+      "Cours cette semaine",
+      "12",
+      "Votre emploi du temps",
+      "Devoirs à corriger",
+      "24",
+      "Individuels et collectifs"
+    ],
+    "chart": "Les évaluations au fil du semestre",
+    "photo": "images/enseignante-edone.jpg",
+    "photoAlt": "Illustration : Une enseignante préparant son cours dans une salle lumineuse",
+    "photoCaption": "Du temps pour transmettre."
+  },
+  "etudiants": {
+    "label": "VOTRE PARCOURS PREND FORME",
+    "title": "Apprendre avec tous les repères.",
+    "description": "Un cours à retrouver, une note à consulter, un devoir à rendre : votre vie étudiante vous suit partout.",
+    "list": [
+      "Maquette pédagogique complète (années académiques, classes, cours, enseignants, salles)",
+      "Quiz & devoirs (accès, réponses, notes immédiates)",
+      "Notes & bulletins (consultation, téléchargement PDF, rangs, moyennes pondérées)",
+      "Paiement Mobile Money / carte (Orange Money, MTN, Moov, Wave, Visa, Mastercard)",
+      "CV automatique généré depuis le parcours, personnalisable et partageable via lien public",
+      "Carte étudiant numérique et imprimable (photo, statut de remise suivi par la direction)",
+      "Bibliothèque de 79 000+ ouvrages (consultation, favoris, lecture directe)",
+      "Email professionnel Google Workspace (accès à Drive, Docs, Sheets, Meet)",
+      "Vérification publique des documents (bulletin, diplôme, attestation par code unique)",
+      "Accès aux reçus de paiement et historique de solde",
+      "Suivi des frais divers (cartes, kits, accessoires, transport)",
+      "Alertes d’absences et notifications automatiques"
+    ],
+    "dash": "À vous le prochain chapitre.",
+    "metrics": [
+      "Moyenne du semestre",
+      "14,5",
+      "Sur 20 · Exemple",
+      "Devoirs rendus",
+      "8 / 9",
+      "Votre progression"
+    ],
+    "chart": "Votre parcours, mois après mois",
+    "photo": "images/campus-edone.jpg",
+    "photoAlt": "Illustration : Des étudiants travaillant ensemble sur un campus",
+    "photoCaption": "Le prochain chapitre s’écrit ensemble."
+  },
+  "parents": {
+    "label": "LE LIEN AVEC L’ÉCOLE, TOUT SIMPLEMENT",
+    "title": "Être présent, même à distance.",
+    "description": "Accédez au suivi de votre enfant par son matricule, consultez ses échéances et réglez les frais depuis votre téléphone.",
+    "list": [
+      "Accès simple par matricule (login facile, pas de mot de passe complexe obligatoire)",
+      "Suivi du cursus, notes, bulletins (toutes périodes)",
+      "Alertes d’absences (notification immédiate)",
+      "Statut et paiement de la scolarité (suivi des échéances, montants restants)",
+      "Paiement des frais divers en ligne (transport, carte, kits, accessoires)",
+      "Notifications SMS/Email automatiques (reçus, alertes, annonces)",
+      "Accès au wallet / historique des paiements effectués",
+      "Consultation de la carte étudiant et des documents officiels (lorsque autorisé)"
+    ],
+    "dash": "Gardez le lien avec son école.",
+    "metrics": [
+      "Scolarité réglée",
+      "75 %",
+      "Suivi des échéances",
+      "Prochaine échéance",
+      "50 000 F",
+      "Montant illustratif"
+    ],
+    "chart": "Les règlements au fil de l’année",
+    "photo": "images/famille-edone.jpg",
+    "photoAlt": "Illustration : Un père et sa fille consultant un téléphone à la maison",
+    "photoCaption": "Le lien, même à distance."
+  },
+  "personnel": {
+    "label": "LES ÉQUIPES QUI FONT TOURNER L’ÉCOLE",
+    "title": "Chaque tâche trouve sa place.",
+    "description": "Inscriptions, ressources humaines, fournitures et transport : une organisation commune pour tous les métiers du campus.",
+    "list": [
+      "Fiches du personnel administratif et technique",
+      "Services, contrats, suivi RH",
+      "Gestion du stock et moyens généraux (produits, catégories, fournisseurs, commandes, remise de kits et accessoires)",
+      "Transport (suivi des lignes, paquets, frais de transport)",
+      "Gestion des inscriptions et réinscriptions (dossiers électroniques, statistiques en direct)",
+      "Établissement et gestion du campus (salles, filières, niveaux)",
+      "Mise à jour des données de l’élève et du personnel",
+      "Authentification sécurisée (2FA pour super administrateurs)",
+      "Conformité RGPD (traitement et conservation conformes)"
+    ],
+    "dash": "Le campus, bien organisé.",
+    "metrics": [
+      "Dossiers complets",
+      "184",
+      "Inscriptions · Exemple",
+      "Kits à remettre",
+      "32",
+      "Logistique · Exemple"
+    ],
+    "chart": "L’activité administrative au fil des mois",
+    "photo": "images/administration-edone.jpg",
+    "photoAlt": "Illustration : Une équipe administrative organisant la vie scolaire",
+    "photoCaption": "Chaque métier compte."
+  },
+  "partenaires": {
+    "label": "LE PROGRÈS SE PARTAGE",
+    "title": "Accompagner les écoles. Grandir ensemble.",
+    "description": "Distribuez EdOne en marque blanche et accompagnez vos établissements clients, de l’installation à la formation.",
+    "list": [
+      "Licence marque blanche aux couleurs de votre structure",
+      "Prime d’installation de 100 000 FCFA par établissement signé",
+      "Commission de 10 % à vie sur chaque abonnement mensuel payé",
+      "Dashboard partenaire dédié au suivi des établissements et des commissions",
+      "Support technique, formation et accompagnement au déploiement"
+    ],
+    "dash": "Votre réseau prend son élan.",
+    "metrics": [
+      "Établissements",
+      "8",
+      "Votre réseau · Exemple",
+      "Commission",
+      "10 %",
+      "Sur les abonnements payés"
+    ],
+    "chart": "Le développement de votre réseau",
+    "photo": "images/campus-vie-edone.jpg",
+    "photoAlt": "Illustration : Des étudiants traversant un campus arboré",
+    "photoCaption": "Accompagner les écoles qui avancent."
+  }
+};
 const tabs=[...document.querySelectorAll('[data-role]')];
-function selectRole(tab){tabs.forEach(t=>{t.setAttribute('aria-selected',String(t===tab));t.tabIndex=t===tab?0:-1;});const r=roles[tab.dataset.role];document.getElementById('role-panel').setAttribute('aria-labelledby',tab.id);document.getElementById('role-label').textContent=r.label;document.getElementById('role-title').textContent=r.title;document.getElementById('role-desc').textContent=r.description;document.getElementById('role-list').replaceChildren(...r.list.map(text=>{const li=document.createElement('li');li.textContent=text;return li;}));document.getElementById('dash-title').textContent=r.dash;['metric1label','metric1','metric1note','metric2label','metric2','metric2note'].forEach((id,i)=>document.getElementById(id).textContent=r.metrics[i]);document.getElementById('chart-title').textContent=r.chart;document.querySelectorAll('.bars i').forEach((bar,i)=>{bar.style.height=(25+((i*13+tab.dataset.role.length*7)%65))+'%';});}
+function selectRole(tab){tabs.forEach(t=>{t.setAttribute('aria-selected',String(t===tab));t.tabIndex=t===tab?0:-1;});const r=roles[tab.dataset.role];document.getElementById('rolePhoto').src=r.photo;document.getElementById('rolePhoto').alt=r.photoAlt;document.getElementById('rolePhotoCaption').textContent=r.photoCaption;document.getElementById('role-panel').setAttribute('aria-labelledby',tab.id);document.getElementById('role-label').textContent=r.label;document.getElementById('role-title').textContent=r.title;document.getElementById('role-desc').textContent=r.description;document.getElementById('role-details').open=false;document.getElementById('role-list').replaceChildren(...r.list.slice(0,4).map(text=>{const li=document.createElement('li');li.textContent=text;return li;}));document.getElementById('role-all-features').replaceChildren(...r.list.slice(4).map(text=>{const li=document.createElement('li');li.textContent=text;return li;}));document.getElementById('role-details').hidden=r.list.length<=4;document.getElementById('role-details-summary').textContent='Voir les '+r.list.length+' fonctionnalités du profil';document.getElementById('dash-title').textContent=r.dash;['metric1label','metric1','metric1note','metric2label','metric2','metric2note'].forEach((id,i)=>document.getElementById(id).textContent=r.metrics[i]);document.getElementById('chart-title').textContent=r.chart;document.querySelectorAll('.bars i').forEach((bar,i)=>{bar.style.height=(25+((i*13+tab.dataset.role.length*7)%65))+'%';});}
 tabs.forEach((t,i)=>{t.addEventListener('click',()=>selectRole(t));t.addEventListener('keydown',e=>{let target;if(e.key==='ArrowRight'||e.key==='ArrowDown')target=tabs[(i+1)%tabs.length];if(e.key==='ArrowLeft'||e.key==='ArrowUp')target=tabs[(i+tabs.length-1)%tabs.length];if(e.key==='Home')target=tabs[0];if(e.key==='End')target=tabs.at(-1);if(target){e.preventDefault();selectRole(target);target.focus();}});});
 // The feature content is embedded to keep this static page usable via file:// too.
 const modules=[
   {
+    "id": 1,
     "category": "Pédagogie",
     "title": "Gestion académique",
-    "description": "Années académiques, campus, salles, filières, niveaux, classes et maquettes pédagogiques."
+    "description": "Années, campus, salles, filières, niveaux, classes, maquettes."
   },
   {
+    "id": 2,
     "category": "Pédagogie",
-    "title": "Inscription &amp; réinscription",
-    "description": "Dossier électronique complet, cartes étudiants, kits &amp; accessoires, statistiques en direct."
+    "title": "Inscription & réinscription",
+    "description": "Dossier électronique, carte étudiant, kits, statistiques."
   },
   {
+    "id": 3,
     "category": "Pédagogie",
     "title": "Emploi du temps",
     "description": "Planification par classe, émargements numériques, export PDF/Excel."
   },
   {
+    "id": 4,
     "category": "Pédagogie",
     "title": "Espace enseignant",
-    "description": "Contrats, volume horaire, travaux dirigés, dépôt de supports, RIB, acomptes."
+    "description": "Contrats, volume horaire, supports, RIB, acomptes."
   },
   {
+    "id": 5,
     "category": "Pédagogie",
     "title": "Quiz sécurisés anti-triche",
-    "description": "QCM, choix multiples, réponses libres, tentatives limitées, détection de changement d'onglet."
+    "description": "QCM, réponses libres, tentatives limitées, détection d’onglet."
   },
   {
+    "id": 6,
     "category": "Pédagogie",
     "title": "Devoirs individuels",
-    "description": "Dépôt de fichier, consigne jointe, correction et appréciation par l'enseignant."
+    "description": "Fichier, consigne, correction, appréciation."
   },
   {
+    "id": 7,
     "category": "Pédagogie",
     "title": "Devoirs de groupe",
-    "description": "Constitution des groupes, chef de groupe désigné, soumission et notation collective."
+    "description": "Groupes, chef, soumission, notation collective."
   },
   {
+    "id": 8,
     "category": "Pédagogie",
-    "title": "Évaluations &amp; notation",
-    "description": "Import de notes par Excel, coefficients configurables, gestion des réclamations."
+    "title": "Évaluations & notation",
+    "description": "Import Excel, coefficients, réclamations."
   },
   {
-    "category": "Documents",
+    "id": 9,
+    "category": "Pédagogie",
     "title": "Bulletins",
-    "description": "Génération automatique par semestre, moyennes pondérées, rangs et appréciations."
+    "description": "Génération automatique par semestre, moyennes pondérées, rangs, appréciations."
   },
   {
-    "category": "Documents",
+    "id": 10,
+    "category": "Pédagogie",
     "title": "Procès-verbaux",
-    "description": "PV de semestre et annuel, calcul des crédits, décisions de passage automatisées."
+    "description": "PV semestriels et annuels, calcul des crédits et décisions de passage automatisées."
   },
   {
-    "category": "Documents",
-    "title": "Diplômes &amp; certificats",
-    "description": "Sessions de délivrance, génération en masse, code de vérification publique."
+    "id": 11,
+    "category": "Pédagogie",
+    "title": "Diplômes & certificats",
+    "description": "Sessions, génération en masse, code de vérification publique."
   },
   {
-    "category": "Documents",
+    "id": 12,
+    "category": "Pédagogie",
     "title": "Attestations de scolarité",
-    "description": "Certificats de scolarité, de réussite et d'admission, vérifiables via lien public."
+    "description": "Certificats vérifiables via lien public."
   },
   {
-    "category": "Documents",
+    "id": 13,
+    "category": "Pédagogie",
     "title": "Reçus de paiement",
-    "description": "Reçu automatique à chaque paiement, envoyé par SMS et email, historique complet."
+    "description": "Un reçu est généré automatiquement à chaque règlement, puis envoyé par SMS et e-mail."
   },
   {
-    "category": "Documents",
+    "id": 14,
+    "category": "Pédagogie",
     "title": "Carte étudiant",
-    "description": "Carte numérique et imprimable avec photo, statut de remise suivi par la direction."
+    "description": "Numérique + imprimable, photo, statut de remise."
   },
   {
-    "category": "Documents",
+    "id": 15,
+    "category": "Pédagogie",
     "title": "CV automatique",
-    "description": "Généré à partir du parcours de l'étudiant, personnalisable et partageable via un lien."
+    "description": "Parcours de l’étudiant, personnalisé, lien public."
   },
   {
-    "category": "Documents",
+    "id": 16,
+    "category": "Pédagogie",
     "title": "Vérification en ligne",
-    "description": "Chaque document officiel est vérifiable publiquement via son code unique."
+    "description": "Documents officiels par code unique."
   },
   {
+    "id": 17,
+    "category": "Documents",
+    "title": "Bulletins PDF",
+    "description": "Génération de bulletins téléchargeables au format PDF."
+  },
+  {
+    "id": 18,
+    "category": "Documents",
+    "title": "Procès-verbaux PDF",
+    "description": "Génération de PV semestriels et annuels au format PDF."
+  },
+  {
+    "id": 19,
+    "category": "Documents",
+    "title": "Diplômes et certificats en masse",
+    "description": "Production des diplômes et certificats par session de délivrance."
+  },
+  {
+    "id": 20,
+    "category": "Documents",
+    "title": "Attestations officielles",
+    "description": "Attestations de réussite, d’admission et de scolarité, vérifiables par lien public."
+  },
+  {
+    "id": 21,
+    "category": "Documents",
+    "title": "Reçus automatiques",
+    "description": "Transmission du reçu de chaque paiement par SMS et e-mail."
+  },
+  {
+    "id": 22,
+    "category": "Documents",
+    "title": "Exports Excel et PDF",
+    "description": "Export des données pédagogiques pour les équipes de l’établissement."
+  },
+  {
+    "id": 23,
     "category": "Finance",
-    "title": "Comptabilité &amp; scolarité",
-    "description": "Frais de scolarité, plans de paiement, historique complet, statuts de solde."
+    "title": "Comptabilité & scolarité",
+    "description": "Frais, plans de paiement, historique, solde."
   },
   {
+    "id": 24,
     "category": "Finance",
     "title": "Wallet établissement",
-    "description": "Solde en temps réel, demandes de reversement, historique de toutes les transactions."
+    "description": "Solde temps réel, reversement, historique."
   },
   {
+    "id": 25,
     "category": "Finance",
-    "title": "Abonnement &amp; facturation",
-    "description": "Facturation SaaS mensuelle automatisée, prélèvement wallet ou paiement en ligne."
+    "title": "Abonnement & facturation SaaS automatisée",
+    "description": "Prélèvement wallet ou en ligne."
   },
   {
+    "id": 26,
     "category": "Finance",
-    "title": "Réconciliation automatique",
-    "description": "Rapprochement automatique des transactions et détection d'écarts."
+    "title": "Réconciliation automatique des transactions",
+    "description": "Détection d’écarts."
   },
   {
+    "id": 27,
     "category": "Finance",
-    "title": "Stock &amp; moyens généraux",
-    "description": "Produits, catégories, fournisseurs, commandes, remise de kits &amp; accessoires."
+    "title": "Six moyens de paiement",
+    "description": "Orange Money, MTN Mobile Money, Moov Money, Wave, Visa et Mastercard."
   },
   {
+    "id": 28,
     "category": "Finance",
-    "title": "Ressources humaines",
-    "description": "Fiches personnel administratif, services, contrats et suivi RH."
+    "title": "Frais de transaction de 3 %",
+    "description": "3 % du montant par transaction, sans frais fixes additionnels, sur tous les plans et moyens de paiement."
   },
   {
+    "id": 29,
     "category": "Finance",
-    "title": "Demandes d'acompte",
-    "description": "Enseignants et personnel demandent un acompte en ligne, validé par la comptabilité."
+    "title": "Minimum par transaction",
+    "description": "Montant minimum : 2 000 FCFA par transaction."
   },
   {
+    "id": 30,
     "category": "Finance",
-    "title": "Infirmerie",
-    "description": "Dossiers médicaux, antécédents, consultations, arrêts de travail."
+    "title": "Tous les frais scolaires en ligne",
+    "description": "Règlement de la scolarité, du transport, de la carte, des kits et des accessoires."
   },
   {
-    "category": "Communication",
-    "title": "Espace parent sécurisé",
-    "description": "Accès par matricule et contact, suivi complet du cursus, absences et paiements."
+    "id": 31,
+    "category": "Finance",
+    "title": "Demandes de reversement",
+    "description": "L’établissement suit son wallet et demande le reversement de ses fonds."
   },
   {
-    "category": "Communication",
-    "title": "Campagnes SMS &amp; email",
-    "description": "Ciblées par classe, filière ou niveau  relances de paiement, notes, messages libres."
+    "id": 32,
+    "category": "Finance",
+    "title": "Notification après règlement",
+    "description": "Envoi automatique d’un reçu par SMS et e-mail après chaque paiement."
   },
   {
-    "category": "Communication",
-    "title": "Comptes &amp; permissions",
-    "description": "Rôles et droits d'accès finement configurables pour chaque profil."
+    "id": 33,
+    "category": "Finance",
+    "title": "Imputation en temps réel",
+    "description": "Le règlement est affecté directement au dossier de l’étudiant."
   },
   {
-    "category": "Communication",
-    "title": "Google Workspace intégré",
-    "description": "Email professionnel automatique et accès à Drive, Docs, Sheets et Meet."
+    "id": 34,
+    "category": "Ressources",
+    "title": "Stock et moyens généraux",
+    "description": "Produits, catégories, fournisseurs."
   },
   {
-    "category": "Communication",
-    "title": "Transport scolaire",
-    "description": "Cars, trajets, abonnements étudiants, paiement de l'abonnement mensuel en ligne."
+    "id": 35,
+    "category": "Ressources",
+    "title": "Commandes et fournitures",
+    "description": "Suivi des commandes et des fournitures de l’établissement."
   },
   {
-    "category": "Communication",
-    "title": "Sécurité &amp; double authentification",
-    "description": "2FA pour les comptes sensibles, isolation stricte des données par établissement."
+    "id": 36,
+    "category": "Ressources",
+    "title": "Remise des kits et accessoires",
+    "description": "Suivi de la distribution des kits et accessoires aux étudiants."
   },
   {
-    "category": "Communication",
-    "title": "Dashboard 360°",
-    "description": "Vue globale direction : effectifs, recouvrement, RH, académique en temps réel."
+    "id": 37,
+    "category": "Ressources",
+    "title": "Gestion du transport",
+    "description": "Lignes, frais, suivi."
   },
   {
+    "id": 38,
+    "category": "RH",
+    "title": "Fiches du personnel administratif / enseignant",
+    "description": "Fiches du personnel administratif / enseignant."
+  },
+  {
+    "id": 39,
+    "category": "RH",
+    "title": "Services, contrats, suivi RH",
+    "description": "Services, contrats, suivi RH."
+  },
+  {
+    "id": 40,
+    "category": "RH",
+    "title": "Volume horaire et acomptes",
+    "description": "Suivi des heures et demandes d’acompte du personnel et des enseignants."
+  },
+  {
+    "id": 41,
     "category": "Communication",
-    "title": "Bibliothèque numérique",
-    "description": "79 000+ ouvrages, documents établissement et partages étudiants validés."
+    "title": "Campagnes SMS & email",
+    "description": "Direction/admin."
+  },
+  {
+    "id": 42,
+    "category": "Communication",
+    "title": "Notifications automatiques",
+    "description": "Absences, notes, bulletins, paiements."
+  },
+  {
+    "id": 43,
+    "category": "Communication",
+    "title": "Alertes d’absence",
+    "description": "Les parents et étudiants reçoivent les notifications d’absence."
+  },
+  {
+    "id": 44,
+    "category": "Communication",
+    "title": "Envoi des documents",
+    "description": "Communication des bulletins et diplômes par e-mail et notifications par SMS."
+  },
+  {
+    "id": 45,
+    "category": "Communication",
+    "title": "Contact et support WhatsApp",
+    "description": "Un canal de contact pour échanger avec l’équipe EdOne."
+  },
+  {
+    "id": 46,
+    "category": "Sécurité",
+    "title": "Isolation multi-établissement",
+    "description": "Données isolées et accès cloisonnés par établissement."
+  },
+  {
+    "id": 47,
+    "category": "Sécurité",
+    "title": "Connexions HTTPS",
+    "description": "Chiffrement des échanges entre votre navigateur et la plateforme via HTTPS."
+  },
+  {
+    "id": 48,
+    "category": "Sécurité",
+    "title": "Mots de passe hashés",
+    "description": "Les mots de passe sont conservés sous forme de hash pour protéger les accès."
+  },
+  {
+    "id": 49,
+    "category": "Sécurité",
+    "title": "Double authentification",
+    "description": "La 2FA renforce la protection des comptes super administrateurs."
+  },
+  {
+    "id": 50,
+    "category": "Sécurité",
+    "title": "Sauvegardes et restauration",
+    "description": "Sauvegardes automatisées et procédure de restauration testée."
+  },
+  {
+    "id": 51,
+    "category": "Sécurité",
+    "title": "Conformité RGPD",
+    "description": "Traitement et conservation des données dans le cadre des exigences RGPD."
+  },
+  {
+    "id": 52,
+    "category": "Sécurité",
+    "title": "Traçabilité complète",
+    "description": "Actions horodatées et attribuées, notamment les paiements et modifications de notes."
+  },
+  {
+    "id": 53,
+    "category": "Sécurité",
+    "title": "Environnement cloisonné",
+    "description": "Chaque établissement dispose de son propre périmètre de données et d’accès."
+  },
+  {
+    "id": 54,
+    "category": "Bibliothèque",
+    "title": "Catalogue Gutendex",
+    "description": "79 000+ ouvrages du domaine public."
+  },
+  {
+    "id": 55,
+    "category": "Bibliothèque",
+    "title": "Lecture directe et sécurisée",
+    "description": "Sans téléchargement libre."
+  },
+  {
+    "id": 56,
+    "category": "Bibliothèque",
+    "title": "Ouvrages propres à l’établissement",
+    "description": "Ajoutés par direction / enseignants."
+  },
+  {
+    "id": 57,
+    "category": "Bibliothèque",
+    "title": "Partages étudiants",
+    "description": "Documents validés avant publication."
+  },
+  {
+    "id": 58,
+    "category": "Bibliothèque",
+    "title": "Favoris personnels",
+    "description": "Chaque étudiant retrouve ses livres favoris, issus du fonds de l’école ou du catalogue public."
+  },
+  {
+    "id": 59,
+    "category": "Bibliothèque",
+    "title": "Ouvrages mis en avant",
+    "description": "Les super administrateurs peuvent épingler des titres du catalogue public."
+  },
+  {
+    "id": 60,
+    "category": "Bibliothèque",
+    "title": "Bibliothèque et parcours",
+    "description": "Accès intégré à l’espace étudiant, avec une place dans son CV et son parcours."
   }
 ];
-function filterModules(category){document.querySelectorAll('[data-filter]').forEach(b=>{const active=b.dataset.filter===category;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});const items=modules.filter(m=>m.category===category);document.getElementById('moduleGrid').innerHTML=items.map((m,i)=>`<article class="module-item" style="animation-delay:${i*25}ms"><span>0${i+1} /</span><h3>${m.title}</h3><p>${m.description}</p></article>`).join('');document.getElementById('moduleSummary').textContent=items.length+' fonctionnalités · '+category;}
-document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>filterModules(b.dataset.filter)));document.querySelectorAll('[data-category]').forEach(a=>a.addEventListener('click',()=>filterModules(a.dataset.category)));filterModules('Pédagogie');
-const fmt=n=>new Intl.NumberFormat('fr-FR').format(n)+' FCFA';const range=document.getElementById('feeRange');function updateCalc(){const amount=Number(range.value),fee=Math.round(amount*.02)+100;document.getElementById('feeAmount').textContent=fmt(amount);document.getElementById('lineBase').textContent=fmt(amount);document.getElementById('lineFee').textContent=fmt(fee);document.getElementById('lineTotal').textContent=fmt(amount+fee);}range.addEventListener('input',updateCalc);updateCalc();
+let selectedCategory='Tous';
+const moduleSearch=document.getElementById('moduleSearch');
+const normalize=text=>text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('fr');
+function filterModules(category=selectedCategory){
+ selectedCategory=category;
+ document.querySelectorAll('[data-filter]').forEach(b=>{const active=b.dataset.filter===category;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
+ const query=normalize(moduleSearch.value.trim());
+ const items=modules.filter(m=>(category==='Tous'||m.category===category)&&normalize(m.title+' '+m.description+' '+m.category).includes(query));
+ const grid=document.getElementById('moduleGrid');
+ grid.replaceChildren(...items.map((m,i)=>{const article=document.createElement('article');article.className='module-item';article.style.animationDelay=Math.min(i,7)*25+'ms';const number=document.createElement('span');number.textContent=String(m.id).padStart(2,'0')+' / '+m.category;const heading=document.createElement('h3');heading.textContent=m.title;const description=document.createElement('p');description.textContent=m.description;article.append(number,heading,description);return article;}));
+ document.getElementById('moduleEmpty').hidden=items.length>0;
+ document.getElementById('moduleSummary').textContent=items.length+' résultat'+(items.length>1?'s':'')+' sur '+modules.length+' fonctionnalités détaillées'+(category==='Tous'?'':' · '+category);
+ document.getElementById('clearSearch').hidden=!moduleSearch.value;
+}
+document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>filterModules(b.dataset.filter)));
+document.querySelectorAll('[data-category]').forEach(a=>a.addEventListener('click',()=>{moduleSearch.value='';filterModules(a.dataset.category);}));
+moduleSearch.addEventListener('input',()=>filterModules());
+document.getElementById('clearSearch').addEventListener('click',()=>{moduleSearch.value='';filterModules();moduleSearch.focus();});
+document.getElementById('resetModules').addEventListener('click',()=>{moduleSearch.value='';filterModules('Tous');moduleSearch.focus();});
+filterModules();
+const fmt=n=>new Intl.NumberFormat('fr-FR').format(n)+' FCFA';
+const range=document.getElementById('feeRange');
+function updateCalc(){const amount=Number(range.value),fee=Math.round(amount*.03);document.getElementById('feeAmount').textContent=fmt(amount);document.getElementById('lineBase').textContent=fmt(amount);document.getElementById('lineFee').textContent=fmt(fee);document.getElementById('lineTotal').textContent=fmt(amount+fee);}
+range.addEventListener('input',updateCalc);updateCalc();
+
 const countriesToggle=document.getElementById('countriesToggle');countriesToggle.addEventListener('click',()=>{const open=countriesToggle.getAttribute('aria-expanded')!=='true';countriesToggle.setAttribute('aria-expanded',String(open));document.getElementById('countries').hidden=!open;countriesToggle.innerHTML=(open?'Masquer les pays':'Voir les pays couverts')+' <span>'+(open?'−':'+')+'</span>';});
 document.querySelectorAll('[data-plan]').forEach(a=>a.addEventListener('click',()=>{document.getElementById('message').value='Je souhaite en savoir plus sur '+a.dataset.plan+'.';}));document.getElementById('year').textContent=new Date().getFullYear();
 
@@ -312,3 +710,12 @@ document.querySelectorAll('[data-plan]').forEach(a=>a.addEventListener('click',(
     submitBtn.textContent = 'Envoyer ma demande';
   });
 })();
+
+// Useful motion: reading progress and direct links into a profile.
+document.querySelectorAll('[data-jump-role]').forEach(button=>button.addEventListener('click',()=>{
+ const roleTab=document.getElementById('tab-'+button.dataset.jumpRole);
+ selectRole(roleTab);
+ document.getElementById('espaces').scrollIntoView({behavior:reducedMotion?'auto':'smooth',block:'start'});
+ roleTab.focus({preventScroll:true});
+}));
+if(!reducedMotion){const progress=document.getElementById('readingProgress');let scheduled=false;function updateReadingProgress(){const available=document.documentElement.scrollHeight-window.innerHeight;progress.style.transform='scaleX('+(available>0?Math.min(1,window.scrollY/available):0)+')';scheduled=false;}window.addEventListener('scroll',()=>{if(!scheduled){scheduled=true;requestAnimationFrame(updateReadingProgress);}},{passive:true});window.addEventListener('resize',updateReadingProgress);updateReadingProgress();}

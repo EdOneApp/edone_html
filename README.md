@@ -1,3 +1,13 @@
+## Catalogue complet et nouveaux visuels
+
+Le document fourni dans `docs/fonctionnalites-source.md` est la référence métier : 60 entrées numérotées, 8 familles, 6 grands profils, e-mail professionnel et Google Workspace gratuits pour tous, bibliothèque, notifications, documents, ressources, RH et partenaires.
+
+- Frais actuels : **3 % du montant, sans frais fixes additionnels**. Minimum : **2 000 FCFA par transaction**. Le calculateur et toutes les mentions visibles appliquent cette règle.
+- `fonctionnalites.html` : guide complet rendu en HTML, consultable sans JavaScript.
+- `modules.json` et `docs/roles.json` : données éditoriales de référence. Après une modification, exécuter `python3 scripts/sync-content.py` pour synchroniser `app.js` et le guide.
+- `images/enseignante-edone.jpg`, `images/famille-edone.jpg`, `images/bibliotheque-edone.jpg`, `images/administration-edone.jpg`, `images/campus-vie-edone.jpg` : nouveaux visuels illustratifs générés avec ImageGen et optimisés en JPEG. Chargement différé sur la page d’accueil.
+- Recherche insensible aux accents, filtres, détails par profil, progression de lecture, apparitions au défilement et effets de survol. Réduction des mouvements respectée.
+
 ## Lisibilité et pages d’erreur
 
 Les textes ont été agrandis (descriptions 16–18 px, champs de formulaire 16 px) et les grilles adaptées à ces nouvelles tailles.
@@ -15,7 +25,7 @@ Direction « campus vivant » : fond ivoire, vert profond, accents corail, typog
 - `index.html` : nouvelle page et formulaire de démonstration vers WhatsApp.
 - `styles.css` : design responsive, navigation mobile et animations.
 - `app.js` : quatre profils interactifs, filtres de fonctionnalités, calculateur de frais, pays et validation du formulaire.
-- `modules.json` : catalogue des 32 fiches conservées ; une copie est intégrée dans `app.js` pour permettre l’ouverture directe sans serveur.
+- `modules.json` : catalogue des 60 fiches conservées ; une copie est intégrée dans `app.js` pour permettre l’ouverture directe sans serveur.
 - `images/campus-edone.jpg` : nouveau visuel optimisé (environ 460 Ko). Les personnes et les chiffres des aperçus sont illustratifs.
 
 Pour prévisualiser : `python3 -m http.server 4173`, puis ouvrir `http://localhost:4173`. Aucun build ni installation nécessaire. Les polices Google nécessitent Internet ; des polices système prennent le relais hors ligne.
@@ -39,7 +49,7 @@ EdOne réunit **gestion académique, scolarité, paiements Mobile Money, bibliot
 | **79 000+** | Ouvrages accessibles en bibliothèque |
 | **25** | Pays actifs en Afrique & Europe |
 | **15+** | Devises supportées |
-| **2 % + 100 FCFA** | Frais fixes par paiement en ligne |
+| **3 % sans frais fixes** | Frais fixes par paiement en ligne |
 
 ---
 
@@ -129,7 +139,7 @@ EdOne connecte nativement, dans **25 pays** :
 **Mobile Money** — Orange Money · MTN Mobile Money · Moov Money · Wave
 **Cartes bancaires** — Visa · Mastercard
 
-Frais simples et transparents : **2 % du montant + 100 FCFA**, identiques quel que soit le moyen de paiement.
+Frais simples et transparents : **3 % du montant, sans frais fixes**, identiques quel que soit le moyen de paiement.
 
 - Wallet établissement avec demandes de reversement
 - Réconciliation automatique de chaque transaction
@@ -201,7 +211,7 @@ Devenez fournisseur officiel de la solution EdOne :
 | **Campus** | 200 000 FCFA/mois (~300 EUR) | Jusqu'à 3 000 étudiants — universités, grandes écoles |
 | **Enterprise** | Sur devis | Étudiants illimités — groupes scolaires, réseaux & partenaires |
 
-*Frais de transaction (2 % + 100 FCFA) identiques quel que soit le plan choisi.*
+*Frais de transaction (3 % sans frais fixes) identiques quel que soit le plan choisi.*
 
 ![Infrastructure numérique intégrée](images/4.jpeg)
 
@@ -210,7 +220,7 @@ Devenez fournisseur officiel de la solution EdOne :
 ## ❓ FAQ
 
 **Combien coûte un paiement en ligne pour un parent ?**
-2 % du montant réglé + 100 FCFA fixes par transaction, quel que soit le moyen de paiement.
+3 % du montant réglé, sans frais fixes additionnels, quel que soit le moyen de paiement.
 
 **Comment fonctionne la bibliothèque de 79 000 ouvrages ?**
 Accès gratuit au catalogue du domaine public, enrichi par les documents de l'école et les partages entre étudiants (validés avant publication).

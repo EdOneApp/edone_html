@@ -1,162 +1,362 @@
 [
   {
+    "id": 1,
     "category": "Pédagogie",
     "title": "Gestion académique",
-    "description": "Années académiques, campus, salles, filières, niveaux, classes et maquettes pédagogiques."
+    "description": "Années, campus, salles, filières, niveaux, classes, maquettes."
   },
   {
+    "id": 2,
     "category": "Pédagogie",
-    "title": "Inscription &amp; réinscription",
-    "description": "Dossier électronique complet, cartes étudiants, kits &amp; accessoires, statistiques en direct."
+    "title": "Inscription & réinscription",
+    "description": "Dossier électronique, carte étudiant, kits, statistiques."
   },
   {
+    "id": 3,
     "category": "Pédagogie",
     "title": "Emploi du temps",
     "description": "Planification par classe, émargements numériques, export PDF/Excel."
   },
   {
+    "id": 4,
     "category": "Pédagogie",
     "title": "Espace enseignant",
-    "description": "Contrats, volume horaire, travaux dirigés, dépôt de supports, RIB, acomptes."
+    "description": "Contrats, volume horaire, supports, RIB, acomptes."
   },
   {
+    "id": 5,
     "category": "Pédagogie",
     "title": "Quiz sécurisés anti-triche",
-    "description": "QCM, choix multiples, réponses libres, tentatives limitées, détection de changement d'onglet."
+    "description": "QCM, réponses libres, tentatives limitées, détection d’onglet."
   },
   {
+    "id": 6,
     "category": "Pédagogie",
     "title": "Devoirs individuels",
-    "description": "Dépôt de fichier, consigne jointe, correction et appréciation par l'enseignant."
+    "description": "Fichier, consigne, correction, appréciation."
   },
   {
+    "id": 7,
     "category": "Pédagogie",
     "title": "Devoirs de groupe",
-    "description": "Constitution des groupes, chef de groupe désigné, soumission et notation collective."
+    "description": "Groupes, chef, soumission, notation collective."
   },
   {
+    "id": 8,
     "category": "Pédagogie",
-    "title": "Évaluations &amp; notation",
-    "description": "Import de notes par Excel, coefficients configurables, gestion des réclamations."
+    "title": "Évaluations & notation",
+    "description": "Import Excel, coefficients, réclamations."
   },
   {
-    "category": "Documents",
+    "id": 9,
+    "category": "Pédagogie",
     "title": "Bulletins",
-    "description": "Génération automatique par semestre, moyennes pondérées, rangs et appréciations."
+    "description": "Génération automatique par semestre, moyennes pondérées, rangs, appréciations."
   },
   {
-    "category": "Documents",
+    "id": 10,
+    "category": "Pédagogie",
     "title": "Procès-verbaux",
-    "description": "PV de semestre et annuel, calcul des crédits, décisions de passage automatisées."
+    "description": "PV semestriels et annuels, calcul des crédits et décisions de passage automatisées."
   },
   {
-    "category": "Documents",
-    "title": "Diplômes &amp; certificats",
-    "description": "Sessions de délivrance, génération en masse, code de vérification publique."
+    "id": 11,
+    "category": "Pédagogie",
+    "title": "Diplômes & certificats",
+    "description": "Sessions, génération en masse, code de vérification publique."
   },
   {
-    "category": "Documents",
+    "id": 12,
+    "category": "Pédagogie",
     "title": "Attestations de scolarité",
-    "description": "Certificats de scolarité, de réussite et d'admission, vérifiables via lien public."
+    "description": "Certificats vérifiables via lien public."
   },
   {
-    "category": "Documents",
+    "id": 13,
+    "category": "Pédagogie",
     "title": "Reçus de paiement",
-    "description": "Reçu automatique à chaque paiement, envoyé par SMS et email, historique complet."
+    "description": "Un reçu est généré automatiquement à chaque règlement, puis envoyé par SMS et e-mail."
   },
   {
-    "category": "Documents",
+    "id": 14,
+    "category": "Pédagogie",
     "title": "Carte étudiant",
-    "description": "Carte numérique et imprimable avec photo, statut de remise suivi par la direction."
+    "description": "Numérique + imprimable, photo, statut de remise."
   },
   {
-    "category": "Documents",
+    "id": 15,
+    "category": "Pédagogie",
     "title": "CV automatique",
-    "description": "Généré à partir du parcours de l'étudiant, personnalisable et partageable via un lien."
+    "description": "Parcours de l’étudiant, personnalisé, lien public."
   },
   {
-    "category": "Documents",
+    "id": 16,
+    "category": "Pédagogie",
     "title": "Vérification en ligne",
-    "description": "Chaque document officiel est vérifiable publiquement via son code unique."
+    "description": "Documents officiels par code unique."
   },
   {
+    "id": 17,
+    "category": "Documents",
+    "title": "Bulletins PDF",
+    "description": "Génération de bulletins téléchargeables au format PDF."
+  },
+  {
+    "id": 18,
+    "category": "Documents",
+    "title": "Procès-verbaux PDF",
+    "description": "Génération de PV semestriels et annuels au format PDF."
+  },
+  {
+    "id": 19,
+    "category": "Documents",
+    "title": "Diplômes et certificats en masse",
+    "description": "Production des diplômes et certificats par session de délivrance."
+  },
+  {
+    "id": 20,
+    "category": "Documents",
+    "title": "Attestations officielles",
+    "description": "Attestations de réussite, d’admission et de scolarité, vérifiables par lien public."
+  },
+  {
+    "id": 21,
+    "category": "Documents",
+    "title": "Reçus automatiques",
+    "description": "Transmission du reçu de chaque paiement par SMS et e-mail."
+  },
+  {
+    "id": 22,
+    "category": "Documents",
+    "title": "Exports Excel et PDF",
+    "description": "Export des données pédagogiques pour les équipes de l’établissement."
+  },
+  {
+    "id": 23,
     "category": "Finance",
-    "title": "Comptabilité &amp; scolarité",
-    "description": "Frais de scolarité, plans de paiement, historique complet, statuts de solde."
+    "title": "Comptabilité & scolarité",
+    "description": "Frais, plans de paiement, historique, solde."
   },
   {
+    "id": 24,
     "category": "Finance",
     "title": "Wallet établissement",
-    "description": "Solde en temps réel, demandes de reversement, historique de toutes les transactions."
+    "description": "Solde temps réel, reversement, historique."
   },
   {
+    "id": 25,
     "category": "Finance",
-    "title": "Abonnement &amp; facturation",
-    "description": "Facturation SaaS mensuelle automatisée, prélèvement wallet ou paiement en ligne."
+    "title": "Abonnement & facturation SaaS automatisée",
+    "description": "Prélèvement wallet ou en ligne."
   },
   {
+    "id": 26,
     "category": "Finance",
-    "title": "Réconciliation automatique",
-    "description": "Rapprochement automatique des transactions et détection d'écarts."
+    "title": "Réconciliation automatique des transactions",
+    "description": "Détection d’écarts."
   },
   {
+    "id": 27,
     "category": "Finance",
-    "title": "Stock &amp; moyens généraux",
-    "description": "Produits, catégories, fournisseurs, commandes, remise de kits &amp; accessoires."
+    "title": "Six moyens de paiement",
+    "description": "Orange Money, MTN Mobile Money, Moov Money, Wave, Visa et Mastercard."
   },
   {
+    "id": 28,
     "category": "Finance",
-    "title": "Ressources humaines",
-    "description": "Fiches personnel administratif, services, contrats et suivi RH."
+    "title": "Frais de transaction de 3 %",
+    "description": "3 % du montant par transaction, sans frais fixes additionnels, sur tous les plans et moyens de paiement."
   },
   {
+    "id": 29,
     "category": "Finance",
-    "title": "Demandes d'acompte",
-    "description": "Enseignants et personnel demandent un acompte en ligne, validé par la comptabilité."
+    "title": "Minimum par transaction",
+    "description": "Montant minimum : 2 000 FCFA par transaction."
   },
   {
+    "id": 30,
     "category": "Finance",
-    "title": "Infirmerie",
-    "description": "Dossiers médicaux, antécédents, consultations, arrêts de travail."
+    "title": "Tous les frais scolaires en ligne",
+    "description": "Règlement de la scolarité, du transport, de la carte, des kits et des accessoires."
   },
   {
-    "category": "Communication",
-    "title": "Espace parent sécurisé",
-    "description": "Accès par matricule et contact, suivi complet du cursus, absences et paiements."
+    "id": 31,
+    "category": "Finance",
+    "title": "Demandes de reversement",
+    "description": "L’établissement suit son wallet et demande le reversement de ses fonds."
   },
   {
-    "category": "Communication",
-    "title": "Campagnes SMS &amp; email",
-    "description": "Ciblées par classe, filière ou niveau  relances de paiement, notes, messages libres."
+    "id": 32,
+    "category": "Finance",
+    "title": "Notification après règlement",
+    "description": "Envoi automatique d’un reçu par SMS et e-mail après chaque paiement."
   },
   {
-    "category": "Communication",
-    "title": "Comptes &amp; permissions",
-    "description": "Rôles et droits d'accès finement configurables pour chaque profil."
+    "id": 33,
+    "category": "Finance",
+    "title": "Imputation en temps réel",
+    "description": "Le règlement est affecté directement au dossier de l’étudiant."
   },
   {
-    "category": "Communication",
-    "title": "Google Workspace intégré",
-    "description": "Email professionnel automatique et accès à Drive, Docs, Sheets et Meet."
+    "id": 34,
+    "category": "Ressources",
+    "title": "Stock et moyens généraux",
+    "description": "Produits, catégories, fournisseurs."
   },
   {
-    "category": "Communication",
-    "title": "Transport scolaire",
-    "description": "Cars, trajets, abonnements étudiants, paiement de l'abonnement mensuel en ligne."
+    "id": 35,
+    "category": "Ressources",
+    "title": "Commandes et fournitures",
+    "description": "Suivi des commandes et des fournitures de l’établissement."
   },
   {
-    "category": "Communication",
-    "title": "Sécurité &amp; double authentification",
-    "description": "2FA pour les comptes sensibles, isolation stricte des données par établissement."
+    "id": 36,
+    "category": "Ressources",
+    "title": "Remise des kits et accessoires",
+    "description": "Suivi de la distribution des kits et accessoires aux étudiants."
   },
   {
-    "category": "Communication",
-    "title": "Dashboard 360°",
-    "description": "Vue globale direction : effectifs, recouvrement, RH, académique en temps réel."
+    "id": 37,
+    "category": "Ressources",
+    "title": "Gestion du transport",
+    "description": "Lignes, frais, suivi."
   },
   {
+    "id": 38,
+    "category": "RH",
+    "title": "Fiches du personnel administratif / enseignant",
+    "description": "Fiches du personnel administratif / enseignant."
+  },
+  {
+    "id": 39,
+    "category": "RH",
+    "title": "Services, contrats, suivi RH",
+    "description": "Services, contrats, suivi RH."
+  },
+  {
+    "id": 40,
+    "category": "RH",
+    "title": "Volume horaire et acomptes",
+    "description": "Suivi des heures et demandes d’acompte du personnel et des enseignants."
+  },
+  {
+    "id": 41,
     "category": "Communication",
-    "title": "Bibliothèque numérique",
-    "description": "79 000+ ouvrages, documents établissement et partages étudiants validés."
+    "title": "Campagnes SMS & email",
+    "description": "Direction/admin."
+  },
+  {
+    "id": 42,
+    "category": "Communication",
+    "title": "Notifications automatiques",
+    "description": "Absences, notes, bulletins, paiements."
+  },
+  {
+    "id": 43,
+    "category": "Communication",
+    "title": "Alertes d’absence",
+    "description": "Les parents et étudiants reçoivent les notifications d’absence."
+  },
+  {
+    "id": 44,
+    "category": "Communication",
+    "title": "Envoi des documents",
+    "description": "Communication des bulletins et diplômes par e-mail et notifications par SMS."
+  },
+  {
+    "id": 45,
+    "category": "Communication",
+    "title": "Contact et support WhatsApp",
+    "description": "Un canal de contact pour échanger avec l’équipe EdOne."
+  },
+  {
+    "id": 46,
+    "category": "Sécurité",
+    "title": "Isolation multi-établissement",
+    "description": "Données isolées et accès cloisonnés par établissement."
+  },
+  {
+    "id": 47,
+    "category": "Sécurité",
+    "title": "Connexions HTTPS",
+    "description": "Chiffrement des échanges entre votre navigateur et la plateforme via HTTPS."
+  },
+  {
+    "id": 48,
+    "category": "Sécurité",
+    "title": "Mots de passe hashés",
+    "description": "Les mots de passe sont conservés sous forme de hash pour protéger les accès."
+  },
+  {
+    "id": 49,
+    "category": "Sécurité",
+    "title": "Double authentification",
+    "description": "La 2FA renforce la protection des comptes super administrateurs."
+  },
+  {
+    "id": 50,
+    "category": "Sécurité",
+    "title": "Sauvegardes et restauration",
+    "description": "Sauvegardes automatisées et procédure de restauration testée."
+  },
+  {
+    "id": 51,
+    "category": "Sécurité",
+    "title": "Conformité RGPD",
+    "description": "Traitement et conservation des données dans le cadre des exigences RGPD."
+  },
+  {
+    "id": 52,
+    "category": "Sécurité",
+    "title": "Traçabilité complète",
+    "description": "Actions horodatées et attribuées, notamment les paiements et modifications de notes."
+  },
+  {
+    "id": 53,
+    "category": "Sécurité",
+    "title": "Environnement cloisonné",
+    "description": "Chaque établissement dispose de son propre périmètre de données et d’accès."
+  },
+  {
+    "id": 54,
+    "category": "Bibliothèque",
+    "title": "Catalogue Gutendex",
+    "description": "79 000+ ouvrages du domaine public."
+  },
+  {
+    "id": 55,
+    "category": "Bibliothèque",
+    "title": "Lecture directe et sécurisée",
+    "description": "Sans téléchargement libre."
+  },
+  {
+    "id": 56,
+    "category": "Bibliothèque",
+    "title": "Ouvrages propres à l’établissement",
+    "description": "Ajoutés par direction / enseignants."
+  },
+  {
+    "id": 57,
+    "category": "Bibliothèque",
+    "title": "Partages étudiants",
+    "description": "Documents validés avant publication."
+  },
+  {
+    "id": 58,
+    "category": "Bibliothèque",
+    "title": "Favoris personnels",
+    "description": "Chaque étudiant retrouve ses livres favoris, issus du fonds de l’école ou du catalogue public."
+  },
+  {
+    "id": 59,
+    "category": "Bibliothèque",
+    "title": "Ouvrages mis en avant",
+    "description": "Les super administrateurs peuvent épingler des titres du catalogue public."
+  },
+  {
+    "id": 60,
+    "category": "Bibliothèque",
+    "title": "Bibliothèque et parcours",
+    "description": "Accès intégré à l’espace étudiant, avec une place dans son CV et son parcours."
   }
 ]

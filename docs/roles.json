@@ -1,0 +1,181 @@
+{
+  "direction": {
+    "label": "VOTRE ÉTABLISSEMENT, EN VUE D’ENSEMBLE",
+    "title": "Piloter avec une longueur d’avance.",
+    "description": "Académique, finances et équipes : une vue d’ensemble, des accès maîtrisés et des décisions éclairées.",
+    "list": [
+      "Multi-établissements & campus (gestion de plusieurs écoles sur une même plateforme)",
+      "Permissions granulaires (rôles, accès par module, par établissement)",
+      "Dashboard 360° (vue d’ensemble des indicateurs)",
+      "Campagnes SMS & email",
+      "Diplômes, PV (procès-verbaux), attestations de scolarité, certificats de réussite",
+      "Wallet établissement (solde temps réel, demandes de reversement, historique)",
+      "Réconciliation automatique des transactions",
+      "Gestion des abonnements et facturation SaaS automatisée",
+      "Programme partenaire / intégrateur (licence marque blanche, prime 100 000 FCFA / école, 10% à vie, dashboard partenaire)",
+      "Configuration des coefficients, maquettes pédagogiques, filières, niveaux, salles",
+      "Import / export de données (Excel, PDF)",
+      "Traçabilité complète (chaque modification de note et chaque paiement horodaté et attribué)",
+      "Sauvegardes automatisées + procédure de restauration testée",
+      "Isolation multi-établissement (données cloisonnées)"
+    ],
+    "dash": "Votre école avance.",
+    "metrics": [
+      "Étudiants inscrits",
+      "1 248",
+      "Année académique en cours",
+      "Recouvrement",
+      "87 %",
+      "Une vision en temps réel"
+    ],
+    "chart": "Les inscriptions, mois après mois",
+    "photo": "images/administration-edone.jpg",
+    "photoAlt": "Illustration : Une équipe administrative scolaire autour d’un ordinateur",
+    "photoCaption": "Les équipes qui font avancer l’école."
+  },
+  "enseignants": {
+    "label": "PLUS DE TEMPS POUR TRANSMETTRE",
+    "title": "Préparer, partager. Et voir progresser.",
+    "description": "Du planning à la correction, retrouvez vos cours, vos étudiants et vos démarches administratives dans un même espace.",
+    "list": [
+      "Contrats & volume horaire (suivi administratif du corps enseignant)",
+      "Import de notes par Excel (import massif, correction rapide)",
+      "Quiz sécurisés anti-triche (QCM, choix multiples, réponses libres, tentatives limitées, détection de changement d’onglet/navigateur)",
+      "Devoirs individuels (dépôt de fichier, consigne jointe, correction et appréciation)",
+      "Devoirs de groupe (constitution des groupes, chef de groupe, soumission collective, notation collective)",
+      "Évaluations et notation (coefficients configurables, gestion des réclamations)",
+      "Dépôt de supports de cours",
+      "RIB (relevé d’identité bancaire) et demandes d’acompte",
+      "Fiches de présence numériques",
+      "Espace enseignant dédié (maquette, planning)",
+      "Configuration des coefficients par matière / niveau"
+    ],
+    "dash": "Une journée pour transmettre.",
+    "metrics": [
+      "Cours cette semaine",
+      "12",
+      "Votre emploi du temps",
+      "Devoirs à corriger",
+      "24",
+      "Individuels et collectifs"
+    ],
+    "chart": "Les évaluations au fil du semestre",
+    "photo": "images/enseignante-edone.jpg",
+    "photoAlt": "Illustration : Une enseignante préparant son cours dans une salle lumineuse",
+    "photoCaption": "Du temps pour transmettre."
+  },
+  "etudiants": {
+    "label": "VOTRE PARCOURS PREND FORME",
+    "title": "Apprendre avec tous les repères.",
+    "description": "Un cours à retrouver, une note à consulter, un devoir à rendre : votre vie étudiante vous suit partout.",
+    "list": [
+      "Maquette pédagogique complète (années académiques, classes, cours, enseignants, salles)",
+      "Quiz & devoirs (accès, réponses, notes immédiates)",
+      "Notes & bulletins (consultation, téléchargement PDF, rangs, moyennes pondérées)",
+      "Paiement Mobile Money / carte (Orange Money, MTN, Moov, Wave, Visa, Mastercard)",
+      "CV automatique généré depuis le parcours, personnalisable et partageable via lien public",
+      "Carte étudiant numérique et imprimable (photo, statut de remise suivi par la direction)",
+      "Bibliothèque de 79 000+ ouvrages (consultation, favoris, lecture directe)",
+      "Email professionnel Google Workspace (accès à Drive, Docs, Sheets, Meet)",
+      "Vérification publique des documents (bulletin, diplôme, attestation par code unique)",
+      "Accès aux reçus de paiement et historique de solde",
+      "Suivi des frais divers (cartes, kits, accessoires, transport)",
+      "Alertes d’absences et notifications automatiques"
+    ],
+    "dash": "À vous le prochain chapitre.",
+    "metrics": [
+      "Moyenne du semestre",
+      "14,5",
+      "Sur 20 · Exemple",
+      "Devoirs rendus",
+      "8 / 9",
+      "Votre progression"
+    ],
+    "chart": "Votre parcours, mois après mois",
+    "photo": "images/campus-edone.jpg",
+    "photoAlt": "Illustration : Des étudiants travaillant ensemble sur un campus",
+    "photoCaption": "Le prochain chapitre s’écrit ensemble."
+  },
+  "parents": {
+    "label": "LE LIEN AVEC L’ÉCOLE, TOUT SIMPLEMENT",
+    "title": "Être présent, même à distance.",
+    "description": "Accédez au suivi de votre enfant par son matricule, consultez ses échéances et réglez les frais depuis votre téléphone.",
+    "list": [
+      "Accès simple par matricule (login facile, pas de mot de passe complexe obligatoire)",
+      "Suivi du cursus, notes, bulletins (toutes périodes)",
+      "Alertes d’absences (notification immédiate)",
+      "Statut et paiement de la scolarité (suivi des échéances, montants restants)",
+      "Paiement des frais divers en ligne (transport, carte, kits, accessoires)",
+      "Notifications SMS/Email automatiques (reçus, alertes, annonces)",
+      "Accès au wallet / historique des paiements effectués",
+      "Consultation de la carte étudiant et des documents officiels (lorsque autorisé)"
+    ],
+    "dash": "Gardez le lien avec son école.",
+    "metrics": [
+      "Scolarité réglée",
+      "75 %",
+      "Suivi des échéances",
+      "Prochaine échéance",
+      "50 000 F",
+      "Montant illustratif"
+    ],
+    "chart": "Les règlements au fil de l’année",
+    "photo": "images/famille-edone.jpg",
+    "photoAlt": "Illustration : Un père et sa fille consultant un téléphone à la maison",
+    "photoCaption": "Le lien, même à distance."
+  },
+  "personnel": {
+    "label": "LES ÉQUIPES QUI FONT TOURNER L’ÉCOLE",
+    "title": "Chaque tâche trouve sa place.",
+    "description": "Inscriptions, ressources humaines, fournitures et transport : une organisation commune pour tous les métiers du campus.",
+    "list": [
+      "Fiches du personnel administratif et technique",
+      "Services, contrats, suivi RH",
+      "Gestion du stock et moyens généraux (produits, catégories, fournisseurs, commandes, remise de kits et accessoires)",
+      "Transport (suivi des lignes, paquets, frais de transport)",
+      "Gestion des inscriptions et réinscriptions (dossiers électroniques, statistiques en direct)",
+      "Établissement et gestion du campus (salles, filières, niveaux)",
+      "Mise à jour des données de l’élève et du personnel",
+      "Authentification sécurisée (2FA pour super administrateurs)",
+      "Conformité RGPD (traitement et conservation conformes)"
+    ],
+    "dash": "Le campus, bien organisé.",
+    "metrics": [
+      "Dossiers complets",
+      "184",
+      "Inscriptions · Exemple",
+      "Kits à remettre",
+      "32",
+      "Logistique · Exemple"
+    ],
+    "chart": "L’activité administrative au fil des mois",
+    "photo": "images/administration-edone.jpg",
+    "photoAlt": "Illustration : Une équipe administrative organisant la vie scolaire",
+    "photoCaption": "Chaque métier compte."
+  },
+  "partenaires": {
+    "label": "LE PROGRÈS SE PARTAGE",
+    "title": "Accompagner les écoles. Grandir ensemble.",
+    "description": "Distribuez EdOne en marque blanche et accompagnez vos établissements clients, de l’installation à la formation.",
+    "list": [
+      "Licence marque blanche aux couleurs de votre structure",
+      "Prime d’installation de 100 000 FCFA par établissement signé",
+      "Commission de 10 % à vie sur chaque abonnement mensuel payé",
+      "Dashboard partenaire dédié au suivi des établissements et des commissions",
+      "Support technique, formation et accompagnement au déploiement"
+    ],
+    "dash": "Votre réseau prend son élan.",
+    "metrics": [
+      "Établissements",
+      "8",
+      "Votre réseau · Exemple",
+      "Commission",
+      "10 %",
+      "Sur les abonnements payés"
+    ],
+    "chart": "Le développement de votre réseau",
+    "photo": "images/campus-vie-edone.jpg",
+    "photoAlt": "Illustration : Des étudiants traversant un campus arboré",
+    "photoCaption": "Accompagner les écoles qui avancent."
+  }
+}
