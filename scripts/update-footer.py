@@ -10,6 +10,11 @@ for path in Path('.').rglob('*.html'):
     if updated!=text:
         path.write_text(updated)
 
+# Use native SVG icons before calculating SEO content hashes.
+if Path('scripts/update-icons.py').exists():
+    import runpy
+    runpy.run_path('scripts/update-icons.py')
+
 # Footer edits are content changes; keep metadata and sitemap in sync.
 if Path('scripts/update-seo.py').exists() and Path('seo-config.json').exists():
     import runpy

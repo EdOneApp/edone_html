@@ -1,3 +1,7 @@
+## Icônes cohérentes sur tous les écrans
+
+Les icônes d’interface sont des SVG locaux définis dans `icons.json` et servis par `icons.js`. Les éléments statiques sont intégrés dans le HTML par `scripts/update-icons.py`, qui est appelé lors de la synchronisation du footer et du catalogue. Les coches de listes utilisent un masque SVG. Les logos de marque restent des fichiers d’image distincts. Aucun rendu d’icône ne dépend d’une police emoji sur iOS ou Android.
+
 ## Référencement technique
 
 `seo-config.json` définit les titres, descriptions et URL canoniques des cinq pages utiles. `scripts/update-seo.py` génère les balises de partage, les données structurées, les icônes liées, `robots.txt`, `sitemap.xml` et `site.webmanifest`. Les pages d’erreur restent hors index. HTTPS est désormais obligatoire sur l’hébergement.
@@ -67,7 +71,7 @@ EdOne réunit **gestion académique, scolarité, paiements Mobile Money, bibliot
 
 ---
 
-## 📊 En quelques chiffres
+##  En quelques chiffres
 
 | | |
 |---|---|
@@ -80,7 +84,7 @@ EdOne réunit **gestion académique, scolarité, paiements Mobile Money, bibliot
 
 ---
 
-## 🎓 Fonctionnalités · Pédagogie & vie de classe
+##  Fonctionnalités · Pédagogie & vie de classe
 
 - **Gestion académique** : années académiques, campus, salles, filières, niveaux, classes, maquettes pédagogiques
 - **Inscription & réinscription** : dossier électronique complet, cartes étudiants, kits & accessoires, statistiques en direct
@@ -93,7 +97,7 @@ EdOne réunit **gestion académique, scolarité, paiements Mobile Money, bibliot
 
 ---
 
-## 📄 Fonctionnalités · Documents & certification officielle
+##  Fonctionnalités · Documents & certification officielle
 
 - **Bulletins** générés automatiquement par semestre (moyennes pondérées, rangs, appréciations)
 - **Procès-verbaux** de semestre et annuels, calcul des crédits, décisions de passage automatisées
@@ -108,7 +112,7 @@ EdOne réunit **gestion académique, scolarité, paiements Mobile Money, bibliot
 
 ---
 
-## 💰 Fonctionnalités · Finance, wallet & ressources
+##  Fonctionnalités · Finance, wallet & ressources
 
 - **Comptabilité & scolarité** : frais, plans de paiement, historique complet, statuts de solde
 - **Wallet établissement** : solde en temps réel, demandes de reversement, historique des transactions
@@ -121,7 +125,7 @@ EdOne réunit **gestion académique, scolarité, paiements Mobile Money, bibliot
 
 ---
 
-## 📢 Fonctionnalités · Communication, sécurité & pilotage
+##  Fonctionnalités · Communication, sécurité & pilotage
 
 - **Espace parent sécurisé** : accès par matricule, suivi complet du cursus, absences et paiements
 - **Campagnes SMS & e-mail** ciblées par classe, filière ou niveau
@@ -136,7 +140,7 @@ EdOne réunit **gestion académique, scolarité, paiements Mobile Money, bibliot
 
 ---
 
-## 📚 Bibliothèque numérique · 79 000+ ouvrages
+##  Bibliothèque numérique · 79 000+ ouvrages
 
 Chaque établissement et ses étudiants accèdent **gratuitement** à une bibliothèque privée enrichie de :
 - Catalogue du domaine public (79 000+ titres)
@@ -147,7 +151,7 @@ Chaque établissement et ses étudiants accèdent **gratuitement** à une biblio
 
 ---
 
-## 📈 Tableaux de bord · Web & mobile
+##  Tableaux de bord · Web & mobile
 
 - **Dashboard direction (web)** : effectifs, taux de recouvrement, encaissements du mois, enseignants actifs, évolution des inscriptions & paiements, répartition par cycle
 - **Applications mobiles dédiées** pour chaque profil :
@@ -159,7 +163,7 @@ Chaque établissement et ses étudiants accèdent **gratuitement** à une biblio
 
 ---
 
-## 💳 Paiements en ligne
+##  Paiements en ligne
 
 EdOne connecte nativement, dans **25 pays** :
 
@@ -177,7 +181,7 @@ Frais simples et transparents : **3 % du montant, sans frais fixes**, identiques
 
 ---
 
-## 🌍 Couverture géographique
+##  Couverture géographique
 
 Un seul rail de paiement, **25 pays connectés**, avec un hub opérationnel basé à **Abidjan**.
 
@@ -185,7 +189,7 @@ Côte d'Ivoire · Sénégal · Mali · Guinée · Sierra Leone · Burkina Faso �
 
 ---
 
-## 👥 Un espace pour chaque profil
+##  Un espace pour chaque profil
 
 | Profil | Ce qu'il peut faire |
 |---|---|
@@ -198,7 +202,7 @@ Côte d'Ivoire · Sénégal · Mali · Guinée · Sierra Leone · Burkina Faso �
 
 ---
 
-## 🔒 Sécurité & conformité
+##  Sécurité & conformité
 
 - **Isolation multi-établissement** : chaque requête filtrée, aucune fuite possible entre écoles
 - **Chiffrement & HTTPS** : mots de passe hashés, connexions chiffrées de bout en bout
@@ -209,7 +213,7 @@ Côte d'Ivoire · Sénégal · Mali · Guinée · Sierra Leone · Burkina Faso �
 
 ---
 
-## 🤝 Programme partenaires / affiliation
+##  Programme partenaires / affiliation
 
 Devenez fournisseur officiel de la solution EdOne :
 
@@ -229,7 +233,7 @@ Devenez fournisseur officiel de la solution EdOne :
 
 ---
 
-## 💵 Tarifs
+##  Tarifs
 
 | Plan | Prix | Cible |
 |---|---|---|
@@ -244,7 +248,7 @@ Devenez fournisseur officiel de la solution EdOne :
 
 ---
 
-## ❓ FAQ
+##  FAQ
 
 **Combien coûte un paiement en ligne pour un parent ?**
 3 % du montant réglé, sans frais fixes additionnels, quel que soit le moyen de paiement.
@@ -266,7 +270,7 @@ Généralement une à trois semaines, import des données et formation comprises
 
 ---
 
-## 💬 Contact & démo
+##  Contact & démo
 
 - **WhatsApp :** [+225 01 05 23 23 35](https://wa.me/2250105232335)
 - **E-mail :** edoneapp@gmail.com
@@ -276,7 +280,7 @@ La page inclut un formulaire de demande de démo qui redirige directement vers W
 
 ---
 
-## 🗂️ Fichiers du projet
+##  Fichiers du projet
 
 ```
 edone_html/

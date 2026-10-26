@@ -24,7 +24,7 @@ Pour régénérer les variantes WebP après remplacement des JPEG : `python3 scr
 
 ## Google Search Console
 
-Le propriétaire indique que le domaine est déjà validé. L’accès au navigateur de ce chat demande encore une connexion Google ; aucune soumission depuis Search Console n’a donc été confirmée pendant cette intervention.
+La propriété de domaine était déjà validée. Le sitemap https://edone.my/sitemap.xml a été soumis le 26 octobre 2026 dans la session Google du propriétaire. Search Console a confirmé « Traitement du sitemap réussi » et 5 pages découvertes. Cette confirmation ne signifie pas que les cinq pages sont déjà indexées ni qu’elles occupent une position déterminée.
 
 Dans la propriété `edone.my`, ouvrir **Sitemaps**, puis envoyer :
 
