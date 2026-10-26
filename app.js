@@ -513,7 +513,7 @@ const modules=[
   {
     "id": 54,
     "category": "Bibliothèque",
-    "title": "Catalogue Gutendex",
+    "title": "Catalogue de livres numériques",
     "description": "79 000+ ouvrages du domaine public."
   },
   {

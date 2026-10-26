@@ -25,7 +25,7 @@
 - **Reçus de paiement** envoyés automatiquement par SMS + email à chaque règlement
 
 ### b) Bibliothèque numérique de 79 000+ ouvrages
-- **Catalogue du domaine public (Gutendex)** : 79 000+ ouvrages accessibles gratuitement
+- **Catalogue du domaine public** : 79 000+ ouvrages accessibles gratuitement
 - **Lecture directe et sécurisée** (pas de téléchargement libre) dans l’interface
 - **Ouvrages propres à l’établissement** : documents ajoutés par la direction/en enseignants
 - **Partages étudiants validés** : les étudiants peuvent partager des documents, validés avant publication
@@ -173,7 +173,7 @@
 53. Environnement cloisonné par établissement
 
 ### Bibliothèque (tous les rôles accèdent)
-54. Catalogue Gutendex (79 000+ ouvrages du domaine public)
+54. Catalogue de livres numériques (79 000+ ouvrages du domaine public)
 55. Lecture directe et sécurisée (sans téléchargement libre)
 56. Ouvrages propres à l’établissement (ajoutés par direction / enseignants)
 57. Partages étudiants (documents validés avant publication)
