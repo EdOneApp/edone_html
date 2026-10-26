@@ -1,3 +1,7 @@
+## Navigation de pied de page
+
+Le footer commun est défini dans `partials/footer.html` et appliqué aux 20 pages publiques par `python3 scripts/update-footer.py`. Il relie les 17 sections de la page d’accueil, le guide, les pages légales et les pages d’erreur. Les sections détaillées du guide et les pages d’assistance sont regroupées dans des volets dépliables. La synchronisation du catalogue réapplique automatiquement ce footer.
+
 ## Film de présentation et informations légales
 
 - `media/edone-presentation-fr.mp4` : motion design original de 35 secondes, avec voix de synthèse française, composition musicale, sous-titres et transcription. Lecteur sans autoplay, muet par défaut, commandes natives et boutons accessibles.
