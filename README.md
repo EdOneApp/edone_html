@@ -1,3 +1,9 @@
+## Référencement technique
+
+`seo-config.json` définit les titres, descriptions et URL canoniques des cinq pages utiles. `scripts/update-seo.py` génère les balises de partage, les données structurées, les icônes liées, `robots.txt`, `sitemap.xml` et `site.webmanifest`. Les pages d’erreur restent hors index. HTTPS est désormais obligatoire sur l’hébergement.
+
+Le catalogue est présent dans le HTML initial. Les principales photos possèdent des variantes WebP, avec repli JPEG. Exécuter `python3 scripts/check-seo.py` pour vérifier les invariants. La procédure Search Console et les limites de la prestation figurent dans `docs/seo-operations.md`.
+
 ## Aperçu MacBook et iPhone
 
 La section `#apercu`, placée immédiatement après les chiffres, présente un MacBook et un iPhone en HTML/CSS avec des données de démonstration. Trois vues synchronisées couvrent la vue 360°, l’académique et les finances. `device-showcase.js` gère les compteurs, graphiques et événements simulés, avec pause explicite, suspension hors écran et réduction des mouvements. Les écrans ne sont pas des captures d’un établissement réel et ne présentent pas de données de production.

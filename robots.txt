@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /.git/
+Disallow: /docs/
+Disallow: /scripts/
+Disallow: /partials/
+
+Sitemap: https://edone.my/sitemap.xml

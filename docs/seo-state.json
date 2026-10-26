@@ -1,0 +1,82 @@
+{
+  "400.html": {
+    "hash": "ebddfca6edb60620e812ce009580e7d4c0d11e2d779ad8a078945a4846b9df31",
+    "lastmod": "2026-10-26"
+  },
+  "401.html": {
+    "hash": "a611cc476ed529f1148eb539e3c93f5af4f696c952e7618f3b038d7a0aa79914",
+    "lastmod": "2026-10-26"
+  },
+  "403.html": {
+    "hash": "ecb92153f4a1efd759f734136f6c4357ff21973f4aeaa336859e3fc09e6c1df6",
+    "lastmod": "2026-10-26"
+  },
+  "404.html": {
+    "hash": "aaeebcd94ebda244c8b96745865abe314e5098c006b9bbeac16199bd06ec0316",
+    "lastmod": "2026-10-26"
+  },
+  "405.html": {
+    "hash": "de4a967f0f5bd9c1cabfce2d7079962cd225a14fb8263ba6949787c3f8c3c393",
+    "lastmod": "2026-10-26"
+  },
+  "408.html": {
+    "hash": "f9df9ced8493a7618bf5e74ffa0e65f0ee5c52f9a67ad1e01de918b66ba9a9d9",
+    "lastmod": "2026-10-26"
+  },
+  "410.html": {
+    "hash": "91e910e7d7ca9a95c98e34be1f70e9688b7fcb193901aad3f7236eb997690208",
+    "lastmod": "2026-10-26"
+  },
+  "422.html": {
+    "hash": "68a46274d759ce8331cc76d0ea506164978085f35366b2f8b602b45ab13c6590",
+    "lastmod": "2026-10-26"
+  },
+  "429.html": {
+    "hash": "df86257ce1d84e035a21965f41012f076cc5fe99c23f57710e414cbd4f70992f",
+    "lastmod": "2026-10-26"
+  },
+  "500.html": {
+    "hash": "ffa5fce5a4858f1793cc17f5ee57b8d8fde3ac89a5d089b4862afb1f87c78a00",
+    "lastmod": "2026-10-26"
+  },
+  "502.html": {
+    "hash": "d62574d375ff6cfd673c05a60337b928ca563ead008f9d6ea41ece7a4808858a",
+    "lastmod": "2026-10-26"
+  },
+  "503.html": {
+    "hash": "cb457dcb1853e42e6709afac7832e47e695fbd1e0a46210f194a20a9855647af",
+    "lastmod": "2026-10-26"
+  },
+  "504.html": {
+    "hash": "2e6e40ba633f80f43ef9ddd23df90671d2aeb54993a093b0f3c61eede6e59398",
+    "lastmod": "2026-10-26"
+  },
+  "cgu/index.html": {
+    "hash": "09d4b5a326bb22b0b23558219fe437d493f8d737a0e96062f5f0c9eb9e8f0f52",
+    "lastmod": "2026-10-26"
+  },
+  "confidentialite/index.html": {
+    "hash": "535979754c9f0a08763e0d18d4b91928f7da0536878feda440cb74527218325d",
+    "lastmod": "2026-10-26"
+  },
+  "fonctionnalites.html": {
+    "hash": "3b9b1de0f96dc29350618a1a1ade6cc9de76e26b38a67b4b32c43efa578af459",
+    "lastmod": "2026-10-26"
+  },
+  "index.html": {
+    "hash": "751644c30beb650c3b20df21da46a8ed0bb5b6905ba2342e8ac8c5a667d4b32f",
+    "lastmod": "2026-10-26"
+  },
+  "maintenance.html": {
+    "hash": "5220da8a33251747649438faf6bbf0f900e797078a50207fbd1ad4dd3521851a",
+    "lastmod": "2026-10-26"
+  },
+  "mentions-legales/index.html": {
+    "hash": "b3177ddf155027f416bb2c631b7882728a5bc1e4320a317c9b6a5fd482472dd6",
+    "lastmod": "2026-10-26"
+  },
+  "offline.html": {
+    "hash": "c47ae906897e7b350a0c9da1a05f39e2c34f5826f545aa0e7280391da52852ea",
+    "lastmod": "2026-10-26"
+  }
+}

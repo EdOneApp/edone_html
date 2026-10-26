@@ -1,0 +1,45 @@
+{
+  "site_url": "https://edone.my",
+  "site_name": "EdOne",
+  "language": "fr",
+  "locale": "fr_CI",
+  "social_image": "/media/edone-presentation-poster.jpg",
+  "video_upload_date": "2026-10-26T03:36:25+00:00",
+  "pages": [
+    {
+      "file": "index.html",
+      "path": "/",
+      "title": "EdOne | Logiciel de gestion scolaire en Côte d’Ivoire",
+      "description": "Centralisez inscriptions, notes, bulletins et paiements de scolarité avec EdOne. Une plateforme pour les écoles, universités, enseignants et parents.",
+      "name": "Logiciel de gestion scolaire EdOne"
+    },
+    {
+      "file": "fonctionnalites.html",
+      "path": "/fonctionnalites.html",
+      "title": "Fonctionnalités du logiciel de gestion scolaire | EdOne",
+      "description": "Explorez les 60 fonctionnalités d’EdOne : gestion académique, scolarité, Mobile Money, bibliothèque, RH, documents officiels et espaces par profil.",
+      "name": "Fonctionnalités EdOne"
+    },
+    {
+      "file": "mentions-legales/index.html",
+      "path": "/mentions-legales/",
+      "title": "Mentions légales et coordonnées de l’éditeur | EdOne",
+      "description": "Retrouvez les informations sur le site EdOne, les coordonnées de contact, l’hébergement, les contenus et les conditions de réutilisation.",
+      "name": "Mentions légales"
+    },
+    {
+      "file": "confidentialite/index.html",
+      "path": "/confidentialite/",
+      "title": "Politique de confidentialité et données personnelles | EdOne",
+      "description": "Découvrez le traitement des données du site EdOne : formulaire de démonstration, WhatsApp, services techniques, cookies et droits des visiteurs.",
+      "name": "Politique de confidentialité"
+    },
+    {
+      "file": "cgu/index.html",
+      "path": "/cgu/",
+      "title": "Conditions générales d’utilisation du site | EdOne",
+      "description": "Consultez les conditions d’utilisation du site EdOne : accès, demandes de démonstration, informations commerciales, contenus et services externes.",
+      "name": "Conditions générales d’utilisation"
+    }
+  ]
+}

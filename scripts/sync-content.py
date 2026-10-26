@@ -12,10 +12,17 @@ js=js[:start]+'const roles='+json.dumps(roles,ensure_ascii=False,indent=2)+';'+j
 start=js.index('const modules='); end=js.index('\nlet selectedCategory=',start)
 js=js[:start]+'const modules='+json.dumps(modules,ensure_ascii=False,indent=2)+';'+js[end:]
 Path('app.js').write_text(js)
+# Keep the default catalogue readable in the initial HTML, including without JavaScript.
+index=Path('index.html').read_text()
+rendered=''.join('<article class="module-item"><span>'+str(m['id']).zfill(2)+' / '+html.escape(m['category'])+'</span><h3>'+html.escape(m['title'])+'</h3><p>'+html.escape(m['description'])+'</p></article>' for m in modules)
+index=re.sub(r'(<div id="moduleGrid" class="module-grid">).*?(</div>)',lambda match:match[1]+rendered+match[2],index,count=1,flags=re.S)
+Path('index.html').write_text(index)
+
 groups=defaultdict(list)
 for m in modules:groups[m['category']].append(m)
 slugs={category:'famille-'+str(i) for i,category in enumerate(groups,1)}
 head=Path('index.html').read_text().split('</head>')[0].replace('<title>EdOne · Plus de liens. Moins de paperasse.</title>','<title>Toutes les fonctionnalités · EdOne</title>').replace('<script src="app.js" defer></script><script src="motion.js" defer></script><script src="payment-preview.js" defer></script><script src="device-showcase.js" defer></script>','<link rel="stylesheet" href="guide.css">').replace('content="La vie scolaire, simplement. EdOne réunit votre administration, vos enseignants, vos étudiants et leurs parents : inscriptions, notes, paiements et bibliothèque."','content="Découvrez les 60 fonctionnalités détaillées d’EdOne, les six profils, les services numériques inclus et les tarifs."')+'</head>'
+head=re.sub(r'\s*<!-- SEO:START -->.*?<!-- SEO:END -->','',head,flags=re.S)
 links=''.join(f'<a href="#{slugs[c]}">{html.escape(c)} <span>{len(items):02d}</span></a>' for c,items in groups.items())
 sections=''
 for category,items in groups.items():

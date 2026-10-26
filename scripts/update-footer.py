@@ -9,3 +9,8 @@ for path in Path('.').rglob('*.html'):
     updated=re.sub(r'<footer\b[^>]*>.*?</footer>',lambda match:footer,text,flags=re.S)
     if updated!=text:
         path.write_text(updated)
+
+# Footer edits are content changes; keep metadata and sitemap in sync.
+if Path('scripts/update-seo.py').exists() and Path('seo-config.json').exists():
+    import runpy
+    runpy.run_path('scripts/update-seo.py',run_name='__main__')
