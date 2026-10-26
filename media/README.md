@@ -1,0 +1,9 @@
+# Présentation EdOne
+
+Film original de 34,58 secondes, 1280 × 720, 24 images/s, H.264 et audio AAC 44,1 kHz. Les photos du site sont mises en mouvement avec des textes et éléments graphiques. Il ne s’agit pas d’images de clients réels ni de captures de l’application en production.
+
+La narration utilise la voix de synthèse française Thomas de macOS. La composition musicale est synthétisée par `scripts/render-motion.py` ; aucun enregistrement musical tiers n’est utilisé. Le son est normalisé à −16 LUFS, avec un plafond cible de −1,5 dBTP.
+
+Fichiers livrés : MP4, affiche JPEG, sous-titres français WebVTT, storyboard et minutage. Le lecteur natif ne démarre pas automatiquement ; il est muet par défaut et ne sauvegarde pas de préférence. Une transcription HTML reste disponible sans lecture.
+
+Pour régénérer sur macOS : Pillow et FFmpeg doivent être installés ; lancer `python3 scripts/render-motion.py`. Les voix intermédiaires sont créées dans `/private/tmp` avec `say` si elles sont absentes. L’accès au service de synthèse vocale peut nécessiter une autorisation hors du sandbox.

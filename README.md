@@ -1,3 +1,10 @@
+## Film de présentation et informations légales
+
+- `media/edone-presentation-fr.mp4` : motion design original de 35 secondes, avec voix de synthèse française, composition musicale, sous-titres et transcription. Lecteur sans autoplay, muet par défaut, commandes natives et boutons accessibles.
+- `scripts/render-motion.py` : source de fabrication du film (macOS, Pillow, FFmpeg et voix Thomas).
+- `/mentions-legales/`, `/confidentialite/`, `/cgu/` : pages statiques dédiées au site vitrine, liées dans les pieds de page. La marque publique est EdOne.
+- Les éléments d’identité juridique non communiqués restent à compléter ; voir `docs/legal-editorial-notes.md`. Les pages ne remplacent pas les contrats de l’application scolaire.
+
 ## Catalogue complet et nouveaux visuels
 
 Le document fourni dans `docs/fonctionnalites-source.md` est la référence métier : 60 entrées numérotées, 8 familles, 6 grands profils, e-mail professionnel et Google Workspace gratuits pour tous, bibliothèque, notifications, documents, ressources, RH et partenaires.
@@ -272,4 +279,4 @@ Page 100 % statique : aucune installation, aucun serveur, aucune dépendance ext
 
 ---
 
-*EdOne — OCTOGONE TECHNOLOGIES*# edone_html
+*EdOne*# edone_html
