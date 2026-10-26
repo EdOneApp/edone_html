@@ -1,3 +1,9 @@
+## Moyens de paiement et aperçu mobile
+
+La section paiements utilise les logos Wave, Orange Money, Moov Money, MTN MoMo et Djamo, avec des fichiers hébergés localement issus des sites officiels (provenance dans `images/payments/README.md`). Visa et Mastercard restent mentionnés en complément.
+
+Le téléphone est un composant HTML/CSS à l’apparence réaliste, avec choix d’opérateur accessible au clavier, montant synchronisé au calculateur et aperçu de reçu. Les données sont fictives, aucune opération de paiement n’est effectuée et aucune donnée sensible n’est demandée. `payment-preview.js` gère cette démonstration. Djamo est ajouté au catalogue des moyens présentés, soit sept avec Visa et Mastercard, sous réserve de disponibilité selon le pays.
+
 ## Navigation de pied de page
 
 Le footer commun est défini dans `partials/footer.html` et appliqué aux 20 pages publiques par `python3 scripts/update-footer.py`. Il relie les 17 sections de la page d’accueil, le guide et les pages légales. Les sections détaillées du guide sont regroupées dans un volet dépliable. La synchronisation du catalogue réapplique automatiquement ce footer.

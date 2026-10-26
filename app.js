@@ -80,7 +80,7 @@ const roles={
       "Maquette pédagogique complète (années académiques, classes, cours, enseignants, salles)",
       "Quiz & devoirs (accès, réponses, notes immédiates)",
       "Notes & bulletins (consultation, téléchargement PDF, rangs, moyennes pondérées)",
-      "Paiement Mobile Money / carte (Orange Money, MTN, Moov, Wave, Visa, Mastercard)",
+      "Paiement Mobile Money / carte (Orange Money, MTN, Moov, Wave, Djamo, Visa, Mastercard)",
       "CV automatique généré depuis le parcours, personnalisable et partageable via lien public",
       "Carte étudiant numérique et imprimable (photo, statut de remise suivi par la direction)",
       "Bibliothèque de 79 000+ ouvrages (consultation, favoris, lecture directe)",
@@ -351,8 +351,8 @@ const modules=[
   {
     "id": 27,
     "category": "Finance",
-    "title": "Six moyens de paiement",
-    "description": "Orange Money, MTN Mobile Money, Moov Money, Wave, Visa et Mastercard."
+    "title": "Sept moyens de paiement",
+    "description": "Wave, Orange Money, Moov Money, MTN MoMo, Djamo, Visa et Mastercard. Disponibilité selon le pays."
   },
   {
     "id": 28,
@@ -575,7 +575,7 @@ document.getElementById('resetModules').addEventListener('click',()=>{moduleSear
 filterModules();
 const fmt=n=>new Intl.NumberFormat('fr-FR').format(n)+' FCFA';
 const range=document.getElementById('feeRange');
-function updateCalc(){const amount=Number(range.value),fee=Math.round(amount*.03);document.getElementById('feeAmount').textContent=fmt(amount);document.getElementById('lineBase').textContent=fmt(amount);document.getElementById('lineFee').textContent=fmt(fee);document.getElementById('lineTotal').textContent=fmt(amount+fee);}
+function updateCalc(){const amount=Number(range.value),fee=Math.round(amount*.03);document.getElementById('feeAmount').textContent=fmt(amount);document.getElementById('lineBase').textContent=fmt(amount);document.getElementById('lineFee').textContent=fmt(fee);document.getElementById('lineTotal').textContent=fmt(amount+fee);if(document.getElementById('phoneBase')){document.getElementById('phoneBase').textContent=fmt(amount);document.getElementById('phoneFee').textContent=fmt(fee);document.getElementById('phoneTotal').textContent=fmt(amount+fee);document.getElementById('phoneReceiptTotal').textContent=fmt(amount+fee);}}
 range.addEventListener('input',updateCalc);updateCalc();
 
 const countriesToggle=document.getElementById('countriesToggle');countriesToggle.addEventListener('click',()=>{const open=countriesToggle.getAttribute('aria-expanded')!=='true';countriesToggle.setAttribute('aria-expanded',String(open));document.getElementById('countries').hidden=!open;countriesToggle.innerHTML=(open?'Masquer les pays':'Voir les pays couverts')+' <span>'+(open?'−':'+')+'</span>';});
