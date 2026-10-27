@@ -17,7 +17,11 @@
       "Import / export de données (Excel, PDF)",
       "Traçabilité complète (chaque modification de note et chaque paiement horodaté et attribué)",
       "Sauvegardes automatisées + procédure de restauration testée",
-      "Isolation multi-établissement (données cloisonnées)"
+      "Isolation multi-établissement (données cloisonnées)",
+      "Dossiers RH, congés, paie et espace employé selon les habilitations",
+      "GED, classement documentaire et archivage des bulletins",
+      "Statistiques de stockage et journal des opérations sensibles avec exports",
+      "Création des comptes, profils personnalisés et exceptions individuelles"
     ],
     "dash": "Votre école avance.",
     "metrics": [
@@ -48,7 +52,9 @@
       "RIB (relevé d’identité bancaire) et demandes d’acompte",
       "Fiches de présence numériques",
       "Espace enseignant dédié (maquette, planning)",
-      "Configuration des coefficients par matière / niveau"
+      "Configuration des coefficients par matière / niveau",
+      "Documents personnels et supports de cours accessibles selon les droits",
+      "Devoirs de groupe, soumissions et correction des travaux"
     ],
     "dash": "Une journée pour transmettre.",
     "metrics": [
@@ -80,7 +86,9 @@
       "Vérification publique des documents (bulletin, diplôme, attestation par code unique)",
       "Accès aux reçus de paiement et historique de solde",
       "Suivi des frais divers (cartes, kits, accessoires, transport)",
-      "Alertes d’absences et notifications automatiques"
+      "Alertes d’absences et notifications automatiques",
+      "Documents scolaires et archives accessibles depuis son espace",
+      "Supports et sujets de devoirs réservés à ses classes"
     ],
     "dash": "À vous le prochain chapitre.",
     "metrics": [
@@ -137,7 +145,13 @@
       "Établissement et gestion du campus (salles, filières, niveaux)",
       "Mise à jour des données de l’élève et du personnel",
       "Authentification sécurisée (2FA pour super administrateurs)",
-      "Conformité RGPD (traitement et conservation conformes)"
+      "Conformité RGPD (traitement et conservation conformes)",
+      "Dossier employé, carrière, évaluations et formations",
+      "Demandes de congés et calendrier des absences",
+      "Demandes RH, dépôt de pièces privées et suivi du traitement",
+      "Préparation de la paie et bulletins PDF pour les gestionnaires habilités",
+      "Espace salarié : dossier, demandes et bulletins personnels",
+      "GED, stock, transport ou service médical selon le métier et les droits accordés"
     ],
     "dash": "Le campus, bien organisé.",
     "metrics": [
@@ -177,5 +191,121 @@
     "photo": "images/campus-vie-edone.jpg",
     "photoAlt": "Illustration : Des étudiants traversant un campus arboré",
     "photoCaption": "Accompagner les écoles qui avancent."
+  },
+  "scolarite": {
+    "name": "Scolarité",
+    "description": "Gérer le parcours administratif et scolaire des étudiants.",
+    "list": [
+      "Dossiers étudiants, pièces et inscriptions",
+      "Années, filières, niveaux et classes",
+      "Notes, résultats, bulletins et documents scolaires",
+      "Recherche et archivage des documents académiques"
+    ]
+  },
+  "pedagogie": {
+    "name": "Responsable pédagogique",
+    "description": "Organiser les enseignements et suivre les résultats.",
+    "list": [
+      "Enseignants et affectations pédagogiques",
+      "Matières, UE, maquettes, coefficients et crédits",
+      "Progressions, emplois du temps et évaluations",
+      "Compensation des UE, bulletins et procès-verbaux"
+    ]
+  },
+  "comptabilite": {
+    "name": "Comptabilité",
+    "description": "Suivre les frais, encaissements et opérations financières.",
+    "list": [
+      "Frais de scolarité et frais divers",
+      "Contrôle des paiements et suivi des soldes",
+      "Paiements EdonePay et historique des transactions",
+      "Portefeuille, reçus et exports financiers"
+    ]
+  },
+  "rh": {
+    "name": "Ressources humaines",
+    "description": "Accompagner le personnel tout au long de son parcours.",
+    "list": [
+      "Dossiers employés et pièces privées",
+      "Postes, candidatures et parcours professionnels",
+      "Évaluations et formations",
+      "Congés, calendrier et traitement des demandes"
+    ]
+  },
+  "paie": {
+    "name": "Gestionnaire de paie",
+    "description": "Préparer les rémunérations avec des accès dédiés.",
+    "list": [
+      "Contrats et paramètres de rémunération",
+      "Rubriques et préparation de la paie",
+      "Bulletins de paie PDF",
+      "Historique des paies autorisées"
+    ]
+  },
+  "employe": {
+    "name": "Employé",
+    "description": "Retrouver ses informations et démarches personnelles.",
+    "list": [
+      "Dossier et documents personnels autorisés",
+      "Dépôt de pièces justificatives",
+      "Demandes RH et suivi du traitement",
+      "Consultation de ses bulletins de paie disponibles"
+    ]
+  },
+  "ged": {
+    "name": "Gestionnaire documentaire",
+    "description": "Organiser les documents et les archives de l’établissement.",
+    "list": [
+      "Recherche, classement et métadonnées",
+      "Aperçu, téléchargement et versions",
+      "Archivage des bulletins par sélection ou filtres",
+      "Programmation et suivi des campagnes ; accès sensibles soumis à habilitation"
+    ]
+  },
+  "bibliotheque": {
+    "name": "Bibliothécaire",
+    "description": "Organiser les ressources de lecture.",
+    "list": [
+      "Catalogue et fichiers des ouvrages",
+      "Ajout et modification des livres",
+      "Traitement des ouvrages soumis à validation"
+    ]
+  },
+  "stock": {
+    "name": "Gestionnaire de stock",
+    "description": "Suivre les fournitures et approvisionnements.",
+    "list": [
+      "Catégories, produits et fournisseurs",
+      "Commandes et réceptions",
+      "Historique, impressions et exports"
+    ]
+  },
+  "transport": {
+    "name": "Gestionnaire de transport",
+    "description": "Organiser les déplacements et les abonnements.",
+    "list": [
+      "Véhicules et trajets",
+      "Abonnements et consultation de leurs détails",
+      "Exports des informations de transport"
+    ]
+  },
+  "medecin": {
+    "name": "Médecin / service médical",
+    "description": "Assurer le suivi médical avec des droits réservés.",
+    "list": [
+      "Dossiers médicaux autorisés",
+      "Consultations et historique",
+      "Documents PDF disponibles"
+    ]
+  },
+  "plateforme": {
+    "name": "Administration de la plateforme",
+    "description": "Administrer le service pour plusieurs établissements.",
+    "list": [
+      "Gestion des établissements et comptes de direction",
+      "Indicateurs et paramètres de plateforme",
+      "Paramètres techniques des paiements",
+      "Sélection des ouvrages publics proposés"
+    ]
   }
 }

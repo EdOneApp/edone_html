@@ -32,7 +32,7 @@ for p in config['pages']:
  assert head.meta['twitter:card']==['summary_large_image']
  assert len(head.jsons)==1 and head.jsons[0]['@context']=='https://schema.org'
  assert len({node.get('@id') for node in head.jsons[0]['@graph']})==len(head.jsons[0]['@graph'])
- if p['file']=='index.html':assert head.static_modules==60
+ if p['file']=='index.html':assert head.static_modules==len(json.loads(Path('modules.json').read_text()))
  for rel in ['icon','apple-touch-icon','manifest']:
   assert len(head.links[rel])==1 and Path(head.links[rel][0].lstrip('/')).exists()
 for path in Path('.').glob('*.html'):
@@ -51,4 +51,4 @@ manifest=json.loads(Path('site.webmanifest').read_text());assert manifest['start
 for icon in manifest['icons']:assert Path(icon['src'].lstrip('/')).exists()
 with Path('images/icons/favicon-96.png').open('rb') as f:header=f.read(24)
 assert struct.unpack('>II',header[16:24])==(96,96)
-print('SEO validé : 5 pages canoniques indexables, 15 pages d’erreur exclues, 60 fiches HTML, JSON-LD et sitemap valides.')
+print('SEO validé : 5 pages canoniques indexables, 15 pages d’erreur exclues, fiches HTML du catalogue, JSON-LD et sitemap valides.')

@@ -358,5 +358,257 @@
     "category": "Bibliothèque",
     "title": "Bibliothèque et parcours",
     "description": "Accès intégré à l’espace étudiant, avec une place dans son CV et son parcours."
+  },
+  {
+    "id": 61,
+    "category": "Pédagogie",
+    "title": "Évaluations à nombre variable",
+    "description": "Adaptez le nombre de notes et d’évaluations aux besoins de chaque matière et période."
+  },
+  {
+    "id": 62,
+    "category": "Pédagogie",
+    "title": "Crédits et compensation des UE",
+    "description": "Configurez les crédits, coefficients et règles de compensation pour les parcours universitaires et professionnels."
+  },
+  {
+    "id": 63,
+    "category": "Pédagogie",
+    "title": "Progressions pédagogiques",
+    "description": "Suivez l’avancement des enseignements et les progressions des équipes pédagogiques."
+  },
+  {
+    "id": 64,
+    "category": "Pédagogie",
+    "title": "Personnalisation des documents scolaires",
+    "description": "Retrouvez le logo, les couleurs et les informations de votre établissement sur les documents prévus."
+  },
+  {
+    "id": 65,
+    "category": "RH",
+    "title": "Dossier employé complet",
+    "description": "Centralisez les informations administratives, professionnelles et les pièces justificatives du personnel."
+  },
+  {
+    "id": 66,
+    "category": "RH",
+    "title": "Fiches de poste et recrutement",
+    "description": "Organisez les postes et les candidatures dans le suivi RH."
+  },
+  {
+    "id": 67,
+    "category": "RH",
+    "title": "Parcours et carrière",
+    "description": "Conservez les étapes du parcours professionnel de chaque employé."
+  },
+  {
+    "id": 68,
+    "category": "RH",
+    "title": "Évaluations du personnel",
+    "description": "Enregistrez les évaluations et suivez les appréciations professionnelles."
+  },
+  {
+    "id": 69,
+    "category": "RH",
+    "title": "Formations du personnel",
+    "description": "Suivez les formations et les justificatifs associés aux employés."
+  },
+  {
+    "id": 70,
+    "category": "RH",
+    "title": "Congés et calendrier",
+    "description": "Centralisez les demandes de congé, leur traitement, les soldes et le calendrier des absences."
+  },
+  {
+    "id": 71,
+    "category": "RH",
+    "title": "Demandes et documents RH",
+    "description": "Traitez les demandes des employés, suivez leur avancement et produisez les documents disponibles."
+  },
+  {
+    "id": 72,
+    "category": "RH",
+    "title": "Espace personnel employé",
+    "description": "Chaque employé consulte son dossier autorisé, dépose ses pièces et suit ses demandes."
+  },
+  {
+    "id": 73,
+    "category": "RH",
+    "title": "Pièces RH privées",
+    "description": "Conservez les documents du personnel dans un espace privé avec des accès adaptés à leur sensibilité."
+  },
+  {
+    "id": 74,
+    "category": "Paie",
+    "title": "Contrats et rémunérations",
+    "description": "Gérez les contrats et les informations de rémunération selon les habilitations du gestionnaire."
+  },
+  {
+    "id": 75,
+    "category": "Paie",
+    "title": "Rubriques de paie configurables",
+    "description": "Paramétrez les éléments de rémunération et les retenues utilisés dans les calculs."
+  },
+  {
+    "id": 76,
+    "category": "Paie",
+    "title": "Préparation de la paie",
+    "description": "Préparez les paies et appliquez les paramètres de calcul configurés pour l’établissement."
+  },
+  {
+    "id": 77,
+    "category": "Paie",
+    "title": "Bulletins de paie PDF",
+    "description": "Générez et consultez les bulletins de paie téléchargeables."
+  },
+  {
+    "id": 78,
+    "category": "Paie",
+    "title": "Historique et accès salarié",
+    "description": "Retrouvez les paies précédentes ; chaque salarié accède uniquement aux bulletins mis à sa disposition."
+  },
+  {
+    "id": 79,
+    "category": "GED & archives",
+    "title": "Documents centralisés",
+    "description": "Retrouvez les pièces des étudiants, supports de cours, documents enseignants, ouvrages et pièces RH selon vos droits."
+  },
+  {
+    "id": 80,
+    "category": "GED & archives",
+    "title": "Recherche documentaire multicritère",
+    "description": "Recherchez par texte, catégorie, mots-clés, année, filière, niveau, classe ou personne concernée."
+  },
+  {
+    "id": 81,
+    "category": "GED & archives",
+    "title": "Dépôt et classement",
+    "description": "Déposez un fichier et renseignez son titre, sa description, sa catégorie et ses mots-clés."
+  },
+  {
+    "id": 82,
+    "category": "GED & archives",
+    "title": "Aperçu et téléchargement sécurisé",
+    "description": "Prévisualisez et téléchargez les fichiers auxquels votre profil est autorisé à accéder."
+  },
+  {
+    "id": 83,
+    "category": "GED & archives",
+    "title": "Versions et historique documentaire",
+    "description": "Conservez les versions des documents et consultez leur historique."
+  },
+  {
+    "id": 84,
+    "category": "GED & archives",
+    "title": "Indexation du contenu",
+    "description": "Recherchez dans le texte extrait des formats pris en charge, notamment PDF, DOCX et XLSX."
+  },
+  {
+    "id": 85,
+    "category": "GED & archives",
+    "title": "Archivage des bulletins",
+    "description": "Archivez les bulletins par sélection d’étudiants ou par année, filière, niveau et classe."
+  },
+  {
+    "id": 86,
+    "category": "GED & archives",
+    "title": "Campagnes programmées",
+    "description": "Programmez les campagnes d’archivage et suivez leur progression et les éventuelles erreurs."
+  },
+  {
+    "id": 87,
+    "category": "GED & archives",
+    "title": "Confidentialité par catégorie",
+    "description": "Les documents RH, bancaires, médicaux et de paie conservent des autorisations spécifiques."
+  },
+  {
+    "id": 88,
+    "category": "Santé",
+    "title": "Dossiers médicaux",
+    "description": "Centralisez et mettez à jour les informations médicales des personnes concernées avec des accès réservés."
+  },
+  {
+    "id": 89,
+    "category": "Santé",
+    "title": "Consultations et historique",
+    "description": "Enregistrez les consultations et retrouvez leur historique."
+  },
+  {
+    "id": 90,
+    "category": "Santé",
+    "title": "Documents de consultation PDF",
+    "description": "Produisez les documents PDF disponibles depuis le suivi des consultations."
+  },
+  {
+    "id": 91,
+    "category": "Accès & profils",
+    "title": "Profils par métier",
+    "description": "Attribuez des profils adaptés : scolarité, pédagogie, comptabilité, RH, paie, GED, bibliothèque, stock, transport et médecin."
+  },
+  {
+    "id": 92,
+    "category": "Accès & profils",
+    "title": "Autorisations par action",
+    "description": "Définissez les droits de consultation, création, modification, validation, export ou suppression selon les fonctionnalités."
+  },
+  {
+    "id": 93,
+    "category": "Accès & profils",
+    "title": "Exceptions individuelles",
+    "description": "Adaptez les autorisations d’un utilisateur sans modifier les droits de toute son équipe."
+  },
+  {
+    "id": 94,
+    "category": "Accès & profils",
+    "title": "Création sécurisée des comptes",
+    "description": "Créez les comptes du personnel avec identifiants générés et affectation des profils autorisés."
+  },
+  {
+    "id": 95,
+    "category": "Accès & profils",
+    "title": "Navigation adaptée au profil",
+    "description": "Les menus suivent les autorisations ; les actions font également l’objet de contrôles côté serveur."
+  },
+  {
+    "id": 96,
+    "category": "Statistiques & journal",
+    "title": "Stockage par établissement",
+    "description": "Consultez le nombre de fichiers et le volume de stockage mesuré pour votre établissement."
+  },
+  {
+    "id": 97,
+    "category": "Statistiques & journal",
+    "title": "Journal des opérations sensibles",
+    "description": "Retrouvez les créations, modifications et suppressions enregistrées sur les données couvertes, y compris les traitements en masse."
+  },
+  {
+    "id": 98,
+    "category": "Statistiques & journal",
+    "title": "Auteur et changements détaillés",
+    "description": "Consultez la date, l’auteur lorsqu’il est disponible, l’élément concerné et les changements enregistrés, avec masquage des secrets ciblés."
+  },
+  {
+    "id": 99,
+    "category": "Statistiques & journal",
+    "title": "Recherche avancée des événements",
+    "description": "Filtrez le journal par période, action, auteur, module, référence et contexte de requête."
+  },
+  {
+    "id": 100,
+    "category": "Statistiques & journal",
+    "title": "Exports du journal et impression",
+    "description": "Exportez les résultats autorisés en Excel, CSV ou JSON et utilisez la vue d’impression."
+  },
+  {
+    "id": 101,
+    "category": "Finance",
+    "title": "EdonePay",
+    "description": "Retrouvez les paiements en ligne sous la marque EdonePay, avec le suivi des transactions, soldes et reçus."
+  },
+  {
+    "id": 102,
+    "category": "Documents",
+    "title": "Fiche établissement PDF",
+    "description": "Téléchargez une fiche regroupant les informations de votre établissement."
   }
 ]

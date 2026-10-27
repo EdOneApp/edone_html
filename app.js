@@ -25,7 +25,11 @@ const roles={
       "Import / export de données (Excel, PDF)",
       "Traçabilité complète (chaque modification de note et chaque paiement horodaté et attribué)",
       "Sauvegardes automatisées + procédure de restauration testée",
-      "Isolation multi-établissement (données cloisonnées)"
+      "Isolation multi-établissement (données cloisonnées)",
+      "Dossiers RH, congés, paie et espace employé selon les habilitations",
+      "GED, classement documentaire et archivage des bulletins",
+      "Statistiques de stockage et journal des opérations sensibles avec exports",
+      "Création des comptes, profils personnalisés et exceptions individuelles"
     ],
     "dash": "Votre école avance.",
     "metrics": [
@@ -56,7 +60,9 @@ const roles={
       "RIB (relevé d’identité bancaire) et demandes d’acompte",
       "Fiches de présence numériques",
       "Espace enseignant dédié (maquette, planning)",
-      "Configuration des coefficients par matière / niveau"
+      "Configuration des coefficients par matière / niveau",
+      "Documents personnels et supports de cours accessibles selon les droits",
+      "Devoirs de groupe, soumissions et correction des travaux"
     ],
     "dash": "Une journée pour transmettre.",
     "metrics": [
@@ -88,7 +94,9 @@ const roles={
       "Vérification publique des documents (bulletin, diplôme, attestation par code unique)",
       "Accès aux reçus de paiement et historique de solde",
       "Suivi des frais divers (cartes, kits, accessoires, transport)",
-      "Alertes d’absences et notifications automatiques"
+      "Alertes d’absences et notifications automatiques",
+      "Documents scolaires et archives accessibles depuis son espace",
+      "Supports et sujets de devoirs réservés à ses classes"
     ],
     "dash": "À vous le prochain chapitre.",
     "metrics": [
@@ -145,7 +153,13 @@ const roles={
       "Établissement et gestion du campus (salles, filières, niveaux)",
       "Mise à jour des données de l’élève et du personnel",
       "Authentification sécurisée (2FA pour super administrateurs)",
-      "Conformité RGPD (traitement et conservation conformes)"
+      "Conformité RGPD (traitement et conservation conformes)",
+      "Dossier employé, carrière, évaluations et formations",
+      "Demandes de congés et calendrier des absences",
+      "Demandes RH, dépôt de pièces privées et suivi du traitement",
+      "Préparation de la paie et bulletins PDF pour les gestionnaires habilités",
+      "Espace salarié : dossier, demandes et bulletins personnels",
+      "GED, stock, transport ou service médical selon le métier et les droits accordés"
     ],
     "dash": "Le campus, bien organisé.",
     "metrics": [
@@ -185,6 +199,122 @@ const roles={
     "photo": "images/campus-vie-edone.jpg",
     "photoAlt": "Illustration : Des étudiants traversant un campus arboré",
     "photoCaption": "Accompagner les écoles qui avancent."
+  },
+  "scolarite": {
+    "name": "Scolarité",
+    "description": "Gérer le parcours administratif et scolaire des étudiants.",
+    "list": [
+      "Dossiers étudiants, pièces et inscriptions",
+      "Années, filières, niveaux et classes",
+      "Notes, résultats, bulletins et documents scolaires",
+      "Recherche et archivage des documents académiques"
+    ]
+  },
+  "pedagogie": {
+    "name": "Responsable pédagogique",
+    "description": "Organiser les enseignements et suivre les résultats.",
+    "list": [
+      "Enseignants et affectations pédagogiques",
+      "Matières, UE, maquettes, coefficients et crédits",
+      "Progressions, emplois du temps et évaluations",
+      "Compensation des UE, bulletins et procès-verbaux"
+    ]
+  },
+  "comptabilite": {
+    "name": "Comptabilité",
+    "description": "Suivre les frais, encaissements et opérations financières.",
+    "list": [
+      "Frais de scolarité et frais divers",
+      "Contrôle des paiements et suivi des soldes",
+      "Paiements EdonePay et historique des transactions",
+      "Portefeuille, reçus et exports financiers"
+    ]
+  },
+  "rh": {
+    "name": "Ressources humaines",
+    "description": "Accompagner le personnel tout au long de son parcours.",
+    "list": [
+      "Dossiers employés et pièces privées",
+      "Postes, candidatures et parcours professionnels",
+      "Évaluations et formations",
+      "Congés, calendrier et traitement des demandes"
+    ]
+  },
+  "paie": {
+    "name": "Gestionnaire de paie",
+    "description": "Préparer les rémunérations avec des accès dédiés.",
+    "list": [
+      "Contrats et paramètres de rémunération",
+      "Rubriques et préparation de la paie",
+      "Bulletins de paie PDF",
+      "Historique des paies autorisées"
+    ]
+  },
+  "employe": {
+    "name": "Employé",
+    "description": "Retrouver ses informations et démarches personnelles.",
+    "list": [
+      "Dossier et documents personnels autorisés",
+      "Dépôt de pièces justificatives",
+      "Demandes RH et suivi du traitement",
+      "Consultation de ses bulletins de paie disponibles"
+    ]
+  },
+  "ged": {
+    "name": "Gestionnaire documentaire",
+    "description": "Organiser les documents et les archives de l’établissement.",
+    "list": [
+      "Recherche, classement et métadonnées",
+      "Aperçu, téléchargement et versions",
+      "Archivage des bulletins par sélection ou filtres",
+      "Programmation et suivi des campagnes ; accès sensibles soumis à habilitation"
+    ]
+  },
+  "bibliotheque": {
+    "name": "Bibliothécaire",
+    "description": "Organiser les ressources de lecture.",
+    "list": [
+      "Catalogue et fichiers des ouvrages",
+      "Ajout et modification des livres",
+      "Traitement des ouvrages soumis à validation"
+    ]
+  },
+  "stock": {
+    "name": "Gestionnaire de stock",
+    "description": "Suivre les fournitures et approvisionnements.",
+    "list": [
+      "Catégories, produits et fournisseurs",
+      "Commandes et réceptions",
+      "Historique, impressions et exports"
+    ]
+  },
+  "transport": {
+    "name": "Gestionnaire de transport",
+    "description": "Organiser les déplacements et les abonnements.",
+    "list": [
+      "Véhicules et trajets",
+      "Abonnements et consultation de leurs détails",
+      "Exports des informations de transport"
+    ]
+  },
+  "medecin": {
+    "name": "Médecin / service médical",
+    "description": "Assurer le suivi médical avec des droits réservés.",
+    "list": [
+      "Dossiers médicaux autorisés",
+      "Consultations et historique",
+      "Documents PDF disponibles"
+    ]
+  },
+  "plateforme": {
+    "name": "Administration de la plateforme",
+    "description": "Administrer le service pour plusieurs établissements.",
+    "list": [
+      "Gestion des établissements et comptes de direction",
+      "Indicateurs et paramètres de plateforme",
+      "Paramètres techniques des paiements",
+      "Sélection des ouvrages publics proposés"
+    ]
   }
 };
 const tabs=[...document.querySelectorAll('[data-role]')];
@@ -551,6 +681,258 @@ const modules=[
     "category": "Bibliothèque",
     "title": "Bibliothèque et parcours",
     "description": "Accès intégré à l’espace étudiant, avec une place dans son CV et son parcours."
+  },
+  {
+    "id": 61,
+    "category": "Pédagogie",
+    "title": "Évaluations à nombre variable",
+    "description": "Adaptez le nombre de notes et d’évaluations aux besoins de chaque matière et période."
+  },
+  {
+    "id": 62,
+    "category": "Pédagogie",
+    "title": "Crédits et compensation des UE",
+    "description": "Configurez les crédits, coefficients et règles de compensation pour les parcours universitaires et professionnels."
+  },
+  {
+    "id": 63,
+    "category": "Pédagogie",
+    "title": "Progressions pédagogiques",
+    "description": "Suivez l’avancement des enseignements et les progressions des équipes pédagogiques."
+  },
+  {
+    "id": 64,
+    "category": "Pédagogie",
+    "title": "Personnalisation des documents scolaires",
+    "description": "Retrouvez le logo, les couleurs et les informations de votre établissement sur les documents prévus."
+  },
+  {
+    "id": 65,
+    "category": "RH",
+    "title": "Dossier employé complet",
+    "description": "Centralisez les informations administratives, professionnelles et les pièces justificatives du personnel."
+  },
+  {
+    "id": 66,
+    "category": "RH",
+    "title": "Fiches de poste et recrutement",
+    "description": "Organisez les postes et les candidatures dans le suivi RH."
+  },
+  {
+    "id": 67,
+    "category": "RH",
+    "title": "Parcours et carrière",
+    "description": "Conservez les étapes du parcours professionnel de chaque employé."
+  },
+  {
+    "id": 68,
+    "category": "RH",
+    "title": "Évaluations du personnel",
+    "description": "Enregistrez les évaluations et suivez les appréciations professionnelles."
+  },
+  {
+    "id": 69,
+    "category": "RH",
+    "title": "Formations du personnel",
+    "description": "Suivez les formations et les justificatifs associés aux employés."
+  },
+  {
+    "id": 70,
+    "category": "RH",
+    "title": "Congés et calendrier",
+    "description": "Centralisez les demandes de congé, leur traitement, les soldes et le calendrier des absences."
+  },
+  {
+    "id": 71,
+    "category": "RH",
+    "title": "Demandes et documents RH",
+    "description": "Traitez les demandes des employés, suivez leur avancement et produisez les documents disponibles."
+  },
+  {
+    "id": 72,
+    "category": "RH",
+    "title": "Espace personnel employé",
+    "description": "Chaque employé consulte son dossier autorisé, dépose ses pièces et suit ses demandes."
+  },
+  {
+    "id": 73,
+    "category": "RH",
+    "title": "Pièces RH privées",
+    "description": "Conservez les documents du personnel dans un espace privé avec des accès adaptés à leur sensibilité."
+  },
+  {
+    "id": 74,
+    "category": "Paie",
+    "title": "Contrats et rémunérations",
+    "description": "Gérez les contrats et les informations de rémunération selon les habilitations du gestionnaire."
+  },
+  {
+    "id": 75,
+    "category": "Paie",
+    "title": "Rubriques de paie configurables",
+    "description": "Paramétrez les éléments de rémunération et les retenues utilisés dans les calculs."
+  },
+  {
+    "id": 76,
+    "category": "Paie",
+    "title": "Préparation de la paie",
+    "description": "Préparez les paies et appliquez les paramètres de calcul configurés pour l’établissement."
+  },
+  {
+    "id": 77,
+    "category": "Paie",
+    "title": "Bulletins de paie PDF",
+    "description": "Générez et consultez les bulletins de paie téléchargeables."
+  },
+  {
+    "id": 78,
+    "category": "Paie",
+    "title": "Historique et accès salarié",
+    "description": "Retrouvez les paies précédentes ; chaque salarié accède uniquement aux bulletins mis à sa disposition."
+  },
+  {
+    "id": 79,
+    "category": "GED & archives",
+    "title": "Documents centralisés",
+    "description": "Retrouvez les pièces des étudiants, supports de cours, documents enseignants, ouvrages et pièces RH selon vos droits."
+  },
+  {
+    "id": 80,
+    "category": "GED & archives",
+    "title": "Recherche documentaire multicritère",
+    "description": "Recherchez par texte, catégorie, mots-clés, année, filière, niveau, classe ou personne concernée."
+  },
+  {
+    "id": 81,
+    "category": "GED & archives",
+    "title": "Dépôt et classement",
+    "description": "Déposez un fichier et renseignez son titre, sa description, sa catégorie et ses mots-clés."
+  },
+  {
+    "id": 82,
+    "category": "GED & archives",
+    "title": "Aperçu et téléchargement sécurisé",
+    "description": "Prévisualisez et téléchargez les fichiers auxquels votre profil est autorisé à accéder."
+  },
+  {
+    "id": 83,
+    "category": "GED & archives",
+    "title": "Versions et historique documentaire",
+    "description": "Conservez les versions des documents et consultez leur historique."
+  },
+  {
+    "id": 84,
+    "category": "GED & archives",
+    "title": "Indexation du contenu",
+    "description": "Recherchez dans le texte extrait des formats pris en charge, notamment PDF, DOCX et XLSX."
+  },
+  {
+    "id": 85,
+    "category": "GED & archives",
+    "title": "Archivage des bulletins",
+    "description": "Archivez les bulletins par sélection d’étudiants ou par année, filière, niveau et classe."
+  },
+  {
+    "id": 86,
+    "category": "GED & archives",
+    "title": "Campagnes programmées",
+    "description": "Programmez les campagnes d’archivage et suivez leur progression et les éventuelles erreurs."
+  },
+  {
+    "id": 87,
+    "category": "GED & archives",
+    "title": "Confidentialité par catégorie",
+    "description": "Les documents RH, bancaires, médicaux et de paie conservent des autorisations spécifiques."
+  },
+  {
+    "id": 88,
+    "category": "Santé",
+    "title": "Dossiers médicaux",
+    "description": "Centralisez et mettez à jour les informations médicales des personnes concernées avec des accès réservés."
+  },
+  {
+    "id": 89,
+    "category": "Santé",
+    "title": "Consultations et historique",
+    "description": "Enregistrez les consultations et retrouvez leur historique."
+  },
+  {
+    "id": 90,
+    "category": "Santé",
+    "title": "Documents de consultation PDF",
+    "description": "Produisez les documents PDF disponibles depuis le suivi des consultations."
+  },
+  {
+    "id": 91,
+    "category": "Accès & profils",
+    "title": "Profils par métier",
+    "description": "Attribuez des profils adaptés : scolarité, pédagogie, comptabilité, RH, paie, GED, bibliothèque, stock, transport et médecin."
+  },
+  {
+    "id": 92,
+    "category": "Accès & profils",
+    "title": "Autorisations par action",
+    "description": "Définissez les droits de consultation, création, modification, validation, export ou suppression selon les fonctionnalités."
+  },
+  {
+    "id": 93,
+    "category": "Accès & profils",
+    "title": "Exceptions individuelles",
+    "description": "Adaptez les autorisations d’un utilisateur sans modifier les droits de toute son équipe."
+  },
+  {
+    "id": 94,
+    "category": "Accès & profils",
+    "title": "Création sécurisée des comptes",
+    "description": "Créez les comptes du personnel avec identifiants générés et affectation des profils autorisés."
+  },
+  {
+    "id": 95,
+    "category": "Accès & profils",
+    "title": "Navigation adaptée au profil",
+    "description": "Les menus suivent les autorisations ; les actions font également l’objet de contrôles côté serveur."
+  },
+  {
+    "id": 96,
+    "category": "Statistiques & journal",
+    "title": "Stockage par établissement",
+    "description": "Consultez le nombre de fichiers et le volume de stockage mesuré pour votre établissement."
+  },
+  {
+    "id": 97,
+    "category": "Statistiques & journal",
+    "title": "Journal des opérations sensibles",
+    "description": "Retrouvez les créations, modifications et suppressions enregistrées sur les données couvertes, y compris les traitements en masse."
+  },
+  {
+    "id": 98,
+    "category": "Statistiques & journal",
+    "title": "Auteur et changements détaillés",
+    "description": "Consultez la date, l’auteur lorsqu’il est disponible, l’élément concerné et les changements enregistrés, avec masquage des secrets ciblés."
+  },
+  {
+    "id": 99,
+    "category": "Statistiques & journal",
+    "title": "Recherche avancée des événements",
+    "description": "Filtrez le journal par période, action, auteur, module, référence et contexte de requête."
+  },
+  {
+    "id": 100,
+    "category": "Statistiques & journal",
+    "title": "Exports du journal et impression",
+    "description": "Exportez les résultats autorisés en Excel, CSV ou JSON et utilisez la vue d’impression."
+  },
+  {
+    "id": 101,
+    "category": "Finance",
+    "title": "EdonePay",
+    "description": "Retrouvez les paiements en ligne sous la marque EdonePay, avec le suivi des transactions, soldes et reçus."
+  },
+  {
+    "id": 102,
+    "category": "Documents",
+    "title": "Fiche établissement PDF",
+    "description": "Téléchargez une fiche regroupant les informations de votre établissement."
   }
 ];
 let selectedCategory='Tous';
