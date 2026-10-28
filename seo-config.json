@@ -3,21 +3,21 @@
   "site_name": "EdOne",
   "language": "fr",
   "locale": "fr_CI",
-  "social_image": "/media/edone-pub-poster.jpg",
-  "video_upload_date": "2026-10-26T12:49:56+00:00",
+  "social_image": "/media/edone-promo-60s-v2-poster.jpg",
+  "video_upload_date": "2026-10-28T00:00:00+00:00",
   "pages": [
     {
       "file": "index.html",
       "path": "/",
       "title": "EdOne | Logiciel de gestion scolaire en Côte d’Ivoire",
-      "description": "Centralisez inscriptions, notes, bulletins et paiements de scolarité avec EdOne. Une plateforme pour les écoles, universités, enseignants et parents.",
+      "description": "Centralisez la scolarité, les paiements, les équipes et le suivi de plusieurs écoles avec EdOne. Découvrez les espaces métier et le pilotage Multisite.",
       "name": "Logiciel de gestion scolaire EdOne"
     },
     {
       "file": "fonctionnalites.html",
       "path": "/fonctionnalites.html",
       "title": "Fonctionnalités du logiciel de gestion scolaire | EdOne",
-      "description": "Découvrez les fonctionnalités EdOne : scolarité, pédagogie, EdonePay, RH, paie, GED, santé, profils d’accès et journal des opérations.",
+      "description": "Explorez les fonctionnalités EdOne : scolarité, Multisite, campus, EdonePay, RH, paie, GED, sécurité et pilotage des établissements.",
       "name": "Fonctionnalités EdOne"
     },
     {
@@ -42,7 +42,8 @@
       "name": "Conditions générales d’utilisation"
     }
   ],
-  "video_path": "/media/edone-pub-avec-son.mp4",
-  "video_duration_seconds": 30,
-  "video_description": "Présentation EdOne en 30 secondes : gestion scolaire, tableau de bord administratif, suivi des familles et paiements de scolarité."
+  "video_path": "/media/edone-promo-60s-v2.mp4",
+  "video_duration_seconds": 60,
+  "video_description": "Présentation EdOne en 60 secondes : gestion scolaire, tableaux de bord, suivi des familles, bibliothèque et paiements de scolarité.",
+  "contact_email": "admin@edone.my"
 }

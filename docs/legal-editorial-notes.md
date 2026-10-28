@@ -2,7 +2,7 @@
 
 Les pages concernent le site vitrine, pas le contrat complet de l’ERP scolaire ou le traitement des dossiers par les établissements.
 
-Le nom public demandé est EdOne. Coordonnées fournies : edoneapp@gmail.com, +225 01 05 23 23 35, Abidjan, Cocody Riviera. Aucune forme juridique, immatriculation, adresse postale complète ou identité du responsable de publication n’a été fournie. Ces informations restent à confirmer pour compléter les mentions ; aucune n’a été inventée. Les durées précises de conservation des messages et les accords avec les prestataires doivent être confirmés par l’éditeur. Ces textes ne constituent pas une validation juridique de conformité.
+Le nom public demandé est EdOne. Coordonnées fournies : admin@edone.my, +225 01 05 23 23 35, Abidjan, Cocody Riviera. Aucune forme juridique, immatriculation, adresse postale complète ou identité du responsable de publication n’a été fournie. Ces informations restent à confirmer pour compléter les mentions ; aucune n’a été inventée. Les durées précises de conservation des messages et les accords avec les prestataires doivent être confirmés par l’éditeur. Ces textes ne constituent pas une validation juridique de conformité.
 
 Les références de structure demandées sur spaguettidabidjan.com n’étaient pas accessibles via l’outil de consultation. Aucun texte de ce site n’a été copié.
 

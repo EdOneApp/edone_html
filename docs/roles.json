@@ -21,7 +21,10 @@
       "Dossiers RH, congés, paie et espace employé selon les habilitations",
       "GED, classement documentaire et archivage des bulletins",
       "Statistiques de stockage et journal des opérations sensibles avec exports",
-      "Création des comptes, profils personnalisés et exceptions individuelles"
+      "Création des comptes, profils personnalisés et exceptions individuelles",
+      "Consultation Multisite des écoles explicitement attribuées au responsable",
+      "Effectifs et frais par campus, à partir des classes affectées",
+      "Suivi des changements de forfait et des documents de facturation"
     ],
     "dash": "Votre école avance.",
     "metrics": [
@@ -36,6 +39,36 @@
     "photo": "images/administration-edone.jpg",
     "photoAlt": "Illustration : Une équipe administrative scolaire autour d’un ordinateur",
     "photoCaption": "Les équipes qui font avancer l’école."
+  },
+  "fondateurs": {
+    "name": "Fondateurs & groupes scolaires",
+    "label": "TOUTES VOS ÉCOLES, UNE VUE COMMUNE",
+    "title": "Garder le cap, d’un campus à l’autre.",
+    "description": "Consultez vos établissements autorisés, comparez leurs indicateurs et ouvrez le détail de chacun, tout en gardant votre rôle dans votre école principale.",
+    "list": [
+      "Portefeuille des écoles attribuées par la plateforme",
+      "Année active, période commune ou consultation de toutes les années",
+      "Comparaison des effectifs, des frais et du recouvrement",
+      "Dossier détaillé de chaque école : académique, finances, équipes et documents",
+      "Effectifs et frais par campus selon les classes affectées",
+      "Registres avec recherche et références métier lisibles",
+      "Synthèses CSV et rapports imprimables",
+      "Consultation des registres de paie sur habilitation distincte",
+      "Administration de l’école principale conservée pour le fondateur qui en est aussi responsable"
+    ],
+    "dash": "Votre groupe, en vue d’ensemble.",
+    "metrics": [
+      "Établissements suivis",
+      "4",
+      "Portefeuille autorisé",
+      "Recouvrement",
+      "87 %",
+      "Période sélectionnée"
+    ],
+    "chart": "Les inscriptions du groupe, mois après mois",
+    "photo": "images/administration-edone.jpg",
+    "photoAlt": "Illustration d’une équipe de direction réunie pour piloter un groupe scolaire",
+    "photoCaption": "Plusieurs écoles, des décisions mieux éclairées."
   },
   "enseignants": {
     "label": "PLUS DE TEMPS POUR TRANSMETTRE",
@@ -116,7 +149,8 @@
       "Paiement des frais divers en ligne (transport, carte, kits, accessoires)",
       "Notifications SMS/Email automatiques (reçus, alertes, annonces)",
       "Accès au wallet / historique des paiements effectués",
-      "Consultation de la carte étudiant et des documents officiels (lorsque autorisé)"
+      "Consultation de la carte étudiant et des documents officiels (lorsque autorisé)",
+      "Vérification par code SMS temporaire pour accéder au dossier familial en production"
     ],
     "dash": "Gardez le lien avec son école.",
     "metrics": [
@@ -219,7 +253,8 @@
       "Frais de scolarité et frais divers",
       "Contrôle des paiements et suivi des soldes",
       "Paiements EdonePay et historique des transactions",
-      "Portefeuille, reçus et exports financiers"
+      "Portefeuille, reçus et exports financiers",
+      "Suivi des factures, références de règlement et échanges avec la plateforme pour les avoirs et relances"
     ]
   },
   "rh": {
@@ -300,11 +335,17 @@
   },
   "plateforme": {
     "name": "Administration de la plateforme",
-    "description": "Administrer le service pour plusieurs établissements.",
+    "description": "Piloter l’ensemble du service, créer les écoles et leurs responsables, configurer les intégrations et suivre les indicateurs, les incidents et les mises en service.",
     "list": [
-      "Gestion des établissements et comptes de direction",
-      "Indicateurs et paramètres de plateforme",
-      "Paramètres techniques des paiements",
+      "Création des établissements, de leur identité, année académique et premier responsable",
+      "Configuration Workspace, domaine professionnel et parcours marchand EdonePay",
+      "Suivi des installations, abonnements, factures, avoirs et relances",
+      "KPI globaux et annuels, répertoire détaillé, graphiques et carte des établissements",
+      "Recherche des comptes fondateurs et attribution des écoles du portefeuille Multisite",
+      "Autorisations de paie distinctes par compte et établissement",
+      "Incidents, anomalies, résolution et journal des opérations sensibles",
+      "Suivi des formations et preuves de préparation du service",
+      "Double authentification et accès de plateforme séparés des rôles d’école",
       "Sélection des ouvrages publics proposés"
     ]
   }

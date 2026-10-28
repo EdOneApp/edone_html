@@ -29,7 +29,10 @@ const roles={
       "Dossiers RH, congés, paie et espace employé selon les habilitations",
       "GED, classement documentaire et archivage des bulletins",
       "Statistiques de stockage et journal des opérations sensibles avec exports",
-      "Création des comptes, profils personnalisés et exceptions individuelles"
+      "Création des comptes, profils personnalisés et exceptions individuelles",
+      "Consultation Multisite des écoles explicitement attribuées au responsable",
+      "Effectifs et frais par campus, à partir des classes affectées",
+      "Suivi des changements de forfait et des documents de facturation"
     ],
     "dash": "Votre école avance.",
     "metrics": [
@@ -44,6 +47,36 @@ const roles={
     "photo": "images/administration-edone.jpg",
     "photoAlt": "Illustration : Une équipe administrative scolaire autour d’un ordinateur",
     "photoCaption": "Les équipes qui font avancer l’école."
+  },
+  "fondateurs": {
+    "name": "Fondateurs & groupes scolaires",
+    "label": "TOUTES VOS ÉCOLES, UNE VUE COMMUNE",
+    "title": "Garder le cap, d’un campus à l’autre.",
+    "description": "Consultez vos établissements autorisés, comparez leurs indicateurs et ouvrez le détail de chacun, tout en gardant votre rôle dans votre école principale.",
+    "list": [
+      "Portefeuille des écoles attribuées par la plateforme",
+      "Année active, période commune ou consultation de toutes les années",
+      "Comparaison des effectifs, des frais et du recouvrement",
+      "Dossier détaillé de chaque école : académique, finances, équipes et documents",
+      "Effectifs et frais par campus selon les classes affectées",
+      "Registres avec recherche et références métier lisibles",
+      "Synthèses CSV et rapports imprimables",
+      "Consultation des registres de paie sur habilitation distincte",
+      "Administration de l’école principale conservée pour le fondateur qui en est aussi responsable"
+    ],
+    "dash": "Votre groupe, en vue d’ensemble.",
+    "metrics": [
+      "Établissements suivis",
+      "4",
+      "Portefeuille autorisé",
+      "Recouvrement",
+      "87 %",
+      "Période sélectionnée"
+    ],
+    "chart": "Les inscriptions du groupe, mois après mois",
+    "photo": "images/administration-edone.jpg",
+    "photoAlt": "Illustration d’une équipe de direction réunie pour piloter un groupe scolaire",
+    "photoCaption": "Plusieurs écoles, des décisions mieux éclairées."
   },
   "enseignants": {
     "label": "PLUS DE TEMPS POUR TRANSMETTRE",
@@ -124,7 +157,8 @@ const roles={
       "Paiement des frais divers en ligne (transport, carte, kits, accessoires)",
       "Notifications SMS/Email automatiques (reçus, alertes, annonces)",
       "Accès au wallet / historique des paiements effectués",
-      "Consultation de la carte étudiant et des documents officiels (lorsque autorisé)"
+      "Consultation de la carte étudiant et des documents officiels (lorsque autorisé)",
+      "Vérification par code SMS temporaire pour accéder au dossier familial en production"
     ],
     "dash": "Gardez le lien avec son école.",
     "metrics": [
@@ -227,7 +261,8 @@ const roles={
       "Frais de scolarité et frais divers",
       "Contrôle des paiements et suivi des soldes",
       "Paiements EdonePay et historique des transactions",
-      "Portefeuille, reçus et exports financiers"
+      "Portefeuille, reçus et exports financiers",
+      "Suivi des factures, références de règlement et échanges avec la plateforme pour les avoirs et relances"
     ]
   },
   "rh": {
@@ -308,11 +343,17 @@ const roles={
   },
   "plateforme": {
     "name": "Administration de la plateforme",
-    "description": "Administrer le service pour plusieurs établissements.",
+    "description": "Piloter l’ensemble du service, créer les écoles et leurs responsables, configurer les intégrations et suivre les indicateurs, les incidents et les mises en service.",
     "list": [
-      "Gestion des établissements et comptes de direction",
-      "Indicateurs et paramètres de plateforme",
-      "Paramètres techniques des paiements",
+      "Création des établissements, de leur identité, année académique et premier responsable",
+      "Configuration Workspace, domaine professionnel et parcours marchand EdonePay",
+      "Suivi des installations, abonnements, factures, avoirs et relances",
+      "KPI globaux et annuels, répertoire détaillé, graphiques et carte des établissements",
+      "Recherche des comptes fondateurs et attribution des écoles du portefeuille Multisite",
+      "Autorisations de paie distinctes par compte et établissement",
+      "Incidents, anomalies, résolution et journal des opérations sensibles",
+      "Suivi des formations et preuves de préparation du service",
+      "Double authentification et accès de plateforme séparés des rôles d’école",
       "Sélection des ouvrages publics proposés"
     ]
   }
@@ -326,7 +367,7 @@ const modules=[
     "id": 1,
     "category": "Pédagogie",
     "title": "Gestion académique",
-    "description": "Années, campus, salles, filières, niveaux, classes, maquettes."
+    "description": "Années académiques, campus, salles, filières, niveaux, classes et maquettes. Affectation des classes nouvelles ou existantes à leur campus."
   },
   {
     "id": 2,
@@ -470,7 +511,7 @@ const modules=[
     "id": 25,
     "category": "Finance",
     "title": "Abonnement & facturation SaaS automatisée",
-    "description": "Prélèvement wallet ou en ligne."
+    "description": "Factures mensuelles, état des règlements et références de paiement, documents actualisés et suivi de l’abonnement de chaque établissement."
   },
   {
     "id": 26,
@@ -614,13 +655,13 @@ const modules=[
     "id": 49,
     "category": "Sécurité",
     "title": "Double authentification",
-    "description": "La 2FA renforce la protection des comptes super administrateurs."
+    "description": "Double authentification obligatoire pour le pilotage de la plateforme et accès aux opérations sensibles selon les habilitations."
   },
   {
     "id": 50,
     "category": "Sécurité",
     "title": "Sauvegardes et restauration",
-    "description": "Sauvegardes automatisées et procédure de restauration testée."
+    "description": "Sauvegardes chiffrées de la base et des fichiers privés, stockage hors site et exercices de restauration selon la configuration du service."
   },
   {
     "id": 51,
@@ -686,7 +727,7 @@ const modules=[
     "id": 61,
     "category": "Pédagogie",
     "title": "Évaluations à nombre variable",
-    "description": "Adaptez le nombre de notes et d’évaluations aux besoins de chaque matière et période."
+    "description": "Nombre libre d’évaluations par matière, barèmes, coefficients, sessions, imports Excel contrôlés et historique des corrections."
   },
   {
     "id": 62,
@@ -896,7 +937,7 @@ const modules=[
     "id": 96,
     "category": "Statistiques & journal",
     "title": "Stockage par établissement",
-    "description": "Consultez le nombre de fichiers et le volume de stockage mesuré pour votre établissement."
+    "description": "Mesure des fichiers et octets par établissement, avec une visibilité sur les médias, les pièces RH et la GED."
   },
   {
     "id": 97,
@@ -933,6 +974,150 @@ const modules=[
     "category": "Documents",
     "title": "Fiche établissement PDF",
     "description": "Téléchargez une fiche regroupant les informations de votre établissement."
+  },
+  {
+    "id": 103,
+    "category": "Multisite",
+    "title": "Portefeuille du fondateur",
+    "description": "Retrouvez les établissements qui vous sont attribués dans une vue commune, tout en conservant votre rôle dans votre école principale."
+  },
+  {
+    "id": 104,
+    "category": "Multisite",
+    "title": "Affectation des accès aux écoles",
+    "description": "La plateforme recherche les comptes par nom ou e-mail, attribue les écoles consultables et révoque les accès avec traçabilité."
+  },
+  {
+    "id": 105,
+    "category": "Multisite",
+    "title": "Années académiques par établissement",
+    "description": "Consultez l’année active, une période commune ou toutes les années. Les écoles sans la période choisie sont signalées."
+  },
+  {
+    "id": 106,
+    "category": "Multisite",
+    "title": "Comparaison des établissements",
+    "description": "Comparez les effectifs, frais dus, montants réglés, restes à payer et taux de recouvrement de vos écoles."
+  },
+  {
+    "id": 107,
+    "category": "Multisite",
+    "title": "Dossiers détaillés des écoles",
+    "description": "Explorez les inscriptions, filières, classes, comptes, équipes, documents et situation financière de chaque établissement autorisé."
+  },
+  {
+    "id": 108,
+    "category": "Multisite",
+    "title": "Recherche dans les registres",
+    "description": "Retrouvez les informations métier dans des listes paginées, avec recherche et références lisibles comme les matricules."
+  },
+  {
+    "id": 109,
+    "category": "Multisite",
+    "title": "Rapports du groupe scolaire",
+    "description": "Exportez une synthèse CSV ou préparez un rapport imprimable avec les indicateurs des écoles de votre portefeuille."
+  },
+  {
+    "id": 110,
+    "category": "Multisite",
+    "title": "Effectifs et frais par campus",
+    "description": "Ventilez les inscriptions confirmées et les frais selon le campus de la classe, avec les salles et capacités disponibles."
+  },
+  {
+    "id": 111,
+    "category": "Multisite",
+    "title": "Consultation de paie habilitée",
+    "description": "Réservez les registres de paie et contrats aux comptes qui disposent d’une autorisation distincte pour chaque école."
+  },
+  {
+    "id": 112,
+    "category": "Pilotage plateforme",
+    "title": "Création et configuration des écoles",
+    "description": "Préparez l’identité, le logo, les coordonnées, l’année académique, l’abonnement et le suivi de chaque nouvel établissement."
+  },
+  {
+    "id": 113,
+    "category": "Pilotage plateforme",
+    "title": "Premier responsable de l’établissement",
+    "description": "Créez le compte du responsable à former, avec les droits de son école et un parcours de définition du mot de passe."
+  },
+  {
+    "id": 114,
+    "category": "Pilotage plateforme",
+    "title": "Suivi de mise en service et formation",
+    "description": "Suivez la préparation, la formation, la mise en service et les éléments de configuration restant à compléter."
+  },
+  {
+    "id": 115,
+    "category": "Pilotage plateforme",
+    "title": "Configuration Google Workspace",
+    "description": "Centralisez le domaine professionnel et la configuration de l’école, puis vérifiez explicitement la délégation Google Workspace."
+  },
+  {
+    "id": 116,
+    "category": "Pilotage plateforme",
+    "title": "Accompagnement EdonePay",
+    "description": "Suivez le rattachement du compte marchand, les étapes de conformité et la configuration des paiements de l’établissement."
+  },
+  {
+    "id": 117,
+    "category": "Pilotage plateforme",
+    "title": "KPI globaux et annuels",
+    "description": "Suivez les établissements, utilisateurs, étudiants inscrits, comptes professionnels provisionnés, abonnements et indicateurs financiers."
+  },
+  {
+    "id": 118,
+    "category": "Pilotage plateforme",
+    "title": "Carte et répertoire des établissements",
+    "description": "Consultez les écoles en cartes ou en tableau et visualisez leur localisation lorsqu’elle est renseignée."
+  },
+  {
+    "id": 119,
+    "category": "Pilotage plateforme",
+    "title": "Incidents et qualité de service",
+    "description": "Suivez les anomalies, leur récurrence et leur résolution, ainsi que les contrôles et preuves de préparation du service."
+  },
+  {
+    "id": 120,
+    "category": "Finance",
+    "title": "Changement de forfait et résiliation",
+    "description": "Programmez une évolution de forfait, de tarif ou une résiliation au prochain mois non facturé, avec conservation des factures existantes."
+  },
+  {
+    "id": 121,
+    "category": "Finance",
+    "title": "Historique des évolutions d’abonnement",
+    "description": "Retrouvez les changements programmés ou appliqués et annulez avec un motif une évolution encore en attente."
+  },
+  {
+    "id": 122,
+    "category": "Finance",
+    "title": "Avoirs suivis et plafonnés",
+    "description": "Émettez un avoir sur une facture payée, avec motif et référence unique. Son montant cumulé est contrôlé; le remboursement se traite séparément."
+  },
+  {
+    "id": 123,
+    "category": "Finance",
+    "title": "Relances de factures",
+    "description": "Suivez les rappels et leurs états d’envoi. Les relances programmées sont activées après configuration et validation de l’e-mail."
+  },
+  {
+    "id": 124,
+    "category": "Finance",
+    "title": "Suivi des frais d’installation",
+    "description": "Suivez les frais d’installation uniques de 250 000 FCFA, leur état de règlement et le document associé."
+  },
+  {
+    "id": 125,
+    "category": "Sécurité",
+    "title": "Code de vérification pour les parents",
+    "description": "L’accès parent en production utilise un code SMS temporaire à usage unique, lié à la session et limité en tentatives."
+  },
+  {
+    "id": 126,
+    "category": "Accès & profils",
+    "title": "Domaine professionnel maîtrisé",
+    "description": "La plateforme configure le domaine des e-mails professionnels de l’école, avec protection et traçabilité de ses modifications."
   }
 ];
 let selectedCategory='Tous';

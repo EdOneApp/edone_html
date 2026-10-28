@@ -1,20 +1,19 @@
-# Vidéo actuellement publiée
+# Médias vidéo EdOne
 
-- `edone-pub-avec-son.mp4` : 30 secondes, 1920 × 1080, H.264 + AAC, environ 9,2 Mo.
-- `edone-pub-poster.jpg` : image d’affiche extraite à 2 secondes, 1280 × 720.
-- Source vidéo fournie : `edone-pub-16x9-sans-son.mp4`.
-- Source audio fournie : `luvvoice.com-20261026-SVrp9Q.mp3`, environ 25,224 secondes.
+## Film actif — 28 octobre 2026
 
-L’audio commence au début, puis le film se termine sans son. La vidéo source est conservée sans réencodage. Le lecteur n’utilise pas la transcription ni les sous-titres de l’ancienne version.
+- Fichier publié : `edone-promo-60s-v2.mp4`.
+- Source fournie : `edone-promo-60s-v2 (1).mp4`.
+- Durée : **60,000 secondes**; 1920 × 1080, 30 images/s; H.264 yuv420p et audio AAC.
+- Environ **46,2 Mio**. Les pistes audio et vidéo sont conservées sans réencodage; le conteneur MP4 est remuxé avec faststart.
+- Affiche : `edone-promo-60s-v2-poster.jpg`, 1280 × 720, extraite à 6 secondes.
 
-## Archive de la première présentation
+Le lecteur natif de l’accueil utilise les commandes du navigateur, `playsinline` et `preload="none"`. Il ne démarre pas automatiquement et conserve le son. Les métadonnées VideoObject, l’image de partage et le sitemap suivent cette version.
 
-# Présentation EdOne
+## Archives
 
-Film original de 34,58 secondes, 1280 × 720, 24 images/s, H.264 et audio AAC 44,1 kHz. Les photos du site sont mises en mouvement avec des textes et éléments graphiques. Il ne s’agit pas d’images de clients réels ni de captures de l’application en production.
+`edone-pub-avec-son.mp4` est le précédent film de 30 secondes. Les fichiers `edone-presentation-*`, storyboard/minutage et `scripts/render-motion.py` concernent la présentation initiale. Ils restent archivés mais ne sont pas utilisés par le lecteur actuel. Les anciens sous-titres et textes ne sont pas appliqués au nouveau contenu.
 
-La narration utilise la voix de synthèse française Thomas de macOS. La composition musicale est synthétisée par `scripts/render-motion.py` ; aucun enregistrement musical tiers n’est utilisé. Le son est normalisé à −16 LUFS, avec un plafond cible de −1,5 dBTP.
+## Remplacement ultérieur
 
-Fichiers livrés : MP4, affiche JPEG, sous-titres français WebVTT, storyboard et minutage. Le lecteur natif ne démarre pas automatiquement ; il est muet par défaut et ne sauvegarde pas de préférence. Une transcription HTML reste disponible sans lecture.
-
-Pour régénérer sur macOS : Pillow et FFmpeg doivent être installés ; lancer `python3 scripts/render-motion.py`. Les voix intermédiaires sont créées dans `/private/tmp` avec `say` si elles sont absentes. L’accès au service de synthèse vocale peut nécessiter une autorisation hors du sandbox.
+Vérifier les codecs, la durée et la présence du son avec ffprobe. Utiliser une nouvelle URL de fichier pour éviter un ancien cache, extraire une affiche adaptée, puis mettre à jour `index.html`, `seo-config.json` et cette documentation. Relancer la synchronisation, le contrôle SEO et la vérification de lecture dans le navigateur.

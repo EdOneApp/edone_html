@@ -43,3 +43,8 @@ body{line-height:1.7}.intro{font-size:18px}.hero-note{font-size:13px}.feature{mi
 
 /* Installation is a one-time charge, separate from the monthly plans. */
 .installation-fees{margin:0 0 28px;padding:24px 28px;border:1px solid var(--line);border-left:4px solid var(--green,#193c32);border-radius:6px;background:#e9eddf}.installation-fees p{margin-top:10px;max-width:900px}.installation-fees b{font-size:20px}
+
+/* Longer profile labels wrap inside narrow mobile tabs. */
+.role-tabs button{min-width:0}
+.role-tabs button span{min-width:0;white-space:normal;overflow-wrap:anywhere}
+.role-tabs button svg{flex-shrink:0}
