@@ -24,7 +24,12 @@
       "Création des comptes, profils personnalisés et exceptions individuelles",
       "Consultation Multisite des écoles explicitement attribuées au responsable",
       "Effectifs et frais par campus, à partir des classes affectées",
-      "Suivi des changements de forfait et des documents de facturation"
+      "Suivi des changements de forfait et des documents de facturation",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone",
+      "Campagnes email, SMS EdoneSMS et notifications dans l’application avec ciblage et personnalisation",
+      "Portefeuille EdoneSMS, demandes de recharge à 10 FCFA/SMS et demande de Sender ID",
+      "Bases de contacts Excel avec pays, modèle téléchargeable et aperçu des imports"
     ],
     "dash": "Votre école avance.",
     "metrics": [
@@ -54,7 +59,9 @@
       "Registres avec recherche et références métier lisibles",
       "Synthèses CSV et rapports imprimables",
       "Consultation des registres de paie sur habilitation distincte",
-      "Administration de l’école principale conservée pour le fondateur qui en est aussi responsable"
+      "Administration de l’école principale conservée pour le fondateur qui en est aussi responsable",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone"
     ],
     "dash": "Votre groupe, en vue d’ensemble.",
     "metrics": [
@@ -87,7 +94,10 @@
       "Espace enseignant dédié (maquette, planning)",
       "Configuration des coefficients par matière / niveau",
       "Documents personnels et supports de cours accessibles selon les droits",
-      "Devoirs de groupe, soumissions et correction des travaux"
+      "Devoirs de groupe, soumissions et correction des travaux",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone",
+      "Notifications dans l’application, campagnes ciblées et accès aux réponses du support"
     ],
     "dash": "Une journée pour transmettre.",
     "metrics": [
@@ -121,7 +131,13 @@
       "Suivi des frais divers (cartes, kits, accessoires, transport)",
       "Alertes d’absences et notifications automatiques",
       "Documents scolaires et archives accessibles depuis son espace",
-      "Supports et sujets de devoirs réservés à ses classes"
+      "Supports et sujets de devoirs réservés à ses classes",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone",
+      "Tableau de bord avec cartes d’accès aux services autorisés",
+      "Téléchargements PDF directs : notes en paysage, carte, reçus, certificats et CV",
+      "CV complet, saisie progressive, partage public et téléchargement PDF",
+      "Notifications dans l’application et suivi des messages non lus"
     ],
     "dash": "À vous le prochain chapitre.",
     "metrics": [
@@ -150,7 +166,10 @@
       "Notifications SMS/Email automatiques (reçus, alertes, annonces)",
       "Accès au wallet / historique des paiements effectués",
       "Consultation de la carte étudiant et des documents officiels (lorsque autorisé)",
-      "Vérification par code SMS temporaire pour accéder au dossier familial en production"
+      "Vérification par code SMS si activée par l’établissement, avec accès au dossier familial vérifié",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone",
+      "Notifications dans le portail parent et support privé distinct de la conversation de l’étudiant"
     ],
     "dash": "Gardez le lien avec son école.",
     "metrics": [
@@ -185,7 +204,12 @@
       "Demandes RH, dépôt de pièces privées et suivi du traitement",
       "Préparation de la paie et bulletins PDF pour les gestionnaires habilités",
       "Espace salarié : dossier, demandes et bulletins personnels",
-      "GED, stock, transport ou service médical selon le métier et les droits accordés"
+      "GED, stock, transport ou service médical selon le métier et les droits accordés",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone",
+      "Campagnes email, SMS EdoneSMS et notifications dans l’application avec ciblage et personnalisation",
+      "Portefeuille EdoneSMS, demandes de recharge à 10 FCFA/SMS et demande de Sender ID",
+      "Bases de contacts Excel avec pays, modèle téléchargeable et aperçu des imports"
     ],
     "dash": "Le campus, bien organisé.",
     "metrics": [
@@ -233,7 +257,9 @@
       "Dossiers étudiants, pièces et inscriptions",
       "Années, filières, niveaux et classes",
       "Notes, résultats, bulletins et documents scolaires",
-      "Recherche et archivage des documents académiques"
+      "Recherche et archivage des documents académiques",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone"
     ]
   },
   "pedagogie": {
@@ -243,7 +269,9 @@
       "Enseignants et affectations pédagogiques",
       "Matières, UE, maquettes, coefficients et crédits",
       "Progressions, emplois du temps et évaluations",
-      "Compensation des UE, bulletins et procès-verbaux"
+      "Compensation des UE, bulletins et procès-verbaux",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone"
     ]
   },
   "comptabilite": {
@@ -254,7 +282,10 @@
       "Contrôle des paiements et suivi des soldes",
       "Paiements EdonePay et historique des transactions",
       "Portefeuille, reçus et exports financiers",
-      "Suivi des factures, références de règlement et échanges avec la plateforme pour les avoirs et relances"
+      "Suivi des factures, références de règlement et échanges avec la plateforme pour les avoirs et relances",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone",
+      "Suivi des demandes de recharge EdoneSMS et des références de règlement selon les habilitations"
     ]
   },
   "rh": {
@@ -264,7 +295,9 @@
       "Dossiers employés et pièces privées",
       "Postes, candidatures et parcours professionnels",
       "Évaluations et formations",
-      "Congés, calendrier et traitement des demandes"
+      "Congés, calendrier et traitement des demandes",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone"
     ]
   },
   "paie": {
@@ -274,7 +307,9 @@
       "Contrats et paramètres de rémunération",
       "Rubriques et préparation de la paie",
       "Bulletins de paie PDF",
-      "Historique des paies autorisées"
+      "Historique des paies autorisées",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone"
     ]
   },
   "employe": {
@@ -284,7 +319,9 @@
       "Dossier et documents personnels autorisés",
       "Dépôt de pièces justificatives",
       "Demandes RH et suivi du traitement",
-      "Consultation de ses bulletins de paie disponibles"
+      "Consultation de ses bulletins de paie disponibles",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone"
     ]
   },
   "ged": {
@@ -294,7 +331,9 @@
       "Recherche, classement et métadonnées",
       "Aperçu, téléchargement et versions",
       "Archivage des bulletins par sélection ou filtres",
-      "Programmation et suivi des campagnes ; accès sensibles soumis à habilitation"
+      "Programmation et suivi des campagnes ; accès sensibles soumis à habilitation",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone"
     ]
   },
   "bibliotheque": {
@@ -303,7 +342,9 @@
     "list": [
       "Catalogue et fichiers des ouvrages",
       "Ajout et modification des livres",
-      "Traitement des ouvrages soumis à validation"
+      "Traitement des ouvrages soumis à validation",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone"
     ]
   },
   "stock": {
@@ -312,7 +353,9 @@
     "list": [
       "Catégories, produits et fournisseurs",
       "Commandes et réceptions",
-      "Historique, impressions et exports"
+      "Historique, impressions et exports",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone"
     ]
   },
   "transport": {
@@ -321,7 +364,9 @@
     "list": [
       "Véhicules et trajets",
       "Abonnements et consultation de leurs détails",
-      "Exports des informations de transport"
+      "Exports des informations de transport",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone"
     ]
   },
   "medecin": {
@@ -330,7 +375,9 @@
     "list": [
       "Dossiers médicaux autorisés",
       "Consultations et historique",
-      "Documents PDF disponibles"
+      "Documents PDF disponibles",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone"
     ]
   },
   "plateforme": {
@@ -346,7 +393,12 @@
       "Incidents, anomalies, résolution et journal des opérations sensibles",
       "Suivi des formations et preuves de préparation du service",
       "Double authentification et accès de plateforme séparés des rôles d’école",
-      "Sélection des ouvrages publics proposés"
+      "Sélection des ouvrages publics proposés",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone",
+      "Boîte de réception du support en direct : réponses, attribution, recherche et résolution",
+      "Validation des recharges SMS et Sender ID, suivi des crédits et des livraisons par école",
+      "Configuration sécurisée des magasins EdonePay et des confirmations de paiement propres aux écoles"
     ]
   }
 }

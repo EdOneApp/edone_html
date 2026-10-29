@@ -86,8 +86,8 @@
   {
     "id": 15,
     "category": "Pédagogie",
-    "title": "CV automatique",
-    "description": "Parcours de l’étudiant, personnalisé, lien public."
+    "title": "CV étudiant et partage public",
+    "description": "Créez un CV structuré avec parcours, expériences, réalisations, compétences et centres d’intérêt; partagez son lien public et téléchargez-le en PDF."
   },
   {
     "id": 16,
@@ -242,14 +242,14 @@
   {
     "id": 41,
     "category": "Communication",
-    "title": "Campagnes SMS & email",
-    "description": "Direction/admin."
+    "title": "Campagnes multicanales",
+    "description": "Préparez une campagne dans un formulaire unique, choisissez email, SMS EdoneSMS et notification dans l’application, prévisualisez puis lancez l’envoi."
   },
   {
     "id": 42,
     "category": "Communication",
-    "title": "Notifications automatiques",
-    "description": "Absences, notes, bulletins, paiements."
+    "title": "Notifications et suivi de lecture",
+    "description": "Annonces et modèles de notification pour les différents profils, avec boîte de réception, cloche, messages non lus et suivi de lecture."
   },
   {
     "id": 43,
@@ -692,8 +692,8 @@
   {
     "id": 116,
     "category": "Pilotage plateforme",
-    "title": "Accompagnement EdonePay",
-    "description": "Suivez le rattachement du compte marchand, les étapes de conformité et la configuration des paiements de l’établissement."
+    "title": "Configuration des paiements par école",
+    "description": "Centralisez le magasin EdonePay de chaque établissement, sa configuration sécurisée, son URL de confirmation des paiements et les contrôles avant activation."
   },
   {
     "id": 117,
@@ -746,13 +746,187 @@
   {
     "id": 125,
     "category": "Sécurité",
-    "title": "Code de vérification pour les parents",
-    "description": "L’accès parent en production utilise un code SMS temporaire à usage unique, lié à la session et limité en tentatives."
+    "title": "OTP parent selon la politique de l’école",
+    "description": "L’établissement peut activer la vérification par code SMS pour les parents. Les codes utilisent ses crédits EdoneSMS; un manque de crédits ne permet pas de contourner une vérification activée."
   },
   {
     "id": 126,
     "category": "Accès & profils",
     "title": "Domaine professionnel maîtrisé",
     "description": "La plateforme configure le domaine des e-mails professionnels de l’école, avec protection et traçabilité de ses modifications."
+  },
+  {
+    "id": 127,
+    "category": "Communication",
+    "title": "Notifications dans l’application",
+    "description": "Diffusez des messages complets, sans limite de longueur propre au canal in-app, aux étudiants, parents, enseignants et personnels concernés."
+  },
+  {
+    "id": 128,
+    "category": "Communication",
+    "title": "Cloche et notifications non lues",
+    "description": "Un compteur, une cloche animée lorsque des messages attendent et le marquage comme lu à l’ouverture accompagnent la boîte de réception."
+  },
+  {
+    "id": 129,
+    "category": "Communication",
+    "title": "Ciblage académique progressif",
+    "description": "Filtrez les destinataires par année, filière, niveau, classe et personnes précises; les choix suivants s’adaptent aux filtres déjà appliqués."
+  },
+  {
+    "id": 130,
+    "category": "Communication",
+    "title": "Variables et messages personnalisés",
+    "description": "Insérez les noms, prénoms, classes, filières, niveaux, montants de scolarité ou résultats disponibles dans le sujet et le message, avec aperçu avant diffusion."
+  },
+  {
+    "id": 131,
+    "category": "Communication",
+    "title": "Modèles de campagnes prêts à adapter",
+    "description": "Préparez les annonces, urgences, rappels de scolarité, examens, cours, absences, événements et autres communications à partir de modèles modifiables."
+  },
+  {
+    "id": 132,
+    "category": "Communication",
+    "title": "Portefeuille de crédits EdoneSMS",
+    "description": "Chaque établissement dispose de ses SMS disponibles, réservés et consommés, avec un journal des mouvements. Un SMS normalisé coûte 10 FCFA."
+  },
+  {
+    "id": 133,
+    "category": "Communication",
+    "title": "Demandes de recharge SMS",
+    "description": "Demandez des crédits depuis votre espace et suivez leur validation par EdOne, avec le mode de règlement, sa référence et l’historique."
+  },
+  {
+    "id": 134,
+    "category": "Communication",
+    "title": "Nom d’expéditeur de l’établissement",
+    "description": "Demandez un Sender ID au nom de votre école. Sa validation, contrôlée par l’équipe EdOne, nécessite un délai d’au moins une semaine."
+  },
+  {
+    "id": 135,
+    "category": "Communication",
+    "title": "Bases de contacts SMS indépendantes",
+    "description": "Organisez plusieurs listes de contacts, recherchez une personne, ajoutez ou corrigez ses informations, excluez un contact et archivez une base."
+  },
+  {
+    "id": 136,
+    "category": "Communication",
+    "title": "Modèle Excel de contacts téléchargeable",
+    "description": "Téléchargez un vrai modèle Excel et importez jusqu’à cinq colonnes, téléphone compris, pour préparer vos bases de communication."
+  },
+  {
+    "id": 137,
+    "category": "Communication",
+    "title": "Aperçu et contrôle des imports",
+    "description": "Consultez les lignes valides, invalides et en doublon, avec les motifs, puis confirmez explicitement l’import des contacts retenus."
+  },
+  {
+    "id": 138,
+    "category": "Communication",
+    "title": "Numéros locaux et internationaux",
+    "description": "Choisissez le pays de la liste. Les numéros avec ou sans indicatif international sont interprétés, normalisés et vérifiés avant leur utilisation."
+  },
+  {
+    "id": 139,
+    "category": "Communication",
+    "title": "Campagnes sur les contacts importés",
+    "description": "Sélectionnez une ou plusieurs bases, utilisez les colonnes comme variables et vérifiez des exemples personnalisés ainsi que le coût avant l’envoi."
+  },
+  {
+    "id": 140,
+    "category": "Communication",
+    "title": "SMS maîtrisés à 160 caractères",
+    "description": "Après personnalisation, accents et caractères incompatibles sont normalisés et le texte est limité à 160 caractères pour correspondre à un crédit SMS."
+  },
+  {
+    "id": 141,
+    "category": "Communication",
+    "title": "Suivi des campagnes et des livraisons",
+    "description": "Distinguez les messages en attente, acceptés, livrés, refusés ou à vérifier. Les campagnes sont traitées en arrière-plan et les résultats incertains sont rapprochés sans renvoi automatique."
+  },
+  {
+    "id": 142,
+    "category": "Accès & profils",
+    "title": "Didacticiels interactifs par profil",
+    "description": "Découvrez l’application avec des visites guidées, repères, étapes et explications adaptés à votre profil sur ordinateur, tablette et téléphone."
+  },
+  {
+    "id": 143,
+    "category": "Accès & profils",
+    "title": "Aide des pages, champs et actions",
+    "description": "Retrouvez les explications des écrans et des actions disponibles, reprenez un guide et avancez à votre rythme selon les droits de votre compte."
+  },
+  {
+    "id": 144,
+    "category": "Accès & profils",
+    "title": "Tableau de bord étudiant par services",
+    "description": "Retrouvez les destinations autorisées de votre menu sous forme de cartes illustrées, organisées par catégorie et aux couleurs de votre école."
+  },
+  {
+    "id": 145,
+    "category": "Documents",
+    "title": "Téléchargement direct des documents PDF",
+    "description": "Téléchargez les documents personnels disponibles depuis l’espace étudiant, notamment notes, carte, CV, reçus et certificats, avec une mise en page adaptée."
+  },
+  {
+    "id": 146,
+    "category": "Documents",
+    "title": "Notes au format PDF paysage",
+    "description": "Retrouvez les notes dans un document paysage lisible, avec le logo de l’établissement et la photo de l’étudiant."
+  },
+  {
+    "id": 147,
+    "category": "Documents",
+    "title": "Identité visuelle des documents étudiants",
+    "description": "Les documents personnels intègrent les informations de l’école, son logo, un filigrane et la photo de l’étudiant selon le document. Les supports de cours restent sans portrait étudiant."
+  },
+  {
+    "id": 148,
+    "category": "Pédagogie",
+    "title": "CV enrichi et saisie progressive",
+    "description": "Ajoutez votre parcours académique, vos expériences, réalisations, compétences et centres d’intérêt. Enregistrez le titre et la présentation avant de compléter les autres rubriques."
+  },
+  {
+    "id": 149,
+    "category": "Documents",
+    "title": "CV public et PDF professionnel",
+    "description": "Partagez un CV consultable sans connexion, dans une page dédiée, et proposez son téléchargement avec une véritable mise en page de CV."
+  },
+  {
+    "id": 150,
+    "category": "Documents",
+    "title": "QR codes de vérification des documents",
+    "description": "Les liens et QR codes des documents officiels concernés ouvrent une page de vérification EdOne permettant de contrôler leur existence et leur statut."
+  },
+  {
+    "id": 151,
+    "category": "Finance",
+    "title": "Reprise des paiements en cours",
+    "description": "Retrouvez une demande de paiement déjà initiée, consultez son état et reprenez son suivi sans créer une nouvelle tentative en double."
+  },
+  {
+    "id": 152,
+    "category": "Communication",
+    "title": "Support live intégré",
+    "description": "Contactez l’équipe EdOne depuis un bouton de chat flottant dans votre espace. Les nouveaux messages arrivent par WebSocket, avec reconnexion automatique."
+  },
+  {
+    "id": 153,
+    "category": "Communication",
+    "title": "Conversations privées et historique",
+    "description": "Échangez dans une conversation réservée au demandeur et au support EdOne, avec historique, messages non lus et accusés de lecture. Une demande résolue peut être reprise."
+  },
+  {
+    "id": 154,
+    "category": "Pilotage plateforme",
+    "title": "Boîte de réception du support",
+    "description": "Recevez les demandes des différents profils, recherchez une personne ou une école, répondez directement, attribuez une conversation et suivez sa résolution."
+  },
+  {
+    "id": 155,
+    "category": "Pilotage plateforme",
+    "title": "Pilotage global EdoneSMS",
+    "description": "Contrôlez les demandes de recharge et de Sender ID, les règlements, les crédits et les résultats des campagnes par établissement depuis le superdashboard."
   }
 ]

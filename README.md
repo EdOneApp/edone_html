@@ -2,11 +2,12 @@
 
 Site statique de présentation d’EdOne, publié depuis ce dépôt sur GitHub Pages. Domaine configuré : [edone.my](https://edone.my). Le projet Django est maintenu séparément dans `EdOneApp/edone`.
 
-## État du 28 octobre 2026
+## État du 29 octobre 2026
 
-- **126 fiches de fonctionnalités**, 15 familles et 19 profils détaillés.
+- **155 fiches de fonctionnalités**, 15 familles et 19 profils détaillés.
 - Sept profils en avant sur l’accueil, dont le nouveau profil **Fondateurs & groupes**.
 - Ajouts issus du projet Django : Multisite, dossiers et comparaisons des écoles, années académiques, statistiques par campus, pilotage plateforme, suivi de formation, OTP parent, évolutions d’abonnement, avoirs et relances.
+- Nouveautés du 29 octobre : EdoneSMS et crédits, contacts Excel, campagnes multicanales, support live, didacticiels, CV enrichi et documents PDF étudiants.
 - Installation unique de **250 000 FCFA** conservée, distincte des forfaits mensuels.
 - Nouvelle vidéo fournie : **60 secondes**, 1920 × 1080, H.264/AAC, 30 images/s, environ 46,2 Mio. Vidéo et son conservés sans réencodage; conteneur optimisé pour le chargement progressif.
 

@@ -1,10 +1,10 @@
-# Catalogue fonctionnel EdOne — 28 octobre 2026
+# Catalogue fonctionnel EdOne — 29 octobre 2026
 
-`modules.json` et `docs/roles.json` sont les sources éditoriales maintenues. `scripts/sync-content.py` les applique à l’accueil, à ses filtres/recherches et au guide `fonctionnalites.html`. Ce document récapitule le catalogue courant et remplace la liste initiale de 60 fonctionnalités.
+`modules.json` et `docs/roles.json` sont les sources éditoriales. `scripts/sync-content.py` les applique à l’index, à la recherche et au guide `fonctionnalites.html`.
 
-Les ajouts du 28 octobre sont rapprochés du projet Django `EdOneApp/edone`, commit `c8fee3f` : Multisite, campus, pilotage de la plateforme, OTP parent, évolutions d’abonnement, avoirs et relances. Les anciennes offres commerciales restent présentées selon le catalogue existant. Les intégrations et moyens de paiement dépendent de leur configuration et du prestataire.
+**155 fiches, 15 familles et 19 profils.** Rapprochement avec le projet Django EdOne : les évolutions depuis `c8fee3f`, dont `6f889c4`, et le transport WebSocket livré par `eb2244f`. Les fonctionnalités dépendent des droits et de la configuration de l’école; les crédits EdoneSMS sont distincts des abonnements.
 
-Le catalogue contient **126 fiches**, **15 familles** et **19 profils détaillés**. Les sept profils mis en avant sur l’accueil comprennent désormais les fondateurs et groupes scolaires.
+Installation unique : 250 000 FCFA. EdoneSMS : 10 FCFA par SMS normalisé de 160 caractères au plus. Le support intégré n’ajoute pas de facturation par message; l’hébergement du service reste à la charge de la plateforme.
 
 ## Pédagogie
 
@@ -22,12 +22,13 @@ Le catalogue contient **126 fiches**, **15 familles** et **19 profils détaillé
 - **12 — Attestations de scolarité** : Certificats vérifiables via lien public.
 - **13 — Reçus de paiement** : Un reçu est généré automatiquement à chaque règlement, puis envoyé par SMS et e-mail.
 - **14 — Carte étudiant** : Numérique + imprimable, photo, statut de remise.
-- **15 — CV automatique** : Parcours de l’étudiant, personnalisé, lien public.
+- **15 — CV étudiant et partage public** : Créez un CV structuré avec parcours, expériences, réalisations, compétences et centres d’intérêt; partagez son lien public et téléchargez-le en PDF.
 - **16 — Vérification en ligne** : Documents officiels par code unique.
 - **61 — Évaluations à nombre variable** : Nombre libre d’évaluations par matière, barèmes, coefficients, sessions, imports Excel contrôlés et historique des corrections.
 - **62 — Crédits et compensation des UE** : Configurez les crédits, coefficients et règles de compensation pour les parcours universitaires et professionnels.
 - **63 — Progressions pédagogiques** : Suivez l’avancement des enseignements et les progressions des équipes pédagogiques.
 - **64 — Personnalisation des documents scolaires** : Retrouvez le logo, les couleurs et les informations de votre établissement sur les documents prévus.
+- **148 — CV enrichi et saisie progressive** : Ajoutez votre parcours académique, vos expériences, réalisations, compétences et centres d’intérêt. Enregistrez le titre et la présentation avant de compléter les autres rubriques.
 
 ## Documents
 
@@ -38,6 +39,11 @@ Le catalogue contient **126 fiches**, **15 familles** et **19 profils détaillé
 - **21 — Reçus automatiques** : Transmission du reçu de chaque paiement par SMS et e-mail.
 - **22 — Exports Excel et PDF** : Export des données pédagogiques pour les équipes de l’établissement.
 - **102 — Fiche établissement PDF** : Téléchargez une fiche regroupant les informations de votre établissement.
+- **145 — Téléchargement direct des documents PDF** : Téléchargez les documents personnels disponibles depuis l’espace étudiant, notamment notes, carte, CV, reçus et certificats, avec une mise en page adaptée.
+- **146 — Notes au format PDF paysage** : Retrouvez les notes dans un document paysage lisible, avec le logo de l’établissement et la photo de l’étudiant.
+- **147 — Identité visuelle des documents étudiants** : Les documents personnels intègrent les informations de l’école, son logo, un filigrane et la photo de l’étudiant selon le document. Les supports de cours restent sans portrait étudiant.
+- **149 — CV public et PDF professionnel** : Partagez un CV consultable sans connexion, dans une page dédiée, et proposez son téléchargement avec une véritable mise en page de CV.
+- **150 — QR codes de vérification des documents** : Les liens et QR codes des documents officiels concernés ouvrent une page de vérification EdOne permettant de contrôler leur existence et leur statut.
 
 ## Finance
 
@@ -58,6 +64,7 @@ Le catalogue contient **126 fiches**, **15 familles** et **19 profils détaillé
 - **122 — Avoirs suivis et plafonnés** : Émettez un avoir sur une facture payée, avec motif et référence unique. Son montant cumulé est contrôlé; le remboursement se traite séparément.
 - **123 — Relances de factures** : Suivez les rappels et leurs états d’envoi. Les relances programmées sont activées après configuration et validation de l’e-mail.
 - **124 — Suivi des frais d’installation** : Suivez les frais d’installation uniques de 250 000 FCFA, leur état de règlement et le document associé.
+- **151 — Reprise des paiements en cours** : Retrouvez une demande de paiement déjà initiée, consultez son état et reprenez son suivi sans créer une nouvelle tentative en double.
 
 ## Ressources
 
@@ -83,11 +90,28 @@ Le catalogue contient **126 fiches**, **15 familles** et **19 profils détaillé
 
 ## Communication
 
-- **41 — Campagnes SMS & email** : Direction/admin.
-- **42 — Notifications automatiques** : Absences, notes, bulletins, paiements.
+- **41 — Campagnes multicanales** : Préparez une campagne dans un formulaire unique, choisissez email, SMS EdoneSMS et notification dans l’application, prévisualisez puis lancez l’envoi.
+- **42 — Notifications et suivi de lecture** : Annonces et modèles de notification pour les différents profils, avec boîte de réception, cloche, messages non lus et suivi de lecture.
 - **43 — Alertes d’absence** : Les parents et étudiants reçoivent les notifications d’absence.
 - **44 — Envoi des documents** : Communication des bulletins et diplômes par e-mail et notifications par SMS.
 - **45 — Contact et support WhatsApp** : Un canal de contact pour échanger avec l’équipe EdOne.
+- **127 — Notifications dans l’application** : Diffusez des messages complets, sans limite de longueur propre au canal in-app, aux étudiants, parents, enseignants et personnels concernés.
+- **128 — Cloche et notifications non lues** : Un compteur, une cloche animée lorsque des messages attendent et le marquage comme lu à l’ouverture accompagnent la boîte de réception.
+- **129 — Ciblage académique progressif** : Filtrez les destinataires par année, filière, niveau, classe et personnes précises; les choix suivants s’adaptent aux filtres déjà appliqués.
+- **130 — Variables et messages personnalisés** : Insérez les noms, prénoms, classes, filières, niveaux, montants de scolarité ou résultats disponibles dans le sujet et le message, avec aperçu avant diffusion.
+- **131 — Modèles de campagnes prêts à adapter** : Préparez les annonces, urgences, rappels de scolarité, examens, cours, absences, événements et autres communications à partir de modèles modifiables.
+- **132 — Portefeuille de crédits EdoneSMS** : Chaque établissement dispose de ses SMS disponibles, réservés et consommés, avec un journal des mouvements. Un SMS normalisé coûte 10 FCFA.
+- **133 — Demandes de recharge SMS** : Demandez des crédits depuis votre espace et suivez leur validation par EdOne, avec le mode de règlement, sa référence et l’historique.
+- **134 — Nom d’expéditeur de l’établissement** : Demandez un Sender ID au nom de votre école. Sa validation, contrôlée par l’équipe EdOne, nécessite un délai d’au moins une semaine.
+- **135 — Bases de contacts SMS indépendantes** : Organisez plusieurs listes de contacts, recherchez une personne, ajoutez ou corrigez ses informations, excluez un contact et archivez une base.
+- **136 — Modèle Excel de contacts téléchargeable** : Téléchargez un vrai modèle Excel et importez jusqu’à cinq colonnes, téléphone compris, pour préparer vos bases de communication.
+- **137 — Aperçu et contrôle des imports** : Consultez les lignes valides, invalides et en doublon, avec les motifs, puis confirmez explicitement l’import des contacts retenus.
+- **138 — Numéros locaux et internationaux** : Choisissez le pays de la liste. Les numéros avec ou sans indicatif international sont interprétés, normalisés et vérifiés avant leur utilisation.
+- **139 — Campagnes sur les contacts importés** : Sélectionnez une ou plusieurs bases, utilisez les colonnes comme variables et vérifiez des exemples personnalisés ainsi que le coût avant l’envoi.
+- **140 — SMS maîtrisés à 160 caractères** : Après personnalisation, accents et caractères incompatibles sont normalisés et le texte est limité à 160 caractères pour correspondre à un crédit SMS.
+- **141 — Suivi des campagnes et des livraisons** : Distinguez les messages en attente, acceptés, livrés, refusés ou à vérifier. Les campagnes sont traitées en arrière-plan et les résultats incertains sont rapprochés sans renvoi automatique.
+- **152 — Support live intégré** : Contactez l’équipe EdOne depuis un bouton de chat flottant dans votre espace. Les nouveaux messages arrivent par WebSocket, avec reconnexion automatique.
+- **153 — Conversations privées et historique** : Échangez dans une conversation réservée au demandeur et au support EdOne, avec historique, messages non lus et accusés de lecture. Une demande résolue peut être reprise.
 
 ## Sécurité
 
@@ -99,7 +123,7 @@ Le catalogue contient **126 fiches**, **15 familles** et **19 profils détaillé
 - **51 — Conformité RGPD** : Traitement et conservation des données dans le cadre des exigences RGPD.
 - **52 — Traçabilité complète** : Actions horodatées et attribuées, notamment les paiements et modifications de notes.
 - **53 — Environnement cloisonné** : Chaque établissement dispose de son propre périmètre de données et d’accès.
-- **125 — Code de vérification pour les parents** : L’accès parent en production utilise un code SMS temporaire à usage unique, lié à la session et limité en tentatives.
+- **125 — OTP parent selon la politique de l’école** : L’établissement peut activer la vérification par code SMS pour les parents. Les codes utilisent ses crédits EdoneSMS; un manque de crédits ne permet pas de contourner une vérification activée.
 
 ## Bibliothèque
 
@@ -145,6 +169,9 @@ Le catalogue contient **126 fiches**, **15 familles** et **19 profils détaillé
 - **94 — Création sécurisée des comptes** : Créez les comptes du personnel avec identifiants générés et affectation des profils autorisés.
 - **95 — Navigation adaptée au profil** : Les menus suivent les autorisations ; les actions font également l’objet de contrôles côté serveur.
 - **126 — Domaine professionnel maîtrisé** : La plateforme configure le domaine des e-mails professionnels de l’école, avec protection et traçabilité de ses modifications.
+- **142 — Didacticiels interactifs par profil** : Découvrez l’application avec des visites guidées, repères, étapes et explications adaptés à votre profil sur ordinateur, tablette et téléphone.
+- **143 — Aide des pages, champs et actions** : Retrouvez les explications des écrans et des actions disponibles, reprenez un guide et avancez à votre rythme selon les droits de votre compte.
+- **144 — Tableau de bord étudiant par services** : Retrouvez les destinations autorisées de votre menu sous forme de cartes illustrées, organisées par catégorie et aux couleurs de votre école.
 
 ## Statistiques & journal
 
@@ -172,247 +199,13 @@ Le catalogue contient **126 fiches**, **15 familles** et **19 profils détaillé
 - **113 — Premier responsable de l’établissement** : Créez le compte du responsable à former, avec les droits de son école et un parcours de définition du mot de passe.
 - **114 — Suivi de mise en service et formation** : Suivez la préparation, la formation, la mise en service et les éléments de configuration restant à compléter.
 - **115 — Configuration Google Workspace** : Centralisez le domaine professionnel et la configuration de l’école, puis vérifiez explicitement la délégation Google Workspace.
-- **116 — Accompagnement EdonePay** : Suivez le rattachement du compte marchand, les étapes de conformité et la configuration des paiements de l’établissement.
+- **116 — Configuration des paiements par école** : Centralisez le magasin EdonePay de chaque établissement, sa configuration sécurisée, son URL de confirmation des paiements et les contrôles avant activation.
 - **117 — KPI globaux et annuels** : Suivez les établissements, utilisateurs, étudiants inscrits, comptes professionnels provisionnés, abonnements et indicateurs financiers.
 - **118 — Carte et répertoire des établissements** : Consultez les écoles en cartes ou en tableau et visualisez leur localisation lorsqu’elle est renseignée.
 - **119 — Incidents et qualité de service** : Suivez les anomalies, leur récurrence et leur résolution, ainsi que les contrôles et preuves de préparation du service.
+- **154 — Boîte de réception du support** : Recevez les demandes des différents profils, recherchez une personne ou une école, répondez directement, attribuez une conversation et suivez sa résolution.
+- **155 — Pilotage global EdoneSMS** : Contrôlez les demandes de recharge et de Sender ID, les règlements, les crédits et les résultats des campagnes par établissement depuis le superdashboard.
 
-## Profils
+## Validation
 
-### Direction
-
-Académique, finances et équipes : une vue d’ensemble, des accès maîtrisés et des décisions éclairées.
-
-- Multi-établissements & campus (gestion de plusieurs écoles sur une même plateforme)
-- Permissions granulaires (rôles, accès par module, par établissement)
-- Dashboard 360° (vue d’ensemble des indicateurs)
-- Campagnes SMS & email
-- Diplômes, PV (procès-verbaux), attestations de scolarité, certificats de réussite
-- Wallet établissement (solde temps réel, demandes de reversement, historique)
-- Réconciliation automatique des transactions
-- Gestion des abonnements et facturation SaaS automatisée
-- Programme partenaire / intégrateur (licence marque blanche, prime 100 000 FCFA / école, 10% à vie, dashboard partenaire)
-- Configuration des coefficients, maquettes pédagogiques, filières, niveaux, salles
-- Import / export de données (Excel, PDF)
-- Traçabilité complète (chaque modification de note et chaque paiement horodaté et attribué)
-- Sauvegardes automatisées + procédure de restauration testée
-- Isolation multi-établissement (données cloisonnées)
-- Dossiers RH, congés, paie et espace employé selon les habilitations
-- GED, classement documentaire et archivage des bulletins
-- Statistiques de stockage et journal des opérations sensibles avec exports
-- Création des comptes, profils personnalisés et exceptions individuelles
-- Consultation Multisite des écoles explicitement attribuées au responsable
-- Effectifs et frais par campus, à partir des classes affectées
-- Suivi des changements de forfait et des documents de facturation
-
-### Fondateurs & groupes scolaires
-
-Consultez vos établissements autorisés, comparez leurs indicateurs et ouvrez le détail de chacun, tout en gardant votre rôle dans votre école principale.
-
-- Portefeuille des écoles attribuées par la plateforme
-- Année active, période commune ou consultation de toutes les années
-- Comparaison des effectifs, des frais et du recouvrement
-- Dossier détaillé de chaque école : académique, finances, équipes et documents
-- Effectifs et frais par campus selon les classes affectées
-- Registres avec recherche et références métier lisibles
-- Synthèses CSV et rapports imprimables
-- Consultation des registres de paie sur habilitation distincte
-- Administration de l’école principale conservée pour le fondateur qui en est aussi responsable
-
-### Enseignants
-
-Du planning à la correction, retrouvez vos cours, vos étudiants et vos démarches administratives dans un même espace.
-
-- Contrats & volume horaire (suivi administratif du corps enseignant)
-- Import de notes par Excel (import massif, correction rapide)
-- Quiz sécurisés anti-triche (QCM, choix multiples, réponses libres, tentatives limitées, détection de changement d’onglet/navigateur)
-- Devoirs individuels (dépôt de fichier, consigne jointe, correction et appréciation)
-- Devoirs de groupe (constitution des groupes, chef de groupe, soumission collective, notation collective)
-- Évaluations et notation (coefficients configurables, gestion des réclamations)
-- Dépôt de supports de cours
-- RIB (relevé d’identité bancaire) et demandes d’acompte
-- Fiches de présence numériques
-- Espace enseignant dédié (maquette, planning)
-- Configuration des coefficients par matière / niveau
-- Documents personnels et supports de cours accessibles selon les droits
-- Devoirs de groupe, soumissions et correction des travaux
-
-### Étudiants
-
-Un cours à retrouver, une note à consulter, un devoir à rendre : votre vie étudiante vous suit partout.
-
-- Maquette pédagogique complète (années académiques, classes, cours, enseignants, salles)
-- Quiz & devoirs (accès, réponses, notes immédiates)
-- Notes & bulletins (consultation, téléchargement PDF, rangs, moyennes pondérées)
-- Paiement Mobile Money / carte (Orange Money, MTN, Moov, Wave, Djamo, Visa, Mastercard)
-- CV automatique généré depuis le parcours, personnalisable et partageable via lien public
-- Carte étudiant numérique et imprimable (photo, statut de remise suivi par la direction)
-- Bibliothèque de 79 000+ ouvrages (consultation, favoris, lecture directe)
-- Email professionnel Google Workspace (accès à Drive, Docs, Sheets, Meet)
-- Vérification publique des documents (bulletin, diplôme, attestation par code unique)
-- Accès aux reçus de paiement et historique de solde
-- Suivi des frais divers (cartes, kits, accessoires, transport)
-- Alertes d’absences et notifications automatiques
-- Documents scolaires et archives accessibles depuis son espace
-- Supports et sujets de devoirs réservés à ses classes
-
-### Parents
-
-Accédez au suivi de votre enfant par son matricule, consultez ses échéances et réglez les frais depuis votre téléphone.
-
-- Accès simple par matricule (login facile, pas de mot de passe complexe obligatoire)
-- Suivi du cursus, notes, bulletins (toutes périodes)
-- Alertes d’absences (notification immédiate)
-- Statut et paiement de la scolarité (suivi des échéances, montants restants)
-- Paiement des frais divers en ligne (transport, carte, kits, accessoires)
-- Notifications SMS/Email automatiques (reçus, alertes, annonces)
-- Accès au wallet / historique des paiements effectués
-- Consultation de la carte étudiant et des documents officiels (lorsque autorisé)
-- Vérification par code SMS temporaire pour accéder au dossier familial en production
-
-### Personnel et RH
-
-Inscriptions, ressources humaines, fournitures et transport : une organisation commune pour tous les métiers du campus.
-
-- Fiches du personnel administratif et technique
-- Services, contrats, suivi RH
-- Gestion du stock et moyens généraux (produits, catégories, fournisseurs, commandes, remise de kits et accessoires)
-- Transport (suivi des lignes, paquets, frais de transport)
-- Gestion des inscriptions et réinscriptions (dossiers électroniques, statistiques en direct)
-- Établissement et gestion du campus (salles, filières, niveaux)
-- Mise à jour des données de l’élève et du personnel
-- Authentification sécurisée (2FA pour super administrateurs)
-- Conformité RGPD (traitement et conservation conformes)
-- Dossier employé, carrière, évaluations et formations
-- Demandes de congés et calendrier des absences
-- Demandes RH, dépôt de pièces privées et suivi du traitement
-- Préparation de la paie et bulletins PDF pour les gestionnaires habilités
-- Espace salarié : dossier, demandes et bulletins personnels
-- GED, stock, transport ou service médical selon le métier et les droits accordés
-
-### Partenaires
-
-Distribuez EdOne en marque blanche et accompagnez vos établissements clients, de l’installation à la formation.
-
-- Licence marque blanche aux couleurs de votre structure
-- Prime d’installation de 100 000 FCFA par établissement signé
-- Commission de 10 % à vie sur chaque abonnement mensuel payé
-- Dashboard partenaire dédié au suivi des établissements et des commissions
-- Support technique, formation et accompagnement au déploiement
-
-### Scolarité
-
-Gérer le parcours administratif et scolaire des étudiants.
-
-- Dossiers étudiants, pièces et inscriptions
-- Années, filières, niveaux et classes
-- Notes, résultats, bulletins et documents scolaires
-- Recherche et archivage des documents académiques
-
-### Responsable pédagogique
-
-Organiser les enseignements et suivre les résultats.
-
-- Enseignants et affectations pédagogiques
-- Matières, UE, maquettes, coefficients et crédits
-- Progressions, emplois du temps et évaluations
-- Compensation des UE, bulletins et procès-verbaux
-
-### Comptabilité
-
-Suivre les frais, encaissements et opérations financières.
-
-- Frais de scolarité et frais divers
-- Contrôle des paiements et suivi des soldes
-- Paiements EdonePay et historique des transactions
-- Portefeuille, reçus et exports financiers
-- Suivi des factures, références de règlement et échanges avec la plateforme pour les avoirs et relances
-
-### Ressources humaines
-
-Accompagner le personnel tout au long de son parcours.
-
-- Dossiers employés et pièces privées
-- Postes, candidatures et parcours professionnels
-- Évaluations et formations
-- Congés, calendrier et traitement des demandes
-
-### Gestionnaire de paie
-
-Préparer les rémunérations avec des accès dédiés.
-
-- Contrats et paramètres de rémunération
-- Rubriques et préparation de la paie
-- Bulletins de paie PDF
-- Historique des paies autorisées
-
-### Employé
-
-Retrouver ses informations et démarches personnelles.
-
-- Dossier et documents personnels autorisés
-- Dépôt de pièces justificatives
-- Demandes RH et suivi du traitement
-- Consultation de ses bulletins de paie disponibles
-
-### Gestionnaire documentaire
-
-Organiser les documents et les archives de l’établissement.
-
-- Recherche, classement et métadonnées
-- Aperçu, téléchargement et versions
-- Archivage des bulletins par sélection ou filtres
-- Programmation et suivi des campagnes ; accès sensibles soumis à habilitation
-
-### Bibliothécaire
-
-Organiser les ressources de lecture.
-
-- Catalogue et fichiers des ouvrages
-- Ajout et modification des livres
-- Traitement des ouvrages soumis à validation
-
-### Gestionnaire de stock
-
-Suivre les fournitures et approvisionnements.
-
-- Catégories, produits et fournisseurs
-- Commandes et réceptions
-- Historique, impressions et exports
-
-### Gestionnaire de transport
-
-Organiser les déplacements et les abonnements.
-
-- Véhicules et trajets
-- Abonnements et consultation de leurs détails
-- Exports des informations de transport
-
-### Médecin / service médical
-
-Assurer le suivi médical avec des droits réservés.
-
-- Dossiers médicaux autorisés
-- Consultations et historique
-- Documents PDF disponibles
-
-### Administration de la plateforme
-
-Piloter l’ensemble du service, créer les écoles et leurs responsables, configurer les intégrations et suivre les indicateurs, les incidents et les mises en service.
-
-- Création des établissements, de leur identité, année académique et premier responsable
-- Configuration Workspace, domaine professionnel et parcours marchand EdonePay
-- Suivi des installations, abonnements, factures, avoirs et relances
-- KPI globaux et annuels, répertoire détaillé, graphiques et carte des établissements
-- Recherche des comptes fondateurs et attribution des écoles du portefeuille Multisite
-- Autorisations de paie distinctes par compte et établissement
-- Incidents, anomalies, résolution et journal des opérations sensibles
-- Suivi des formations et preuves de préparation du service
-- Double authentification et accès de plateforme séparés des rôles d’école
-- Sélection des ouvrages publics proposés
-
-## Repères commerciaux
-
-Installation unique : 250 000 FCFA par établissement. Abonnements : Starter 25 000 FCFA/mois, School 75 000 FCFA/mois, Campus 200 000 FCFA/mois et Enterprise sur devis. Les changements d’abonnement, avoirs et relances sont décrits comme des fonctions de suivi; un avoir ne déclenche pas automatiquement un remboursement. Les statistiques de campus reposent sur les classes affectées. La consultation de paie nécessite une habilitation distincte.
-
-Les choix d’exploitation Docker/Kubernetes et les résultats de tests internes ne sont pas présentés comme des fonctionnalités destinées aux élèves. Le site ne prétend pas que les validations externes du cluster, des fournisseurs ou de la recette pilote ont été réalisées.
+Les deux pages sont régénérées depuis les mêmes sources. Contrôles de contenu, liens, icônes et SEO, puis vérification navigateur sur ordinateur et mobile. Le site vitrine ne reçoit pas de conversations privées: le support vit dans l’application authentifiée.

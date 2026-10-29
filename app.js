@@ -32,7 +32,12 @@ const roles={
       "Création des comptes, profils personnalisés et exceptions individuelles",
       "Consultation Multisite des écoles explicitement attribuées au responsable",
       "Effectifs et frais par campus, à partir des classes affectées",
-      "Suivi des changements de forfait et des documents de facturation"
+      "Suivi des changements de forfait et des documents de facturation",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone",
+      "Campagnes email, SMS EdoneSMS et notifications dans l’application avec ciblage et personnalisation",
+      "Portefeuille EdoneSMS, demandes de recharge à 10 FCFA/SMS et demande de Sender ID",
+      "Bases de contacts Excel avec pays, modèle téléchargeable et aperçu des imports"
     ],
     "dash": "Votre école avance.",
     "metrics": [
@@ -62,7 +67,9 @@ const roles={
       "Registres avec recherche et références métier lisibles",
       "Synthèses CSV et rapports imprimables",
       "Consultation des registres de paie sur habilitation distincte",
-      "Administration de l’école principale conservée pour le fondateur qui en est aussi responsable"
+      "Administration de l’école principale conservée pour le fondateur qui en est aussi responsable",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone"
     ],
     "dash": "Votre groupe, en vue d’ensemble.",
     "metrics": [
@@ -95,7 +102,10 @@ const roles={
       "Espace enseignant dédié (maquette, planning)",
       "Configuration des coefficients par matière / niveau",
       "Documents personnels et supports de cours accessibles selon les droits",
-      "Devoirs de groupe, soumissions et correction des travaux"
+      "Devoirs de groupe, soumissions et correction des travaux",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone",
+      "Notifications dans l’application, campagnes ciblées et accès aux réponses du support"
     ],
     "dash": "Une journée pour transmettre.",
     "metrics": [
@@ -129,7 +139,13 @@ const roles={
       "Suivi des frais divers (cartes, kits, accessoires, transport)",
       "Alertes d’absences et notifications automatiques",
       "Documents scolaires et archives accessibles depuis son espace",
-      "Supports et sujets de devoirs réservés à ses classes"
+      "Supports et sujets de devoirs réservés à ses classes",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone",
+      "Tableau de bord avec cartes d’accès aux services autorisés",
+      "Téléchargements PDF directs : notes en paysage, carte, reçus, certificats et CV",
+      "CV complet, saisie progressive, partage public et téléchargement PDF",
+      "Notifications dans l’application et suivi des messages non lus"
     ],
     "dash": "À vous le prochain chapitre.",
     "metrics": [
@@ -158,7 +174,10 @@ const roles={
       "Notifications SMS/Email automatiques (reçus, alertes, annonces)",
       "Accès au wallet / historique des paiements effectués",
       "Consultation de la carte étudiant et des documents officiels (lorsque autorisé)",
-      "Vérification par code SMS temporaire pour accéder au dossier familial en production"
+      "Vérification par code SMS si activée par l’établissement, avec accès au dossier familial vérifié",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone",
+      "Notifications dans le portail parent et support privé distinct de la conversation de l’étudiant"
     ],
     "dash": "Gardez le lien avec son école.",
     "metrics": [
@@ -193,7 +212,12 @@ const roles={
       "Demandes RH, dépôt de pièces privées et suivi du traitement",
       "Préparation de la paie et bulletins PDF pour les gestionnaires habilités",
       "Espace salarié : dossier, demandes et bulletins personnels",
-      "GED, stock, transport ou service médical selon le métier et les droits accordés"
+      "GED, stock, transport ou service médical selon le métier et les droits accordés",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone",
+      "Campagnes email, SMS EdoneSMS et notifications dans l’application avec ciblage et personnalisation",
+      "Portefeuille EdoneSMS, demandes de recharge à 10 FCFA/SMS et demande de Sender ID",
+      "Bases de contacts Excel avec pays, modèle téléchargeable et aperçu des imports"
     ],
     "dash": "Le campus, bien organisé.",
     "metrics": [
@@ -241,7 +265,9 @@ const roles={
       "Dossiers étudiants, pièces et inscriptions",
       "Années, filières, niveaux et classes",
       "Notes, résultats, bulletins et documents scolaires",
-      "Recherche et archivage des documents académiques"
+      "Recherche et archivage des documents académiques",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone"
     ]
   },
   "pedagogie": {
@@ -251,7 +277,9 @@ const roles={
       "Enseignants et affectations pédagogiques",
       "Matières, UE, maquettes, coefficients et crédits",
       "Progressions, emplois du temps et évaluations",
-      "Compensation des UE, bulletins et procès-verbaux"
+      "Compensation des UE, bulletins et procès-verbaux",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone"
     ]
   },
   "comptabilite": {
@@ -262,7 +290,10 @@ const roles={
       "Contrôle des paiements et suivi des soldes",
       "Paiements EdonePay et historique des transactions",
       "Portefeuille, reçus et exports financiers",
-      "Suivi des factures, références de règlement et échanges avec la plateforme pour les avoirs et relances"
+      "Suivi des factures, références de règlement et échanges avec la plateforme pour les avoirs et relances",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone",
+      "Suivi des demandes de recharge EdoneSMS et des références de règlement selon les habilitations"
     ]
   },
   "rh": {
@@ -272,7 +303,9 @@ const roles={
       "Dossiers employés et pièces privées",
       "Postes, candidatures et parcours professionnels",
       "Évaluations et formations",
-      "Congés, calendrier et traitement des demandes"
+      "Congés, calendrier et traitement des demandes",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone"
     ]
   },
   "paie": {
@@ -282,7 +315,9 @@ const roles={
       "Contrats et paramètres de rémunération",
       "Rubriques et préparation de la paie",
       "Bulletins de paie PDF",
-      "Historique des paies autorisées"
+      "Historique des paies autorisées",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone"
     ]
   },
   "employe": {
@@ -292,7 +327,9 @@ const roles={
       "Dossier et documents personnels autorisés",
       "Dépôt de pièces justificatives",
       "Demandes RH et suivi du traitement",
-      "Consultation de ses bulletins de paie disponibles"
+      "Consultation de ses bulletins de paie disponibles",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone"
     ]
   },
   "ged": {
@@ -302,7 +339,9 @@ const roles={
       "Recherche, classement et métadonnées",
       "Aperçu, téléchargement et versions",
       "Archivage des bulletins par sélection ou filtres",
-      "Programmation et suivi des campagnes ; accès sensibles soumis à habilitation"
+      "Programmation et suivi des campagnes ; accès sensibles soumis à habilitation",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone"
     ]
   },
   "bibliotheque": {
@@ -311,7 +350,9 @@ const roles={
     "list": [
       "Catalogue et fichiers des ouvrages",
       "Ajout et modification des livres",
-      "Traitement des ouvrages soumis à validation"
+      "Traitement des ouvrages soumis à validation",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone"
     ]
   },
   "stock": {
@@ -320,7 +361,9 @@ const roles={
     "list": [
       "Catégories, produits et fournisseurs",
       "Commandes et réceptions",
-      "Historique, impressions et exports"
+      "Historique, impressions et exports",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone"
     ]
   },
   "transport": {
@@ -329,7 +372,9 @@ const roles={
     "list": [
       "Véhicules et trajets",
       "Abonnements et consultation de leurs détails",
-      "Exports des informations de transport"
+      "Exports des informations de transport",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone"
     ]
   },
   "medecin": {
@@ -338,7 +383,9 @@ const roles={
     "list": [
       "Dossiers médicaux autorisés",
       "Consultations et historique",
-      "Documents PDF disponibles"
+      "Documents PDF disponibles",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone"
     ]
   },
   "plateforme": {
@@ -354,7 +401,12 @@ const roles={
       "Incidents, anomalies, résolution et journal des opérations sensibles",
       "Suivi des formations et preuves de préparation du service",
       "Double authentification et accès de plateforme séparés des rôles d’école",
-      "Sélection des ouvrages publics proposés"
+      "Sélection des ouvrages publics proposés",
+      "Support live privé avec l’équipe EdOne depuis votre espace, historique et suivi des réponses",
+      "Didacticiels interactifs et aide adaptés au profil sur ordinateur, tablette et téléphone",
+      "Boîte de réception du support en direct : réponses, attribution, recherche et résolution",
+      "Validation des recharges SMS et Sender ID, suivi des crédits et des livraisons par école",
+      "Configuration sécurisée des magasins EdonePay et des confirmations de paiement propres aux écoles"
     ]
   }
 };
@@ -450,8 +502,8 @@ const modules=[
   {
     "id": 15,
     "category": "Pédagogie",
-    "title": "CV automatique",
-    "description": "Parcours de l’étudiant, personnalisé, lien public."
+    "title": "CV étudiant et partage public",
+    "description": "Créez un CV structuré avec parcours, expériences, réalisations, compétences et centres d’intérêt; partagez son lien public et téléchargez-le en PDF."
   },
   {
     "id": 16,
@@ -606,14 +658,14 @@ const modules=[
   {
     "id": 41,
     "category": "Communication",
-    "title": "Campagnes SMS & email",
-    "description": "Direction/admin."
+    "title": "Campagnes multicanales",
+    "description": "Préparez une campagne dans un formulaire unique, choisissez email, SMS EdoneSMS et notification dans l’application, prévisualisez puis lancez l’envoi."
   },
   {
     "id": 42,
     "category": "Communication",
-    "title": "Notifications automatiques",
-    "description": "Absences, notes, bulletins, paiements."
+    "title": "Notifications et suivi de lecture",
+    "description": "Annonces et modèles de notification pour les différents profils, avec boîte de réception, cloche, messages non lus et suivi de lecture."
   },
   {
     "id": 43,
@@ -1056,8 +1108,8 @@ const modules=[
   {
     "id": 116,
     "category": "Pilotage plateforme",
-    "title": "Accompagnement EdonePay",
-    "description": "Suivez le rattachement du compte marchand, les étapes de conformité et la configuration des paiements de l’établissement."
+    "title": "Configuration des paiements par école",
+    "description": "Centralisez le magasin EdonePay de chaque établissement, sa configuration sécurisée, son URL de confirmation des paiements et les contrôles avant activation."
   },
   {
     "id": 117,
@@ -1110,14 +1162,188 @@ const modules=[
   {
     "id": 125,
     "category": "Sécurité",
-    "title": "Code de vérification pour les parents",
-    "description": "L’accès parent en production utilise un code SMS temporaire à usage unique, lié à la session et limité en tentatives."
+    "title": "OTP parent selon la politique de l’école",
+    "description": "L’établissement peut activer la vérification par code SMS pour les parents. Les codes utilisent ses crédits EdoneSMS; un manque de crédits ne permet pas de contourner une vérification activée."
   },
   {
     "id": 126,
     "category": "Accès & profils",
     "title": "Domaine professionnel maîtrisé",
     "description": "La plateforme configure le domaine des e-mails professionnels de l’école, avec protection et traçabilité de ses modifications."
+  },
+  {
+    "id": 127,
+    "category": "Communication",
+    "title": "Notifications dans l’application",
+    "description": "Diffusez des messages complets, sans limite de longueur propre au canal in-app, aux étudiants, parents, enseignants et personnels concernés."
+  },
+  {
+    "id": 128,
+    "category": "Communication",
+    "title": "Cloche et notifications non lues",
+    "description": "Un compteur, une cloche animée lorsque des messages attendent et le marquage comme lu à l’ouverture accompagnent la boîte de réception."
+  },
+  {
+    "id": 129,
+    "category": "Communication",
+    "title": "Ciblage académique progressif",
+    "description": "Filtrez les destinataires par année, filière, niveau, classe et personnes précises; les choix suivants s’adaptent aux filtres déjà appliqués."
+  },
+  {
+    "id": 130,
+    "category": "Communication",
+    "title": "Variables et messages personnalisés",
+    "description": "Insérez les noms, prénoms, classes, filières, niveaux, montants de scolarité ou résultats disponibles dans le sujet et le message, avec aperçu avant diffusion."
+  },
+  {
+    "id": 131,
+    "category": "Communication",
+    "title": "Modèles de campagnes prêts à adapter",
+    "description": "Préparez les annonces, urgences, rappels de scolarité, examens, cours, absences, événements et autres communications à partir de modèles modifiables."
+  },
+  {
+    "id": 132,
+    "category": "Communication",
+    "title": "Portefeuille de crédits EdoneSMS",
+    "description": "Chaque établissement dispose de ses SMS disponibles, réservés et consommés, avec un journal des mouvements. Un SMS normalisé coûte 10 FCFA."
+  },
+  {
+    "id": 133,
+    "category": "Communication",
+    "title": "Demandes de recharge SMS",
+    "description": "Demandez des crédits depuis votre espace et suivez leur validation par EdOne, avec le mode de règlement, sa référence et l’historique."
+  },
+  {
+    "id": 134,
+    "category": "Communication",
+    "title": "Nom d’expéditeur de l’établissement",
+    "description": "Demandez un Sender ID au nom de votre école. Sa validation, contrôlée par l’équipe EdOne, nécessite un délai d’au moins une semaine."
+  },
+  {
+    "id": 135,
+    "category": "Communication",
+    "title": "Bases de contacts SMS indépendantes",
+    "description": "Organisez plusieurs listes de contacts, recherchez une personne, ajoutez ou corrigez ses informations, excluez un contact et archivez une base."
+  },
+  {
+    "id": 136,
+    "category": "Communication",
+    "title": "Modèle Excel de contacts téléchargeable",
+    "description": "Téléchargez un vrai modèle Excel et importez jusqu’à cinq colonnes, téléphone compris, pour préparer vos bases de communication."
+  },
+  {
+    "id": 137,
+    "category": "Communication",
+    "title": "Aperçu et contrôle des imports",
+    "description": "Consultez les lignes valides, invalides et en doublon, avec les motifs, puis confirmez explicitement l’import des contacts retenus."
+  },
+  {
+    "id": 138,
+    "category": "Communication",
+    "title": "Numéros locaux et internationaux",
+    "description": "Choisissez le pays de la liste. Les numéros avec ou sans indicatif international sont interprétés, normalisés et vérifiés avant leur utilisation."
+  },
+  {
+    "id": 139,
+    "category": "Communication",
+    "title": "Campagnes sur les contacts importés",
+    "description": "Sélectionnez une ou plusieurs bases, utilisez les colonnes comme variables et vérifiez des exemples personnalisés ainsi que le coût avant l’envoi."
+  },
+  {
+    "id": 140,
+    "category": "Communication",
+    "title": "SMS maîtrisés à 160 caractères",
+    "description": "Après personnalisation, accents et caractères incompatibles sont normalisés et le texte est limité à 160 caractères pour correspondre à un crédit SMS."
+  },
+  {
+    "id": 141,
+    "category": "Communication",
+    "title": "Suivi des campagnes et des livraisons",
+    "description": "Distinguez les messages en attente, acceptés, livrés, refusés ou à vérifier. Les campagnes sont traitées en arrière-plan et les résultats incertains sont rapprochés sans renvoi automatique."
+  },
+  {
+    "id": 142,
+    "category": "Accès & profils",
+    "title": "Didacticiels interactifs par profil",
+    "description": "Découvrez l’application avec des visites guidées, repères, étapes et explications adaptés à votre profil sur ordinateur, tablette et téléphone."
+  },
+  {
+    "id": 143,
+    "category": "Accès & profils",
+    "title": "Aide des pages, champs et actions",
+    "description": "Retrouvez les explications des écrans et des actions disponibles, reprenez un guide et avancez à votre rythme selon les droits de votre compte."
+  },
+  {
+    "id": 144,
+    "category": "Accès & profils",
+    "title": "Tableau de bord étudiant par services",
+    "description": "Retrouvez les destinations autorisées de votre menu sous forme de cartes illustrées, organisées par catégorie et aux couleurs de votre école."
+  },
+  {
+    "id": 145,
+    "category": "Documents",
+    "title": "Téléchargement direct des documents PDF",
+    "description": "Téléchargez les documents personnels disponibles depuis l’espace étudiant, notamment notes, carte, CV, reçus et certificats, avec une mise en page adaptée."
+  },
+  {
+    "id": 146,
+    "category": "Documents",
+    "title": "Notes au format PDF paysage",
+    "description": "Retrouvez les notes dans un document paysage lisible, avec le logo de l’établissement et la photo de l’étudiant."
+  },
+  {
+    "id": 147,
+    "category": "Documents",
+    "title": "Identité visuelle des documents étudiants",
+    "description": "Les documents personnels intègrent les informations de l’école, son logo, un filigrane et la photo de l’étudiant selon le document. Les supports de cours restent sans portrait étudiant."
+  },
+  {
+    "id": 148,
+    "category": "Pédagogie",
+    "title": "CV enrichi et saisie progressive",
+    "description": "Ajoutez votre parcours académique, vos expériences, réalisations, compétences et centres d’intérêt. Enregistrez le titre et la présentation avant de compléter les autres rubriques."
+  },
+  {
+    "id": 149,
+    "category": "Documents",
+    "title": "CV public et PDF professionnel",
+    "description": "Partagez un CV consultable sans connexion, dans une page dédiée, et proposez son téléchargement avec une véritable mise en page de CV."
+  },
+  {
+    "id": 150,
+    "category": "Documents",
+    "title": "QR codes de vérification des documents",
+    "description": "Les liens et QR codes des documents officiels concernés ouvrent une page de vérification EdOne permettant de contrôler leur existence et leur statut."
+  },
+  {
+    "id": 151,
+    "category": "Finance",
+    "title": "Reprise des paiements en cours",
+    "description": "Retrouvez une demande de paiement déjà initiée, consultez son état et reprenez son suivi sans créer une nouvelle tentative en double."
+  },
+  {
+    "id": 152,
+    "category": "Communication",
+    "title": "Support live intégré",
+    "description": "Contactez l’équipe EdOne depuis un bouton de chat flottant dans votre espace. Les nouveaux messages arrivent par WebSocket, avec reconnexion automatique."
+  },
+  {
+    "id": 153,
+    "category": "Communication",
+    "title": "Conversations privées et historique",
+    "description": "Échangez dans une conversation réservée au demandeur et au support EdOne, avec historique, messages non lus et accusés de lecture. Une demande résolue peut être reprise."
+  },
+  {
+    "id": 154,
+    "category": "Pilotage plateforme",
+    "title": "Boîte de réception du support",
+    "description": "Recevez les demandes des différents profils, recherchez une personne ou une école, répondez directement, attribuez une conversation et suivez sa résolution."
+  },
+  {
+    "id": 155,
+    "category": "Pilotage plateforme",
+    "title": "Pilotage global EdoneSMS",
+    "description": "Contrôlez les demandes de recharge et de Sender ID, les règlements, les crédits et les résultats des campagnes par établissement depuis le superdashboard."
   }
 ];
 let selectedCategory='Tous';
