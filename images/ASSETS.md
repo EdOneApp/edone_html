@@ -29,3 +29,9 @@ Prompt : Use case: photorealistic-natural. Asset type: editorial website photogr
 ### `campus-vie-edone.jpg`
 
 Prompt : Use case: photorealistic-natural. Asset type: wide editorial photograph for an African education website. A beautiful sunlit university courtyard in Abidjan, contemporary low-rise ivory architecture, palms and lush tropical trees, young adult Black West African students walking between classes with backpacks in small natural groups, late afternoon warm light, relaxed hopeful mood. Wide 3:2 documentary architectural photography, analogue grain, natural skin tones, no staged posing, no text, no logos, no watermark.
+
+## Campagne EdOne du 29 octobre 2026
+
+Huit affiches issues du dossier `campagne/Visuels_Publicitaires` fourni et validé par l’utilisateur. Générées avec ImageGen à partir de ses références : deux établissements, deux multisite, deux partenaires, une parents et une étudiants. Les personnes, bâtiments et interfaces sont illustratifs et ne constituent pas des témoignages clients ni des captures de production.
+
+Les variantes de livraison se trouvent dans `images/campagnes/` : largeur 560 et 1120 pixels, WebP avec repli JPEG progressif. Les PNG originaux restent dans le dossier de campagne, hors du dépôt. Tous les visuels sont affichés en entier, chargés à la demande et agrandissables dans un nouvel onglet. Les coordonnées et les conditions affichées font partie des affiches ; les textes et appels à l’action importants restent également disponibles en HTML.

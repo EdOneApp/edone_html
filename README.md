@@ -67,3 +67,7 @@ Adresse officielle de contact affichée sur le site : [admin@edone.my](mailto:ad
 Cinq pages canoniques indexables et quinze pages d’erreur/maintenance hors index, avec JSON-LD et sitemap images/vidéo. Voir [la procédure SEO](docs/seo-operations.md). Le formulaire prépare une demande WhatsApp; il ne stocke pas de dossier dans Django.
 
 Les pages [mentions légales](mentions-legales/index.html), [confidentialité](confidentialite/index.html) et [CGU](cgu/index.html) concernent le site vitrine. Les éléments d’identité juridique restant à compléter figurent dans [les notes éditoriales](docs/legal-editorial-notes.md). Une page statique `maintenance.html` ou `offline.html` n’active pas une maintenance serveur ou un cache hors connexion.
+
+## Visuels de campagne
+
+L’accueil utilise huit affiches dans quatre ensembles : `#ecoles-connectees` après la présentation de la solution, `#campus-connectes` après les profils, `#quotidien` pour les parents et étudiants, et `#parrainage` pour les apporteurs d’affaires. Les variantes WebP/JPEG 560/1120 pixels sont dans `images/campagnes/`. Les images restent entières, avec liens d’agrandissement, dimensions explicites et chargement différé. Aucun carrousel ni script supplémentaire. Ces sections sont conservées par `scripts/sync-content.py`, car elles sont hors des blocs générés du catalogue et des profils. Voir `images/ASSETS.md` pour leur provenance.
